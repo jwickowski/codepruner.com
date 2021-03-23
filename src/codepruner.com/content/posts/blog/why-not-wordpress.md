@@ -45,6 +45,7 @@ I have multiple options:
 * I have to have a standard way to cooperate with community 
   * When someone would like to write a post to my blog
   * When someone would like to improve one on my post
+* I want to automate as much as I can
 
 ## The decision is...
 To use [Hugo](https://gohugo.io/). I will try to use it. I thought the start will be easier and faster. I will descrbe it later.
