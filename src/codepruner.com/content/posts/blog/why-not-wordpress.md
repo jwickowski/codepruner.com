@@ -47,4 +47,4 @@ I have multiple options:
   * When someone would like to improve one on my post
 
 ## The decision is...
-Hugo. I will try to use it. I thought the start will be easier and faster. I will descrbe it later.
+To use [Hugo](https://gohugo.io/). I will try to use it. I thought the start will be easier and faster. I will descrbe it later.
