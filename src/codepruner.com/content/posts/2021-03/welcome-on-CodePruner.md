@@ -2,6 +2,7 @@
 title: "Welcome on CodePruner.com"
 date: 2021-03-22T21:16:58+01:00
 draft: false
+tags: ["start a new thing", "blog"]
 ---
 
 # Welcome on Code Pruner blog
@@ -13,7 +14,7 @@ I am going to start blogging in English, because it is a great opportunity to re
 ## What is my plan?
 * Write in English
   * To improve my language skills
-  * To write worlkwide
+  * To write worldkwide
 * Write often
   * Posts don't have to be perfect
   * Write shorter posts, but more regular

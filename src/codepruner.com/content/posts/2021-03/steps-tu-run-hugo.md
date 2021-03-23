@@ -2,6 +2,7 @@
 title: "Steps to run hugo"
 date: 2021-03-23T9:40:58+01:00
 draft: false
+tags: ["hugo", "blog"]
 ---
 
 ## My expetiation

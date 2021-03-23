@@ -2,6 +2,8 @@
 title: "Why not WordPress?"
 date: 2021-03-23T6:40:58+01:00
 draft: false
+tags: ["hugo", "blog", "wordpress"]
+
 ---
 
 ## It is not my first blog
