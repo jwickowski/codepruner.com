@@ -25,3 +25,26 @@ I have multiple options:
 * I can write my on blog engine
   * But it will take me a lot of time
   * I don't have soo much free time to write something like this
+* I can create a tool to write posts in Markdown and import them in to wordpress
+  * But Wordpress is not only a collection of posts. There are pluggins, settings, pages
+  * So recreating it will be painful
+* I can use an different CMS, like WIX, Joomla etc
+  * But there will be no difference
+* I can use a static page generator like Jekyll or Hogo
+  * And it is my destiny, but...
+
+## What I need from blog tool
+* I want to wrire posts in Markdown
+  * Because it easy
+  * Because it doesn't interrupt me
+  * Because it is very easy to migrate
+* I want to have a posibility to simple recreate a whole page
+  * To restore backup
+  * To test new layout or feature on a different domain
+  * To write some plugins if required in safe environement
+* I have to have a standard way to cooperate with community 
+  * When someone would like to write a post to my blog
+  * When someone would like to improve one on my post
+
+## The decision is...
+Hugo. I will try to use it. I thought the start will be easier and faster. I will descrbe it later.
