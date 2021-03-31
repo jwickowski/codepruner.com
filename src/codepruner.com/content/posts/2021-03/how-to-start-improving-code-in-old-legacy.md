@@ -1,7 +1,7 @@
 ---
 title: "How to start inproving code in old lagacy"
 date: 2021-03-29T21:40:58+01:00
-draft: true
+draft: false
 tags: ["legacy", "clean code", "idea", "pain points"]
 ---
 
@@ -36,7 +36,7 @@ But you should create a place where you and the team will write about pain items
 So.. I suggest tocreate a file in repo. You can name something like `PainPoints.md` and write into it. What should be inside:
 * A description what is bad or irritating
 * A short information why it is bad
-* An information how much you burn becaouse of it. 
+* An information how much you burn because of it. 
   * It can be summed, but it would be better to add new values
   * You will see how the value is chaning 
   * It is very IMOPRANT as an future input for discuss
@@ -45,3 +45,31 @@ So.. I suggest tocreate a file in repo. You can name something like `PainPoints.
 * How it is connected with other components
 
 ## An examlpe of that file
+`
+--- 
+title: EAV Structure
+date: 2020.12.15
+description: Entity Attribute Value Structure in database make my queries complex. So my work is slower and slower becaouse of it. Moreover I am not able to understand from db structure. I know that solution is elastic, but not in current implementation.
+
+date: 2020.12.15
+burn: 4h - to read current product state
+
+date: 2021.01.03
+burn: 3h - to update current client info
+description: It is complicated becaouse we have to write low level sqls to manage that data and tests are difficoult
+---
+
+--- 
+title: code scattering
+date: 2020.11.13
+description: A code for connected logic is in different places. So I had to search in multiple folders and project to do a small change.
+
+date: 2020.11.12
+burn: 2h
+---
+
+
+## Is it working?
+I will check it. It is my plan for starting new project. I will let you know about results.
+
+Tell me what is your approach!
