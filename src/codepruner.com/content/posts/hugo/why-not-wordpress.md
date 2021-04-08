@@ -6,7 +6,7 @@ tags: ["hugo", "blog", "wordpress"]
 
 ---
 
-## It is not my first blog
+# It is not my first blog
 I have been present in the internet since 2016 year. I have blog [JerzyWickowski.pl](https://jerzywickowski.pl) and [Blog.DeployAacademy.pl](https://blog.deployacademy.pl/). 
 
 Both of them are using Wordpress and I still have to tell that wordpress is great, but there are some cons:
@@ -22,7 +22,7 @@ Both of them are using Wordpress and I still have to tell that wordpress is grea
 
 So I decides to find... 
 
-## An alternative
+# An alternative
 I have multiple options:
 * I can write my on blog engine
   * But it will take me a lot of time
@@ -35,7 +35,7 @@ I have multiple options:
 * I can use a static page generator like Jekyll or Hogo
   * And it is my destiny, but...
 
-## What I need from blog tool
+# What I need from blog tool
 * I want to wrire posts in Markdown
   * Because it easy
   * Because it doesn't interrupt me
@@ -49,5 +49,5 @@ I have multiple options:
   * When someone would like to improve one on my post
 * I want to automate as much as I can
 
-## The decision is...
+# The decision is...
 To use [Hugo](https://gohugo.io/). I will try to use it. I thought the start will be easier and faster. I will descrbe it later.

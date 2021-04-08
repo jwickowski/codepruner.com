@@ -2,6 +2,6 @@ baseURL = "https://CodePruner.com/"
 languageCode = "en-us"
 title = "CodePruner.com"
 theme = "ananke"
+sectionPagesMenu = "main"
 
-[permalinks]
-  posts = "/:year/:month/:day/:title/"
+disqusShortname = "codepruner"
