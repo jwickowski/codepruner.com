@@ -1,5 +1,5 @@
 ---
-title: "How to start inproving code in old lagacy"
+title: "How to start improving code in old lagacy project"
 date: 2021-03-29T21:40:58+01:00
 draft: false
 tags: ["legacy", "clean code", "idea", "pain points"]
@@ -8,7 +8,7 @@ tags: ["legacy", "clean code", "idea", "pain points"]
 Everyone of us is joining into old ugly legacy systems. When we see it we want to fix the whole application, but it isn't so easy. 
 You have to ask yourself a question
 
-## What should I prune at the beginning?
+# What should I prune at the beginning?
 NOTHING! It is what I learn. You must not fix nothing, at the beginning. 
 
 You have to do 3 things:
@@ -25,7 +25,7 @@ You have to do 3 things:
 
 Today we will talk a bit about the last point.
 
-## How prepare infomrmations about prune candidates?
+# How prepare infomrmations about prune candidates?
 I would suggest to not make big refactors in first months. You should rather focus on fixing bugs and adding small features. During that task you will get information for points 1 and 2. 
 
 But you should create a place where you and the team will write about pain items in code. Evertime when thay are irritated. Every time when you burn then time becouse of currect solution. What should be expect from that place:
@@ -44,12 +44,17 @@ So.. I suggest tocreate a file in repo. You can name something like `PainPoints.
 * The location of that issue. eg. File, Project, Module
 * How it is connected with other components
 
-## An examlpe of that file
-`
+# An examlpe of that file
+
+{{< highlight markdown "linenos=false,linenostart=1" >}}
+
 --- 
 title: EAV Structure
 date: 2020.12.15
-description: Entity Attribute Value Structure in database make my queries complex. So my work is slower and slower becaouse of it. Moreover I am not able to understand from db structure. I know that solution is elastic, but not in current implementation.
+description: Entity Attribute Value Structure in database make my queries complex. 
+So my work is slower and slower becaouse of it. 
+Moreover I am not able to understand from db structure. 
+I know that solution is elastic, but not in current implementation.
 
 date: 2020.12.15
 burn: 4h - to read current product state
@@ -67,9 +72,9 @@ description: A code for connected logic is in different places. So I had to sear
 date: 2020.11.12
 burn: 2h
 ---
+{{< / highlight >}}
 
-
-## Is it working?
+# Is it working?
 I will check it. It is my plan for starting new project. I will let you know about results.
 
 Tell me what is your approach!
