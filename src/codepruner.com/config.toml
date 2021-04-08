@@ -3,5 +3,3 @@ languageCode = "en-us"
 title = "CodePruner.com"
 theme = "ananke"
 
-[permalinks]
-  posts = "/:year/:month/:day/:title/"
