@@ -1,7 +1,7 @@
 ---
 title: "How to configure CI/CD for hugo in practice?"
-date: 2021-04-16T20:40:58+01:00
-draft: true
+date: 2021-04-16T04:40:58+01:00
+draft: false
 tags: ["hugo", "github actions", "devops"]
 ---
 
@@ -47,13 +47,33 @@ In next step we need to setup hugo and build the blog. It can look like that:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.82'
+          hugo-version: '0.82.0'
 
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify 
 ```
 
 ## Step three: deploy it using FTP
+To deploye the site using FTP you have to create an FTP account on your hosting provider. When you have it you can add deployment into your yml file:
+```      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }} 
+          user: ${{ secrets.FTP_USERNAME }} 
+          password: ${{ secrets.FTP_PASSWORD }} 
+          localDir: "src/codepruner.com/public"
+          remoteDir: "/public_html"
+          forceSsl: true
+```
 
+As you notice I didn't add credentials into yml file. It is becouse of security. We don't want to add any sensitive data into repository. They should be stored outside.
+
+In Github you have an opptions to add secrets and use it it pipelines.
+
+## Be happy
+Now the simple version of CI/CD pipeline is working for me. 
+When I add a post in markdown into repository it should be build and deployed. I will be tested it in the future.
+
+What is is way to delivery content?
 
 
