@@ -23,3 +23,13 @@ jobs:
 
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify 
+
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }} 
+          user: ${{ secrets.FTP_USERNAME }} 
+          password: ${{ secrets.FTP_PASSWORD }} 
+          localDir: "src/codepruner.com/public"
+          remoteDir: "/public_html"
+          forceSsl: true
