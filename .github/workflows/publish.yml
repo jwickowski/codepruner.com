@@ -22,7 +22,9 @@ jobs:
           hugo-version: '0.82.0'
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify 
+        run: |
+          set HUGO_ENV=production
+          hugo --source "src/codepruner.com/" --minify 
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
