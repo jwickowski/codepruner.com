@@ -9,7 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      HUGO_ENV: production
     steps:
       - uses: actions/checkout@v2
         with:
@@ -22,9 +23,7 @@ jobs:
           hugo-version: '0.82.0'
 
       - name: Build
-        run: |
-          set HUGO_ENV=production
-          hugo --source "src/codepruner.com/" --minify 
+        run: hugo --source "src/codepruner.com/" --minify --verbose  
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
