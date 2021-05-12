@@ -5,4 +5,6 @@ theme = "ananke"
 sectionPagesMenu = "main"
 
 disqusShortname = "codepruner"
-googleTagManager = "GTM-P3VB947"
+
+[params] 
+  googleTagManager = "GTM-P3VB947"
