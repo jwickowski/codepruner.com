@@ -6,23 +6,23 @@ tags: ["hugo", "blog", "GTM", ]
 ---
 
 # Why I want to add Google Tag Manager
-I want to do this becouse:
+I want to do this because:
 - New Google Analytics requires GTM
 - It allows me to connect Facebook Pixel in the future without any code changes
 - It gives me more options related to some events in the future
 
 ## Step 1 - Add a GTM parameter into config.toml
-It is required becouse it allows to to change the tag in the future without code changing.  You have to rember to add the new parameten in `params` section. It will look like this:
+It is required because it allows to to change the tag in the future without code changing.  You have to member to add the new parameter in `params` section. It will look like this:
 ```
 [params] 
   googleTagManager = "GTM-XXXXXX"
 ```
 
 ## Step 2 - Create partials for GTM
-You can find some tutorial in the internet that you can just add GTM scripts into layout page. It is a solution, but I don't like it becouse:
+You can find some tutorial in the internet that you can just add GTM scripts into layout page. It is a solution, but I don't like it because:
 - It makes code more complicated
-- Then theme update will be painfull
-- When you chenge theme you will have to add it again
+- Then theme update will be painful
+- When you change theme you will have to add it again
 - When google change GTM scripts then you will have to go there again
 
 So I suggest to create two files:
@@ -78,7 +78,7 @@ Now you have to analyze your layout and include:
 - `top-body-additions` at the **beginning of the body** section
     -using: `{{ partial "top-body-additions.html" . }}`
 
-In my current theme Anake I didn't have to enmbed head-additions, becouse it was allready added.
+In my current theme Anake I didn't have to embed head-additions, because it was already added.
 
 # Now configure your GTM 
 and have fun with collecting and analyzing data
