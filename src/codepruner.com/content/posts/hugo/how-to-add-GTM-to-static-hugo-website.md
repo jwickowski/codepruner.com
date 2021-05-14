@@ -73,9 +73,9 @@ Don't forget about the dot(`.`) at the end. If you don't do thais then context w
 
 ## Step 4 - Embed GTM partials
 Now you have to analyze your layout and include:
-- `head-additions` at the end of the head section
+- `head-additions` at the **end of the head** section
     -using: `{{ partial "head-additions.html" . }}`
-- `top-body-additions` at the beginning of the body section
+- `top-body-additions` at the **beginning of the body** section
     -using: `{{ partial "top-body-additions.html" . }}`
 
 In my current theme Anake I didn't have to enmbed head-additions, becouse it was allready added.
