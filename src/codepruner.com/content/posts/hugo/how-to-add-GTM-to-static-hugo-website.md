@@ -1,7 +1,7 @@
 ---
 title: "How to add Google Tag Manager to static hugo website?"
-date: 2021-05-12T6:40:58+01:00
-draft: true
+date: 2021-05-14T6:08:58+01:00
+draft: false
 tags: ["hugo", "blog", "GTM", ]
 ---
 
@@ -81,4 +81,4 @@ Now you have to analyze your layout and include:
 In my current theme Anake I didn't have to enmbed head-additions, becouse it was allready added.
 
 # Now configure your GTM 
-and have fun with analyzing data
+and have fun with collecting and analyzing data
