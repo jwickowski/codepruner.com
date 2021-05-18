@@ -44,7 +44,14 @@ Thanks to that:
 # But I read a book and something changed
 I am currently reading Domain-Driven Design by Eric Evans and he wrote about repositories and there is a different context of that. 
 
--- add context here
+The main difference is an understanding what Entity and Repository is and what are they responsibilities:
+- Entity
+  - It is not EntityFramework model that represents a row from database in objective world
+  - It is a single item that is unique in a system. It reflects a current state of something.
+- Repository
+  - It is not another layer on EntityFramework that returns database rows. 
+  - It is a somethings that will be able to save and recreate an Entity from a storage.
+
 
 Now it sits in my ming, but probably I will change my approach to repositories, but the real repositories. 
 
