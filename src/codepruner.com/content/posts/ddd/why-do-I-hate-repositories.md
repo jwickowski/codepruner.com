@@ -18,9 +18,35 @@ So how? In that projects repositories were used as additional layers above ORM (
 - In most cases it was useless, becouse it would be easier to use EntitiFramework directly.
 
 I knew it was bad, so I felt that repository are another buzz work as DAL, Manager, Tools and Utils. I wanted to throw then away.
+
 # How did I managed it?
+Becouse I saw that approach was bad I was thinking and thinking... and thinking, and trying... and I discovered how to solve the problem. I did some assumptions:
+- remove useless beings and layers
+- keep think simple
+- write code easy to test, mostly with TDD
+- keep code closer to business values than technical stuff
+
+So... I decided to not create repositories any more, but what instead? I prefare to have small readers/getters/providers instead of big repositories. Some examples:
+- DeliveryDetailsReader
+- UserAccountPasswordUpdater
+- AvailableProductListReader
+
+Thanks to that:
+- Every of that class was simple.
+- I can change methods of reading
+  - To so simple insert or updates I can use EntityFramework
+  - To read a gread about of data I can use Stored Procedure or raw SQL to have great performance
+  - To read some data for view I can read it for different source like Documents Database
+- It is very easy to mock that clases, becouse we know what they bechavior is
+- We can test then using integration test to in simple contex
 
 
+# But I read a book and something changed
+I am currently reading Domain-Driven Design by Eric Evans and he wrote about repositories and there is a different context of that. 
+
+-- add context here
+
+Now it sits in my ming, but probably I will change my approach to repositories, but the real repositories. 
 
 
 - I saw bad project
