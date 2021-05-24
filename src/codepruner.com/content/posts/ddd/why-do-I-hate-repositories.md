@@ -1,7 +1,7 @@
 ---
 title: "Why do I hate repositories?"
-date: 2021-05-18T21:16:58+01:00
-draft: true
+date: 2021-05-23T21:16:58+01:00
+draft: false
 tags: ["ddd", "repository"]
 ---
 
@@ -52,12 +52,10 @@ The main difference is an understanding what Entity and Repository is and what a
   - It is not another layer on EntityFramework that returns database rows. 
   - It is a somethings that will be able to save and recreate an Entity from a storage.
 
+# Doeas it change anything?
+Of course. 
+- Now I will be able to distinguish if there is a Buzz word Repository or it was created for certain purpose.
+- I will be thinking about that and maybe I will find a correct place where it could be used
+- Now it sits in my mind and, probably, I will change my approach to repositories, but the real repositories. 
 
-Now it sits in my ming, but probably I will change my approach to repositories, but the real repositories. 
-
-
-- I saw bad project
-- I saw they are using as another layer on EntityFramerowk
-- I prefare to have small readers/getters/providers instead of big repositories
-- But I read DDD Evans and I can see that Repositories in that context make sense.
-
+What about you? How do you think about repositories? Leave comment above.
