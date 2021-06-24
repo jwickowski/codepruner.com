@@ -8,3 +8,4 @@ disqusShortname = "codepruner"
 
 [params] 
   googleTagManager = "GTM-P3VB947"
+  recent_posts_number = 10
