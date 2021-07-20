@@ -1,5 +1,5 @@
 ---
-title: "How  to handle notImplictAny during migration fom js to ts without time wasting"
+title: "How  to handle notImplictAny during migration from js to ts without time wasting"
 date: 2021-07-18T10:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "noImplicitAny", "any", "fakeAny", "ongoing refactor"]
