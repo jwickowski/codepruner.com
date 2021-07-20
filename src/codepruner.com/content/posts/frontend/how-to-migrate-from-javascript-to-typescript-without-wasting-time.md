@@ -43,7 +43,7 @@ As you know I am a great fan of ongoing refactoring, so 3rd approach is natural 
    * Change file extension to `.ts`
    * Try to build the application. It probably fails.
    * Everywhere where are no types use `any`
-     * or I recommend to use `fakeAny`. You can read more about that in post [How to handle `noImplicitAny` during migration fom js to ts](how-to-handle-notImplictAny-during-migration-fom-js-to-ts.md)
+     * or I recommend to use `fakeAny`. You can read more about that in post [How to handle `noImplicitAny` during migration fom js to ts]({{< relref "./how-to-handle-notImplictAny-during-migration-from-js-to-ts.md">}})
 6. If you need to use some types from migrated file or when you need to pass some strongly types parameters. Then add or import concrete types and use them instead of `any` or `fakeAny`.
 
 # Continue migrating in next months
