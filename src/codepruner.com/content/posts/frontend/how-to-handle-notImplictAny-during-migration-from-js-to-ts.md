@@ -3,6 +3,9 @@ title: "How  to handle notImplictAny during migration from js to ts without time
 date: 2021-07-18T10:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "noImplicitAny", "any", "fakeAny", "ongoing refactor"]
+aliases: [
+    "/posts/frontend/how-to-handle-notimplictany-during-migration-fom-js-to-ts/"
+]
 ---
 
 When you are trying to migrate from JavaScript to TypeScript you will have an error `noImplicitAny` when you variable or parameter will not have assigned type. 
