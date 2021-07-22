@@ -7,7 +7,7 @@ tags: ["legacy", "clean code", "exception", "C#"]
 
 Some day I had to investigate a production issue based on logs. My luck that all exception's properties were logged, but there was a small vulnerability. Stack trace was missing. So my investigating was much longer than I expected.
 
-To how it to you, I have created a code sample. Take a look.
+To show it to you, I have created a code sample. Take a look.
 
 # Missing Stack Trace with `throw ex`
 Here is a code where is `throw ex`.
