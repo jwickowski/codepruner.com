@@ -14,13 +14,13 @@ I am going to start blogging in English, because it is a great opportunity to re
 # What is my plan?
 * Write in English
   * To improve my language skills
-  * To write worldkwide
+  * To write worldwide
 * Write often
   * Posts don't have to be perfect
   * Write shorter posts, but more regular
 * Write about daily basis problems 
   * To help you solving similar problems faster
-  * To help miself solving similar problems faster
+  * To help myself solving similar problems faster
 * Show problems and solve them
   * There will be code snippets
   * There will be ideas
