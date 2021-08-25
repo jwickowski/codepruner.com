@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodePruner.Examples.TypeScriptCodeGenerators
 {
-    public class TypeScriptModelGenerator
+    public class TypeScriptContentGenerator
     {
         public string GenerateModel(string className, IEnumerable<BackendField> backendFields)
         {
