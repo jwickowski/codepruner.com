@@ -5,16 +5,23 @@ using System.Linq;
 
 namespace CodePruner.Examples.TypeScriptCodeGenerators.UnitTests
 {
-    public class BackendFieldGetterTests
+    public class TypeScriptModelGeneratorTests
     {
         [Fact]
         public void it_should_return_all_fields()
         {
-            var backendFieldGetter = new BackendFieldGetter();
-            var result = backendFieldGetter.GetBackendField(typeof(SampleClass)).ToList();
+            var typeScriptModelGenerator = new TypeScriptModelGenerator();
+            var result = typeScriptModelGenerator.GenerateTypeScriptModel(typeof(SampleClass));
 
-            result.Count.ShouldBe(3);
-            result.Select(x => x.Name).ShouldBe(new[] { nameof(SampleClass.AnInt), nameof(SampleClass.AFloat), nameof(SampleClass.AString) }, ignoreOrder: true);
+            var expectedClass =
+@"export type SampleClass {
+  AnInt: number;
+  AString: string;
+  AFloat: number;
+}
+";
+
+            result.ShouldBe(expectedClass);
         }
     }
 

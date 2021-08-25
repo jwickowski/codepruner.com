@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace CodePruner.Examples.TypeScriptCodeGenerators
 {
-    public class BackendFieldGetter
+    internal class BackendFieldGetter
     {
-        public IEnumerable<BackendField> GetBackendField(Type sourceType)
+        internal IEnumerable<BackendField> GetBackendField(Type sourceType)
         {
             var properties = sourceType.GetProperties();
             foreach (var property in properties)

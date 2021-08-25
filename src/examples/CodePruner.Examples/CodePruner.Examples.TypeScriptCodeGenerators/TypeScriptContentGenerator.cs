@@ -5,20 +5,19 @@ using System.Text;
 
 namespace CodePruner.Examples.TypeScriptCodeGenerators
 {
-    public class TypeScriptContentGenerator
+    internal class TypeScriptContentGenerator
     {
-        public string GenerateModel(string className, IEnumerable<BackendField> backendFields)
+        internal string GenerateModel(string className, IEnumerable<BackendField> backendFields)
         {
             var sb = new StringBuilder();
-            sb.Append($"export type {className} {{");
+            sb.AppendLine($"export type {className} {{");
             foreach (var backendField in backendFields)
             {
                 var frontendType = GetFrontendType(backendField);
-                sb.Append($"  {backendField.Name}: {frontendType}");
+                sb.AppendLine($"  {backendField.Name}: {frontendType};");
             }
 
-            sb.Append($"  ");
-            sb.Append("}");
+            sb.AppendLine("}");
 
             return sb.ToString();
         }
@@ -28,6 +27,7 @@ namespace CodePruner.Examples.TypeScriptCodeGenerators
             switch (backendField.Type)
             {
                 case "Int32":
+                case "Single":
                     return "number";
                 case "String":
                     return "string";
