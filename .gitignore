@@ -1,1 +1,3 @@
 src/codepruner.com/public/
+**/obj/**
+**/.vs/**
