@@ -6,7 +6,9 @@ tags: ["javascript", "typescript", "C#", "clean code", "code generator"]
 ---
 
 I don't understand why developers doesn't automate their job. They can save a huge amount of time with very low effort. How?  For example, by generating models from backend to frontend. We will talk about it today.
-
+```
+{{% code file="BackendField.cs" %}}
+```
 # How the generation can look like?
 The main idea is to keep backend and frontend models synchronized automatically or almost automatically. In most cases frontend ask backend about data, so the main source of truth should be at backend site. I see it in that way. When model is changed on backend then frontend models should be updated automatically or by executing simple command, like running a console app.
 

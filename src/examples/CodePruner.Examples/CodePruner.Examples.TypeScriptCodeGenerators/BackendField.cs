@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodePruner.Examples.TypeScriptCodeGenerators
+﻿namespace CodePruner.Examples.TypeScriptCodeGenerators
 {
     internal struct  BackendField
     {
