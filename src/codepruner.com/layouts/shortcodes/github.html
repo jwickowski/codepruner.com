@@ -1,0 +1,4 @@
+  
+{{ $dataJ := getJSON "https://api.github.com/repos/"  $.Site.Params.github_repo_name  "/contents/"  (.Get "file")  }}
+{{ $con := base64Decode $dataJ.content }}
+{{ $con}}
