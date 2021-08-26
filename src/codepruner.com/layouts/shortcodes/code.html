@@ -1,4 +1,0 @@
-{{ $filename := (path.Join $.Page.File.Dir (.Get "file")) }} 
-{{ $file := $filename | readFile }}
-{{ $file | markdownify }}
-
