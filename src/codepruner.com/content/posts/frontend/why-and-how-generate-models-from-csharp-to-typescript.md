@@ -50,55 +50,20 @@ So let's get started
 ## Getting metadata
 
 At the beginning we need a model to keep Fields in simple flat format.
-```
-{{<github file="src\examples\CodePruner.Examples\CodePruner.Examples.TypeScriptCodeGenerators\BackendField.cs" >}}
-```
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendField.cs" >}}
+{{< / highlight >}} 
 
 When we have model we can get it from metadata. We will use reflection for this:
-```
-public class BackendFieldGetter {
-   public IEnumerable<BackendField> GetBackendField(type sourceType){
-        var properties = sourceType.GetProperties();
-        foreach(var property in properties)
-        {
-           var propertyType = property.PropertyType.Name;
-           var propertyName = propertyInfo.Name;
-           var backendField = new BackendField{
-              Name = propertyName,
-              Type = propertyType
-           }
-            yield return backendField;
-        }
-   }
-}
-```
+
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendFieldGetter.cs" >}}
+{{< / highlight >}} 
 
 Ok. It is done. Not we need to consume that data and create file content
 
-```
-public class TypeScriptModelGenerator {
-   public string GenerateModel(string className, IEnumerable<BackendField> backendFields) {
-      var sb = new StringBuilder();
-      sb.Append($"export type {className} {{");
-      foreach(var backendField in backendFields){
-      sb.Append($"  {backendField.Name}: {backendField.Type}")           
-      }
-      sb.Append($"  ")
-      sb.Append("}");
-      return sb.ToString();
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
+{{< / highlight >}} 
 
-   } 
-
-   private string GetFrontendType(BackendField backendField){
-      switch(backendField.Type){
-         case "Int32":
-            return "number";
-             case "String":
-            return "string"
-      }
-
-      return backendField.Type
-   }
-}
-```
 
