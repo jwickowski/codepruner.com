@@ -18,6 +18,7 @@ namespace CodePruner.Examples.TypeScriptCodeGenerators.UnitTests
   AnInt: number;
   AString: string;
   AFloat: number;
+  ADateTime: Date;
 }
 ";
 
@@ -30,5 +31,6 @@ namespace CodePruner.Examples.TypeScriptCodeGenerators.UnitTests
         public int AnInt { get; set; }
         public string AString{ get; set; }
         public float AFloat{ get; set; }
+        public DateTime ADateTime { get; set; }
     }
 }

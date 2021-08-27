@@ -31,6 +31,8 @@ namespace CodePruner.Examples.TypeScriptCodeGenerators
                     return "number";
                 case "String":
                     return "string";
+                case "DateTime":
+                    return "Date";
             }
 
             return backendField.Type;
