@@ -86,5 +86,12 @@ And finally we can write a Runner, I mean a console app that will combine it tog
 {{< / highlight >}} 
 
 
+Of course there are multiple things to do with that generator like:
+- Generating enums
+- Importing different types
+- Resolving paths
+- Generating arrays
 
-
+But there is an idea, but if you think it is useful you have 2 options to say me this:
+1. Write a comment below. We can discuss about.
+2. Create a PullRequest to that repo to improve that place or that code. Maybe we create a library for this?
