@@ -66,4 +66,25 @@ Ok. It is done. Not we need to consume that data and create file content
 {{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
 {{< / highlight >}} 
 
+And join it as a one class to simplify the usage:
+
+
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptContentGenerator.cs" >}}
+{{< / highlight >}} 
+
+OK. Before we start it we should write a unit test to be sure that the code is working properly"
+
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.UnitTests/TypeScriptModelGeneratorTests.cs" >}}
+{{< / highlight >}} 
+
+And finally we can write a Runner, I mean a console app that will combine it together and we will be able to regenerate models as often as we wish:
+
+{{< highlight  csharp "linenos=false,linenostart=1" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.Runner/Program.cs" >}}
+{{< / highlight >}} 
+
+
+
 
