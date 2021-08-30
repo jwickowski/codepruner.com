@@ -8,7 +8,7 @@ namespace CodePruner.Examples.TypeScriptCodeGenerators.UnitTests
     public class TypeScriptModelGeneratorTests
     {
         [Fact]
-        public void it_should_return_all_fields()
+        public void it_should_generate_SampleClass_in_ts()
         {
             var typeScriptModelGenerator = new TypeScriptModelGenerator();
             var result = typeScriptModelGenerator.GenerateTypeScriptModel(typeof(SampleClass));
