@@ -23,5 +23,12 @@ but all of that solutions were bad and not good. So I had an idea to get the cod
 
 # My implementation of github shortcode for Hugo
 
+The source code looks like this:
+{{< highlight  html "linenos=false,linenostart=1" >}}
+{{<github file="src/codepruner.com/layouts/shortcodes/github.html" >}}
+{{< / highlight >}} 
+
+
+
 
 
