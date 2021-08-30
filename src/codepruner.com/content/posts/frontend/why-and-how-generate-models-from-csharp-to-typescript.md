@@ -8,12 +8,12 @@ tags: ["javascript", "typescript", "C#", "clean code", "code generator"]
 I don't understand why developers doesn't automate their job. They can save a huge amount of time with very low effort. How?  For example, by generating models from backend to frontend. We will talk about it today.
 
 # How the generation can look like?
-The main idea is to keep backend and frontend models synchronized automatically or almost automatically. In most cases frontend ask backend about data, so the main source of truth should be at backend site. I see it in that way. When model is changed on backend then frontend models should be updated automatically or by executing simple command, like running a console app.
+The main idea is to keep backend and frontend models synchronized automatically. In most cases frontend asks backend about data, so the main source of truth should be the backend site. I see it in that way. When model is changed on backend then frontend models should be updated automatically or by executing simple command, like running a console app.
 
 # Why generating is good
 Before we go to details we should talk why it is soo good:
 - Focus on important things
-   - not on coping names from one place to another
+   - Not on coping names from one place to another
    - We are developers. We should solve problems, not copy labels. Especially when we can avoid stupid work easily
 - Less work in the future
    - To not do the same work twice, so you will save your time
@@ -34,7 +34,7 @@ If they are some many benefits, why this approach is so rare?
 - People believe that front/and and backend are independent (then I suggest to use BFF (Backend For Frontend) pattern)
 
 # How to do this
-- Write it by your own, but it will be discovering a new circle
+- Write it by your own
 - Use complete tool
 - Hybrid, write your code, but with usage of some libraries
 
@@ -49,7 +49,7 @@ I will split into three fragments:
 So let's get started
 ## Getting metadata
 
-At the beginning we need a model to keep Fields in simple flat format.
+At the beginning we need a model to keep fields in a simple flat format.
 {{< highlight  csharp "linenos=false,linenostart=1" >}}
 {{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendField.cs" >}}
 {{< / highlight >}} 
@@ -61,16 +61,13 @@ When we have model we can get it from metadata. We will use reflection for this:
 {{< / highlight >}} 
 
 Ok. It is done. Not we need to consume that data and create file content
-
 {{< highlight  csharp "linenos=false,linenostart=1" >}}
-{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptContentGenerator.cs" >}}
 {{< / highlight >}} 
 
 And join it as a one class to simplify the usage:
-
-
 {{< highlight  csharp "linenos=false,linenostart=1" >}}
-{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptContentGenerator.cs" >}}
+{{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
 {{< / highlight >}} 
 
 OK. Before we start it we should write a unit test to be sure that the code is working properly"
@@ -79,19 +76,21 @@ OK. Before we start it we should write a unit test to be sure that the code is w
 {{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.UnitTests/TypeScriptModelGeneratorTests.cs" >}}
 {{< / highlight >}} 
 
-And finally we can write a Runner, I mean a console app that will combine it together and we will be able to regenerate models as often as we wish:
+And finally we can write a Runner, I mean a console app that combines all it together and we will be able to regenerate models as often as we wish:
 
 {{< highlight  csharp "linenos=false,linenostart=1" >}}
 {{<github file="src/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.Runner/Program.cs" >}}
 {{< / highlight >}} 
 
 
-Of course there are multiple things to do with that generator like:
+Of course it is not a mature solution. There are multiple things to improve like:
 - Generating enums
 - Importing different types
 - Resolving paths
 - Generating arrays
 
-But there is an idea, but if you think it is useful you have 2 options to say me this:
-1. Write a comment below. We can discuss about.
-2. Create a PullRequest to that repo to improve that place or that code. Maybe we create a library for this?
+But current version is saving a huge amount of my teams' time.
+
+# Is it good? 
+1. Leave a comment below. We can discuss about.
+2. Create a PullRequest to that [repo](https://github.com/jwickowski/codepruner.com) to improve that place or that code. 
