@@ -1,7 +1,7 @@
 ---
 title: "why-and-how-generate-models-from-csharp-to-typescript"
-date: 2021-08-10T10:40:58+01:00
-draft: true
+date: 2021-08-31T05:40:58+01:00
+draft: false
 tags: ["javascript", "typescript", "C#", "clean code", "code generator"]
 ---
 
