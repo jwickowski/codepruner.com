@@ -54,64 +54,35 @@ Let's start with the name: `Code Pruner`.
 
 # The implementation of the concept (tactic) 
 So when we have the main idea of the blog we can go to ordinary things. I am going to write articles in categories:
-- Code Quality
-  - Craftmenship
-  - How to automate some part of our work to have more time for more important tasks
-  - CleanCode
-  - Designs Patterns
-  - Refactoring
-    - It is required to have good velocity in long term.
-    - I will write about some tips and tricks in refactoring
-    - I will describe how to refactor even if there is not time for this
-    - And how to do it safety
-- CI/CD  
-  - How and why configure CI/CD process to allow to wo work more effectively
-  - But we will not talk about all of DevOps stuff, we will look at CI/CD from team and developer perspective
-- Technologies
-  - It is nice to write and read about idea, but we need a real examples to use it
+- `Craftsmanship`
+  - In that category we will talk about: Quality, CleanCode, Designs Patterns, Developer Workshop, Architecture
+  - and how to improve our work to be able to focus on the most important areas
+  - `CI/CD`
+    - At the beginning it will be subcategory in Craftsmanship, but maybe it will change in the future
+    - How and why configure CI/CD process to allow to wo work more effectively
+    - But we will not talk about all of DevOps stuff, we will look at CI/CD from team and developer perspective
+- `Refactoring`
+  - It is required to have good velocity in long term.
+  - I will write about some tips and tricks in refactoring
+  - How to refactor even if everyone things there is not time for this
+  - How to do it safety
+  - How to do in continuously
+- `Technologies`
+  - It is nice to write and read about idea, but we need to develop it
+  - Se we need some information about concrete technologies, languages, frameworks, etc.
   - It will be split for frontend and backend, but maybe something different in the future
     - Maybe it would be better to split it by technologies. We will see.
-    - And I creating a blog with GoHugo. So there will be place for articles about Hugo too.
-- Teamwork/cooperation/soft
+    - And I creating a blog with Hugo. So there will be place for articles about Hugo too.
+- `Teamwork`
   - Developer work is not only about creating code. We can say that it is only a small part of it.
   - We need to talk with people. Yes it is true, with multiple types of people: other developers, managers, users, PMs, business people
   - Sometimes we need to write some documents to improve cooperations
-- Architecture
-  - It is something above development
-  - How to plan the work from higher perspective
-  - Something about DDD
-- Blog/Ideas
+  - We will talk about some tricks and approaches how to improve team work to improve velocity
+- `Ideas`
   - I will write about some ideas that I have in my mind and they will be related with my activity, but not very technical. Like that post.
 
+# Summarize
+Ok. So here it the plan.
 
-
-
-
-
-
-
-  
-
-# What is my plan?
-* Write in English
-  * To improve my language skills
-  * To write worldwide
-* Write often
-  * Posts don't have to be perfect
-  * Write shorter posts, but more regular
-* Write about daily basis problems 
-  * To help you solving similar problems faster
-  * To help myself solving similar problems faster
-* Show problems and solve them
-  * There will be code snippets
-  * There will be ideas
-  * There will be some good practice of my adventures :)
-* Write using static page generated
-  * To simplify writing process
-  * To have safe backup
-  * To be able to recreate blog automatically
-
-# How can you help me?
-* If you find a mistake, create a PR to repo with posts [github.com/jwickowski/codepruner.com](https://github.com/jwickowski/codepruner.com).
-* If you want to talk or discuss, write an email to me or leave a comment.
-* If you think the content is valueable, share it.
+Would you like to read about something specific?
+Let me know and leave a comment :)
