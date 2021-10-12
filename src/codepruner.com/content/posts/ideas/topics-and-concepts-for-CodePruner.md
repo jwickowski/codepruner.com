@@ -1,7 +1,7 @@
 ---
 title: "Topics and concepts for CodePruner"
 date: 2021-11-10T21:16:58+01:00
-draft: true
+draft: false
 tags: ["ideas", "blog", "codepruner"]
 ---
 
