@@ -1,27 +1,26 @@
 ---
 title: "Topics and concepts for CodePruner"
-date: 2021-11-10T21:16:58+01:00
+date: 2021-10-11T21:16:58+01:00
 draft: false
 tags: ["ideas", "blog", "codepruner"]
 ---
 
-# Something more
 We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "./welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 
 
 # Types of blogs
 We can split blogs into two categories:
 1. Blogs about nothing and about everything in the same time.
-  - Just to write, just to share some ideas. 
-  - Without any structure or longer plans.
-  - Without the main concept about content category
+    - Just to write, just to share some ideas. 
+    - Without any structure or longer plans.
+    - Without the main concept about content category
 2. Blogs with a clear view and for specific niche.
-  - To write articles in some specified topics
-  - To be a place with professional knowledge in specified areas
-  - With some vision to help people with the same problems
+    - To write articles in some specified topics
+    - To be a place with professional knowledge in specified areas
+    - With some vision to help people with the same problems
 
 All blogs I have created in the past they were in the 1st group(maybe expect one, but the topic was not good for me), but now I think I have a clear vision about the purpose of that place
 
-# The main concept [strategic]
+# The main concept (strategic)
 Let's start with the name: `Code Pruner`. 
 - `Code`:
   - Of course it is technical so we will talk about code and some technical stuff
