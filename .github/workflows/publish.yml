@@ -21,6 +21,20 @@ jobs:
         with:
           hugo-version: '0.85.0'
 
+      - name: Update baseUML in config.toml
+        uses: ciiiii/toml-editor@1.0.0
+        with:
+          file: "src/codepruner.com/config.toml"
+          key: "baseURL"
+          value: "https://CodePruner.com/"
+        
+      - name: Update GTM in config.toml
+        uses: ciiiii/toml-editor@1.0.0
+        with:
+          file: "src/codepruner.com/config.toml"
+          key: "params.googleTagManager"
+          value: "GTM-P3VB947"
+
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify --verbose  
 
