@@ -9,7 +9,11 @@ categories: ["Craftsmanship"]
 ADR is Architecture Decision Record, but if we leave it like that it will not tell you anything. So we will deconstruct the topic into smaller pieces.  
 
 
-- Architecture Decision
+# Architecture Decision
+It is the most important. If we need to talk about ADR we need to understand first two letters. 
+
+
+
 - Why we need ADR
 - What it should contain
 - What format it should be
