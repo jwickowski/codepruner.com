@@ -20,7 +20,7 @@ We can split blogs into two categories:
 
 All blogs I have created in the past they were in the 1st group(maybe expect one, but the topic was not good for me), but now I think I have a clear vision about the purpose of that place
 
-# The main concept (strategic)
+# The main concept
 Let's start with the name: `Code Pruner`. 
 - `Code`:
   - Of course it is technical so we will talk about code and some technical stuff
@@ -51,12 +51,12 @@ Let's start with the name: `Code Pruner`.
     - We need to cooperate with other people
   - In shorten: `How to develop and deliver faster with better quality`
 
-# The implementation of the concept (tactic) 
+# The implementation 
 So when we have the main idea of the blog we can go to ordinary things. I am going to write articles in categories:
 - `Craftsmanship`
   - In that category we will talk about: Quality, CleanCode, Designs Patterns, Developer Workshop, Architecture
   - and how to improve our work to be able to focus on the most important areas
-  - `CI/CD`
+- `CI/CD`
     - At the beginning it will be subcategory in Craftsmanship, but maybe it will change in the future
     - How and why configure CI/CD process to allow to wo work more effectively
     - But we will not talk about all of DevOps stuff, we will look at CI/CD from team and developer perspective
