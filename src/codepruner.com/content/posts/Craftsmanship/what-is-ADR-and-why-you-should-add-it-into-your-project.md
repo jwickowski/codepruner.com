@@ -18,8 +18,8 @@ Ok... we have it, but here are some examples:
 - Create the application for a cloud. Try by agnostic if you can, but currently, we will use AWS
 - Let's use Feature Toggles
 
-The above decisions are simple, but usually, we need to decide to be done in the middle of the work. For example:
-- New frontend files should be created in TypeScript and if you require touching a JavaScript file, then migrate it to TS and add typings
+The above decisions are simple, but usually, we need to decide something in the middle of the project. For example:
+- New frontend files should be created in TypeScript and if touch a JavaScript file, then migrate it to TS and add typings
   - The decision can be made when a current app is in JS and when we want to start migrating to TS, but without stopping current development
   - The decision can be connected with a different one about `ongoing refactoring`
 - Stop using `MomentJs`, start using `date-fns`
@@ -30,18 +30,20 @@ But some decisions can be not so technical. They can be about the way of working
 - Every merge to master should be reviewed on CodeReview
 
 ## Record
-It is a place where we store documents. In our case, it is a place where we will store Architectural Decisions.
+It is a place for one document, ADR in our case.
+
+But we should have also ADL, `Architecture Decision Log` it a place where we store ADR documents.
 
 # Why we require  ADR
 When we know what is ADR, we should be aware why we need it.
 - It forces analyzing multiple options and alternatives. It is good, because it allows us to decide better.
 - We have to consider pros and cons of that decision. There is no decision with pros only. It is good to know what can go wrong with it.
-- It initiates constructive conversations and interrupts worthless discussions. When we create a certain ADR, then a lot of discussion needs to be done to make every team member happy, but after it, everything is known. Then we stop wasting time on discussing between spaces and tabs.
+- It initiates constructive conversations and interrupts worthless discussions. When we create a certain ADR, then a lot of discussion are required to be done to make every team member happy. But after it, everything is known and we stop wasting time on discussing about spaces and tabs.
 - It allows future developers to understand what decision was made, what was the context. So they will have better understanding of the code, and they will know limitation from the past.
 - It allows introducing new developers faster, because a lot of knowledge is in ADRs. So they will be able to understand architecture easier
-- It allows going in straight destination, because a lot of topics will be shared there
+- It allows going in straight destination, because a lot of topics and ideas are shared there
 
-# What it should contain
+# What should it contain
 There are a lot of items that should be in one ADR. Some of them are mandatory, some of them are optional:
 - Title
   - It's obvious
@@ -58,7 +60,7 @@ There are a lot of items that should be in one ADR. Some of them are mandatory, 
 - Decision
   - The most important part. Write what is the decision. 
 
-# What format it should be
+# ADR format
 They are different approaches what is the best format of it, but I would suggest you:
 
 - Don't create your own standard. Use a standard one, and keep it simple
@@ -73,6 +75,8 @@ They are different approaches what is the best format of it, but I would suggest
   - It is easy to read
   - It is easy to generate a webpage based to publish it 
 
-# Do you have ADR in your project?
-I am sure that in every project you were, a decision like that was done. By someone or by a team, but the question is if they were written and why we should do this.... and it is a path to the next point...
+# At the end
+I am sure that in every project you are, a decision like that muse be done.Make sure that it will be written as ADR. It doesn't cost a lot, but saves a great amount of time.
+
+What do you think about ADR? Leave a comment below.
 
