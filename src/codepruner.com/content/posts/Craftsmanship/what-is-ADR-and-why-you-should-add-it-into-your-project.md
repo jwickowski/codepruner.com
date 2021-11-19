@@ -19,7 +19,7 @@ Ok... we have it, but here are some examples:
 - Let's use Feature Toggles
 
 The above decisions are simple, but usually, we need to decide something in the middle of the project. For example:
-- New frontend files should be created in TypeScript and if touch a JavaScript file, then migrate it to TS and add typings
+- New frontend files should be created in TypeScript and if you touch a JavaScript file, then migrate it to TS and add typings
   - The decision can be made when a current app is in JS and when we want to start migrating to TS, but without stopping current development
   - The decision can be connected with a different one about `ongoing refactoring`
 - Stop using `MomentJs`, start using `date-fns`
@@ -52,7 +52,7 @@ There are a lot of items that should be in one ADR. Some of them are mandatory, 
 - Context
   - A description of current situation. Every decision has a context, so it is a must. Allow people in the future to understand your current situation.
 - Status
-  - Every decision has a status. It can be Accepted, Rejected, Canceled or in a Draft. 
+  - Every decision has a status. It can be Accepted, Rejected, Canceled or a Draft. 
 - Alternatives
   - To show people that you have considered alternatives and describe what they weren't chosen
 - Pros and cons
@@ -73,7 +73,7 @@ They are different approaches what is the best format of it, but I would suggest
 - Use Markdown
   - It is easy to write
   - It is easy to read
-  - It is easy to generate a webpage based to publish it 
+  - It is easy to generate a webpage based
 
 # At the end
 I am sure that in every project you are, a decision like that muse be done.Make sure that it will be written as ADR. It doesn't cost a lot, but saves a great amount of time.
