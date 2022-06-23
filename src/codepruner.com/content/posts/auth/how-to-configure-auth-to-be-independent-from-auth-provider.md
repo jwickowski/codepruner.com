@@ -1,23 +1,34 @@
 ---
 title: "How to configure Auth to be independent from auth provider"
-date: 2022-02-28T11:40:58+01:00
-draft: true
-tags: ["auth", ".net", "jwt", "C#"]
+date: 2022-06-22T11:40:58+01:00
+draft: false
+tags: ["auth", "jwt","backend"]
 ---
 
-Have you ever implement authentication or authorization? As developer we do it very often, because it a task that have to be done only once in a project. I have that pleasure to do it in current project. 
+Have you ever implement authentication or authorization for a project you worked in? as developer, I can say,  we don't do it very often, because it needs to be done only once in a project. So there is a high probability that most of developers never implemented it. I am so lucky, I have that pleasure to do it in current project. 
 
+# Get the drivers
+At the beginning I had to decide what approach will be the best for our project. We need to take into account multiple drivers. Some the most important are:
+- Client's policy/requirements
+  - Usually it is the most important criteria. If client wants to use domain Account to login, we have to use it. 
+- Application type 
+  - For example we cannot use cookies when we don't use browser.
+- Will the application be split to multiple services?
+- How to protect the project if client change its mind in the future?
 
-# Multiple auth options
-- self implementing with login and password
-- using a standard external provider like google or office365
-- use a client specific approach, like Windows Authentication for example
+## Find the best auth option for the 
+When you know what you need it is time to decide what approach will be the best for the project. Maybe you are thinking what solution will be the best and how many options you have. To be honest, not too much. We can devide it into 2 groups:
 
-All of these methods can work, but all of them are very specific and using them in the application increase our PRZYWIĄZANIE to specific provider.
+- self implementing auth
+  - but, I don't recommend it, if you really don't have to.
+- using an external provider
+  - the standard one like google or office365
+  - use a client specific approach
 
+It doesn't matter what you choose, because the project will depend on an external provider or your implementation of it. You should add an anti-corruption layer on it to be sure that your project will be protected against the change of auth contract. 
 
 # One to rule them all
-Even if we choose one of above providers we still have a chance to be independent from specific impelmentation. You can use Json Web Token, known also as JWT.
+To have a standard way of auth you can use Json Web Token, known as JWT. 
 
 What is it? On [JWT official site](https://jwt.io/) you can read 'JSON Web Tokens are an open, industry standard method for representing claims securely between two parties.' 
 
@@ -25,10 +36,13 @@ In our context it is a standard and safe way to share information about logged u
 
 # How it can work
 Let's assume you have three parts in your application:
-- Frontend - It can be browser application in React, Angular, Vue or in pure JS. 
-- Api - The backend. Frontend sends requests to API.
-- AuthApi - An API to generate JWT
+- `Frontend` - It can be browser application.
+- `Api` - The backend. `Frontend` sends requests to API.
+- `AuthApi` - An API to generate JWT.
 
+How the flow of authentication can looks like?
+
+## Auth flow - happy path 
 It will work like that:
 1. `Frontend` do a request to `AuthApi` to generate JWT Token
 2. `AuthApi` authenticate the user with a specific provider and returns JWT Token
@@ -40,15 +54,25 @@ It will work like that:
 
 It doesn't look very complicated, does it?
 
-# Then you have the imdependency
-When you use authentication based on JWT you are indepemndet from auth provider. 
-If you wish you can change the provider and you just need to meed the JWT interface and its content. 
+## Auth flow - not, logged in
+But there is a possibility that user will not, be login:
+1. `Frontend` do a request to `AuthApi` to generate JWT Token
+2. `AuthApi` returns an error that client cannot be logged
+3. `Frontend` 
+  - Can try again
+  - Or can redirect user to 401 page
 
-In that approach JWT is your own abstract any-corrrption layer. 
+## auth flow - token expired
+Let assume user stored a token and the token is expired. How will the flow look like:
+1. `Frontend` has saved token 
+2. `Frontend` do a request to `Api`
+3. `Api` return error that token is expired
+4. `Frontend` can do a request to `AuthApi` to get new token
+5. When `AuthApi` returns new token
+6. Then `Frontend` can retry request to `Api` again
 
-# Next parts
-I am sure there will be next parts about JWT and topics around auth.
+# You have independence
+That solution is great, because you have only one point in the application that depends on auth provider. Rest of the application is save. If you wish you can change the provider and you just need to meet the JWT interface and its content. 
 
-I am happy you are here, at the end of the article. 
-
+# A little promise to you
 Can you tell me what is your approach to auth in your projects?
