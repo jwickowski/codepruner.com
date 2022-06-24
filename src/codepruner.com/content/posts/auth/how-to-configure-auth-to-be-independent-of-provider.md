@@ -1,11 +1,11 @@
 ---
-title: "How to configure Auth to be independent from auth provider"
+title: "How to configure Auth to be independent of provider"
 date: 2022-06-22T11:40:58+01:00
 draft: false
 tags: ["auth", "jwt","backend"]
 ---
 
-Have you ever implement authentication or authorization for a project you worked in? as developer, I can say,  we don't do it very often, because it needs to be done only once in a project. So there is a high probability that most of developers never implemented it. I am so lucky, I have that pleasure to do it in current project. 
+Have you ever implement authentication or authorization for a project you worked on? I can say,  we don't do it very often, because it is needed to be done only once in a project. There is a high probability you have never implemented it. It was true for me also, but I am so lucky, I had that pleasure to do it. 
 
 # Get the drivers
 At the beginning I had to decide what approach will be the best for our project. We need to take into account multiple drivers. Some the most important are:
@@ -16,16 +16,16 @@ At the beginning I had to decide what approach will be the best for our project.
 - Will the application be split to multiple services?
 - How to protect the project if client change its mind in the future?
 
-## Find the best auth option for the 
-When you know what you need it is time to decide what approach will be the best for the project. Maybe you are thinking what solution will be the best and how many options you have. To be honest, not too much. We can devide it into 2 groups:
+## Find the best option 
+When you know, what you need. It is time to decide what approach will be the best for the project. Maybe you are thinking what solution is the best and how many options you have. To be honest, not too much. We can divide it into two groups:
 
-- self implementing auth
+- Self implementing
   - but, I don't recommend it, if you really don't have to.
-- using an external provider
+- External provider
   - the standard one like google or office365
   - use a client specific approach
 
-It doesn't matter what you choose, because the project will depend on an external provider or your implementation of it. You should add an anti-corruption layer on it to be sure that your project will be protected against the change of auth contract. 
+It doesn't matter what you choose, because the project will depend on an external provider or your implementation of it. You should consider adding an anti-corruption layer on it, to be sure  your project will be protected against the change of auth contract. 
 
 # One to rule them all
 To have a standard way of auth you can use Json Web Token, known as JWT. 
@@ -34,7 +34,7 @@ What is it? On [JWT official site](https://jwt.io/) you can read 'JSON Web Token
 
 In our context it is a standard and safe way to share information about logged user and we will use it like that.
 
-# How it can work
+# How it works
 Let's assume you have three parts in your application:
 - `Frontend` - It can be browser application.
 - `Api` - The backend. `Frontend` sends requests to API.
@@ -43,32 +43,34 @@ Let's assume you have three parts in your application:
 How the flow of authentication can looks like?
 
 ## Auth flow - happy path 
-It will work like that:
-1. `Frontend` do a request to `AuthApi` to generate JWT Token
-2. `AuthApi` authenticate the user with a specific provider and returns JWT Token
+
+1. `Frontend` do a request to `AuthApi` to generate `JWT Token`
+2. `AuthApi` authenticate the user with a specific provider and returns `Token`
 3. `Frontend` saves token to use it later
-4. When `Frontend` do a request to `Api` then it adds a token to the request
-5. `Api` verify token signature, expiry date and more is wants. 
+4. When `Frontend` do a request to `Api` then it adds a `Token` to every request
+5. `Api` verify token signature, expiry date and more properties if needed. 
   - If token passes the validation then request is handled
   - If token is invalid then `Api` returns an error
 
 It doesn't look very complicated, does it?
 
-## Auth flow - not, logged in
-But there is a possibility that user will not, be login:
-1. `Frontend` do a request to `AuthApi` to generate JWT Token
+## Auth flow - not logged in
+But there is a possibility that user won't be verified:
+
+1. `Frontend` do a request to `AuthApi` to generate `JWT Token`
 2. `AuthApi` returns an error that client cannot be logged
 3. `Frontend` 
   - Can try again
-  - Or can redirect user to 401 page
+  - Can redirect user to 401 page
 
-## auth flow - token expired
-Let assume user stored a token and the token is expired. How will the flow look like:
-1. `Frontend` has saved token 
+## Auth flow - token expired
+Let assume user stored a `Token` and it expires. How will the flow look like:
+
+1. `Frontend` has saved `Token` 
 2. `Frontend` do a request to `Api`
 3. `Api` return error that token is expired
-4. `Frontend` can do a request to `AuthApi` to get new token
-5. When `AuthApi` returns new token
+4. `Frontend` can do a request to `AuthApi` to get new `Token`
+5. When `AuthApi` returns new `Token`
 6. Then `Frontend` can retry request to `Api` again
 
 # You have independence
@@ -76,3 +78,5 @@ That solution is great, because you have only one point in the application that 
 
 # A little promise to you
 Can you tell me what is your approach to auth in your projects?
+
+Would you like to see it in examples? Let me know below :)
