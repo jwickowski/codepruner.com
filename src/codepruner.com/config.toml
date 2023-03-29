@@ -6,6 +6,11 @@ sectionPagesMenu = "main"
 
 disqusShortname = "codepruner"
 
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+  excludeFiles = [ "**/bin", "**/obj", "**/*.csproj", "**/*.sln" ]
+
 [params] 
   googleTagManager = "GTM-P3VB947"
   recent_posts_number = 10
