@@ -55,8 +55,11 @@
       {{ if .Site.Params.commentoEnable }}
         {{- partial "commento.html" . -}}
       {{ end }}
-      </div>
     </div>
+    <div>
+      {{- partial "ConvertKit_Form_AfterContent.html" . -}}
+    </div>
+  </div>
 
     <aside class="w-30-l mt6-l">
       {{- partial "menu-contextual.html" . -}}
