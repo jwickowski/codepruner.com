@@ -72,7 +72,7 @@ export const getBaseUrl = (): string => {
 };
 ```
 
-Use it and be safe without typos and with stong type request and response.
+Use it and be safe without typos and with strong type request and response.
 
 Tell in the comment what is your approach!
 
