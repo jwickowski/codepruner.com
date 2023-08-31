@@ -5,46 +5,45 @@ draft: false
 tags: ["javascript", "typescript", "apiClient", "api", "generator", "swagger-typescript-api", "code generator"]
 ---
  
-In previous post I describe [Why and how you should generate TypeScript ApiClient based on Swagger]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}). After that post you had a generated a client, and now I will show use how to use it in convinient way.
+In previous post I described [why and how you should generate TypeScript ApiClient based on Swagger]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}). After that post you should have a generated a client, and now I will show use how to use it in a real project.
 
+# How to use it 
 
-# How I would like to use it 
+We should not use the Generated Client directly. We should have a wrapper to be able to use it like that:
 
-I don't want to use the Generated Client directly. I would like to have a wrapper and use it like that:
-
-```
+{{< highlight typescript "linenos=false,linenostart=1" >}}
 import { apiClient } from "~/apiClient";
 
 export const getUserCards = async (
   getUserCardsParams: GetUserCardsParams
 ): Promise<UserCardDto[]> => {
-  // in that place, I don't care how the `api` is created. I just use it.
   const response = await apiClient(({ api }) =>
     api.cards.userCardsList(getUserCardsParams)
   );
 
   return response.data;
 };
-```
+{{< / highlight >}}
 
 Why like that?
-- I don't want to care how to pass aa base api url
-- I want to use use strong types if I can
-- I don't want to force other users of the api to know how it is implemented. 
+- I don't want to care how to pass a base api url
+- I want to use use strong types
+- I don't want to force other users of the api to know how it is implemented internally 
   - They just use the wrapper
-- I want to have an abstraction between generated client
+- I want to have an abstraction between a generated client
   - to have a possibility to extend it if there is a need
   - to be secured for a situation when `swagger-typescript-api` won't be supported
   - to simplify the usage of the api
   - because I want to have only one place in the code where generated client is created
 
 
-# How it looks inside
+# How to write the wrapper
 
-First, look at at file where the wrapper is defined:
- ### apiClient.ts
+Look at at file where the wrapper is defined:
+### apiClient.ts
 
-```
+{{< highlight typescript "linenos=false,linenostart=1" >}}
+// I have generated it with `--axios` flag so I use axios here. 
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { GeneratedApiClient, HttpClient } from "./GeneratedApiClient.generated";
 
@@ -60,10 +59,12 @@ export const apiClient = async <ResponseType>(
     return response;
 };
 
+// it is the type of the function. What should be intput and output for passing function
 type ApiClientOptions<ResponseType> = (
     apiClientParameters: ApiClientParameters
 ) => Promise<AxiosResponse<ResponseType>>;
 
+// if you want to add more paramaters to the ApiClient, I think they should be defined here
 type ApiClientParameters = {
     api: GeneratedApiClient<unknown>;
 };
@@ -84,13 +85,12 @@ const createApiClient = (): GeneratedApiClient<unknown> => {
     return new GeneratedApiClient(httpClient);
 };
 
-
 const getBaseUrl = () => {
     // you should replace it with getting an addres from your conifg
     return "httos://localhost:4444";
 }
 
-// It is a specific part of the generated client. It allows you to modify the request before sending if it secured. So you can add an `Authorization` header to it.
+// It is a specific part of the generated client. It allows you to modify the request before sending if it secured. So you can add an `Authorization` header to it, for example.
 const securityWorker = <SecurityDataType = unknown>(
     securityData: SecurityDataType | null
 ): AxiosRequestConfig => {
@@ -103,13 +103,12 @@ const securityWorker = <SecurityDataType = unknown>(
 const getAuthToken = () => {
     return "{token_for_current_user}";
 }
-
-```
+{{< / highlight >}}
 
 And thats all. Now you have everything to start using generated api client. You will never have typo in endpoint address or you will not pass wrong parameter, because everything is strongly typed.
 
 Morover, the code is extensible. So when you need to change the bechavior of the apiClient, you can just do it.  In the project where I am I did extensions like:
-- cancelable - to abort request if the same api method is invoke 2nd time. It is useful when a user change a search criteria
-- debounce - to do wait a bit before doing a request and wait if there is a newer version
+- `cancelable` - to abort request if the same api method is invoke 2nd time. It is useful when a user change a search criteria
+- `debounce` - to do wait a bit before doing a request and wait if there is a newer version
 
 Would you like to see thsese examples? Let me know in comment below.
