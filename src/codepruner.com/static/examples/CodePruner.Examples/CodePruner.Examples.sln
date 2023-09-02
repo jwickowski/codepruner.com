@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31613.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScriptCodeGenerators", "CodePruner.Examples.TypeScriptCodeGenerators\CodePruner.Examples.TypeScriptCodeGenerators.csproj", "{CCDA2133-18F4-44A2-BF58-8B1B3329AA86}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScriptCodeGenerators.UnitTests", "CodePruner.Examples.TypeScriptCodeGenerators.UnitTests\CodePruner.Examples.TypeScriptCodeGenerators.UnitTests.csproj", "{AAE0DA00-26B2-4242-881C-AF6F0E207EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.TypeScriptCodeGenerators.Runner", "CodePruner.Examples.TypeScriptCodeGenerators.Runner\CodePruner.Examples.TypeScriptCodeGenerators.Runner.csproj", "{92E1FC46-62A4-421E-BF9D-9E2611711CC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScriptCodeGenerators.Runner", "CodePruner.Examples.TypeScriptCodeGenerators.Runner\CodePruner.Examples.TypeScriptCodeGenerators.Runner.csproj", "{92E1FC46-62A4-421E-BF9D-9E2611711CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.BlazorWasm.Containerization", "CodePruner.Examples.BlazorWasm.Containerization\CodePruner.Examples.BlazorWasm.Containerization.csproj", "{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{92E1FC46-62A4-421E-BF9D-9E2611711CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92E1FC46-62A4-421E-BF9D-9E2611711CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92E1FC46-62A4-421E-BF9D-9E2611711CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
