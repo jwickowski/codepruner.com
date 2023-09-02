@@ -3,3 +3,4 @@ src/codepruner.com/public/
 **/obj/**
 **/bin/**
 **/.vs/**
+**/.idea/**
