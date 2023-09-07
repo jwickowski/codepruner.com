@@ -9,7 +9,7 @@ In one of my project I decided to use Blazor WebAssembly and I wanted to run it 
 
 # What is wrong with default config
 When I created new Blazor WebAssembly project, I have selected I want to run it with docker. It generated me a file. Here you can see it:
-{{<code language="docker"  file="static\examples\CodePruner.Examples\CodePruner.Examples.BlazorWasm.Containerization\default.Dockerfile" >}}
+{{<code language="docker"  file="static/examples/CodePruner.Examples/CodePruner.Examples.BlazorWasm.Containerization/default.Dockerfile" >}}
 
 Now you can go to the project with the docker file and build it:
 ```
@@ -48,7 +48,7 @@ Two most popular tools to handle it are:
 In our example we chose the 2nd option `nginx`. Here are steps to achieve it:
 ### Add config file for nginx
 You need to add a config file `nginx.conf`. I suggest to add it into project. The file should looks like that:
-{{<code language="docker"  file="static\examples\CodePruner.Examples\CodePruner.Examples.BlazorWasm.Containerization\wwwroot\nginx.conf" >}}
+{{<code language="docker"  file="static/examples/CodePruner.Examples/CodePruner.Examples.BlazorWasm.Containerization/nginx.conf" >}}
 
 ### Change dockerfile
 Now you need to apply changes in dockerfile. There are three main changes:
@@ -57,7 +57,7 @@ Now you need to apply changes in dockerfile. There are three main changes:
 3. copy the config to `/etc/nginx/nginx.conf`
 
 and here is a complete docker file:
-{{<code language="docker"  file="static\examples\CodePruner.Examples\CodePruner.Examples.BlazorWasm.Containerization\Dockerfile" >}}
+{{<code language="docker"  file="static/examples/CodePruner.Examples/CodePruner.Examples.BlazorWasm.Containerization/Dockerfile" >}}
 
 ### Lets try to run it
 First we need to build it with:
