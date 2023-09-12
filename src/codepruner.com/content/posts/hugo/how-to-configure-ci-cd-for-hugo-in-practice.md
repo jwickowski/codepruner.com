@@ -1,5 +1,5 @@
 ---
-title: "How to configure CI/CD for hugo in practice?"
+title: "How to configure CI/CD for hugo in practice with GitHub Actions?"
 date: 2021-04-16T04:40:58+01:00
 draft: false
 tags: ["hugo", "github actions", "devops"]
