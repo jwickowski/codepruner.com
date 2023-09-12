@@ -28,7 +28,7 @@ After it I knew what I wouldn't use, so it is time to switch to working solution
 # Builing that works
 
 Here is working pipelie configuration in yaml format.
-{{< highlight yaml "linenos=false,linenostart=1" >}}
+{{< highlight yaml >}}
 trigger:
  batch: true
  branches: 
@@ -67,8 +67,8 @@ stages:
                 hugo  --logLevel info --minify --destination '$(Build.ArtifactStagingDirectory)/landing'
               workingDirectory: 'landing/src'
          
-           
           - task: PublishPipelineArtifact@1
+            displayName: Publish Artifact
             inputs:
               targetPath: '$(Build.ArtifactStagingDirectory)/landing'
               artifact: "landing"
@@ -81,13 +81,14 @@ stages:
         displayName: Deploy to Prod
         steps:
           - task: DownloadPipelineArtifact@2
-            displayName: Downaload build landing
+            displayName: Downaload landing artifact
             inputs:
               buildType: "current"
               artifactName: "landing"
               targetPath: "$(Pipeline.Workspace)"
             
           - task: FtpUpload@1
+            displayName: Deploy landing
             inputs:
               credentialsOption: 'serviceEndpoint'
               serverEndpoint: 'MY_CONNECTION_NAME'
@@ -99,6 +100,48 @@ stages:
               preservePaths: true
               trustSSL: true
 {{< / highlight >}}
+
+The configution above is working, you can use it, but if you want to read a bit more, stay with me a bit longer.
+
+# Steps description
+
+- Install hugo-extend
+  - It is rather obvious. We need a specific hugo version. 
+  - Chocolatey is a package manager for windows and it works :)
+- Install npm packages
+  - At the beginning I thought it won't be needed, but when I just build hugo without node modules it failed without
+    -  `Error: error building site: POSTCSS: failed to transform "css/style.css" (text/css). Check your PostCSS installation; install with "npm install postcss-cli". See https://gohugo.io/hugo-pipes/postcss/: binary with name "npx" not found`
+  - So I had to also install two node packages with command:
+    - `npm install postcss-cli @fullhuman/postcss-purgecss`
+- Build hugo
+  - The main step of builing bugo
+  - I have added additional options:
+    - `--logLevel info` - to see more information in logs
+    - `--minify` - to have minimalized output
+    - `--destination '$(Build.ArtifactStagingDirectory)/landing` - to push the output to a specific place
+- Publish Artifact
+  - To use it later
+  - I know I could deploy it in that place, but I would like to have an artifact:
+    - to have a posibility to download it manually to check what is inside
+    - to monitor the size of the application
+    - to deploy it in different stage or stages
+- Downaload landing artifact
+  - Getting the artifact
+- Deploy landing
+  - The last step to publish it
+  - I had to use older version of the task `FtpUpload@1` instead of `FtpUpload@2`, because newer is not working for me
+  - Important settings:
+    - I used configured connection in devops to not keep credentials in the source code
+      - I used `generic connection`
+    - `preservePaths: true` - It is importand to set it to true, because we want to have a specific file structure 
+    - `clean: false` and `cleanContents: false` 
+      - I think it is better to not clean, because during the deployment the appliation still be avaialble
+
+# Would you use it?
+
+If you have any question or suggestions? Let me know in comments section below :)
+
+
 
 
 
