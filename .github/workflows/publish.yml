@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
   workflow_dispatch:
 
@@ -19,7 +19,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.85.0'
+          hugo-version: "0.113.0"
+          extended: true
 
       - name: Update baseURL in config.toml
         uses: ciiiii/toml-editor@1.0.0
@@ -27,7 +28,7 @@ jobs:
           file: "src/codepruner.com/config.toml"
           key: "baseURL"
           value: "https://CodePruner.com/"
-        
+
       - name: Update GTM in config.toml
         uses: ciiiii/toml-editor@1.0.0
         with:
@@ -36,14 +37,14 @@ jobs:
           value: "GTM-P3VB947"
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify --verbose  
+        run: hugo --source "src/codepruner.com/" --minify --verbose
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: ${{ secrets.FTP_SERVER }} 
-          user: ${{ secrets.FTP_USERNAME }} 
-          password: ${{ secrets.FTP_PASSWORD }} 
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           localDir: "src/codepruner.com/public"
           remoteDir: "/public_html"
           forceSsl: true
