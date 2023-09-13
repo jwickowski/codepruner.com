@@ -17,24 +17,3 @@ heading = "What Would You <br> Like To Read Today?"
 title = "Hi, I am Alex!"
 image = "images/author.jpg"
 bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel in in donec iaculis tempus odio nunc laoreet . Libero ullamcorper."
-
-
-# ----------------------------------------------------------------
-# French language
-# ----------------------------------------------------------------
-[fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-
-# banner
-[fr.params.banner]
-enable = true
-heading = "Qu'aimeriez-vous <br> lire aujourd'hui"
-
-# About widget
-[fr.params.about_me]
-title = "Salut, je suis Alex!"
-image = "images/author.jpg"
-bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel in in donec iaculis tempus odio nunc laoreet . Libero ullamcorper."
