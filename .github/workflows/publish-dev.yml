@@ -22,19 +22,22 @@ jobs:
           hugo-version: "0.113.0"
           extended: true
 
+      - name: Install npm dependencies
+        run: npm install
+
       - name: Update baseURL in config.toml
         uses: ciiiii/toml-editor@1.0.0
         with:
-          file: "src/codepruner.com/config.toml"
+          file: "src/codepruner.com/config/_default/hugo.toml"
           key: "baseURL"
           value: "https://dev.CodePruner.com/"
 
       - name: Update GTM in config.toml
         uses: ciiiii/toml-editor@1.0.0
         with:
-          file: "src/codepruner.com/config.toml"
+          file: "src/codepruner.com/config/_default/hugo.toml"
           key: "params.googleTagManager"
-          value: "GTM-NHNBLLS"
+          value: "G-1768EEZDT0"
 
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify --verbose
