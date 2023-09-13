@@ -24,6 +24,7 @@ jobs:
 
       - name: Install npm dependencies
         run: npm install
+        working-directory: src/codepruner.com
 
       - name: Update baseURL in config.toml
         uses: ciiiii/toml-editor@1.0.0
