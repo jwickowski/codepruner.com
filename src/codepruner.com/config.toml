@@ -1,17 +1,17 @@
-baseURL = "https://CodePruner.com/"
-languageCode = "en-us"
-title = "CodePruner.com"
-theme = "ananke"
-sectionPagesMenu = "main"
+# baseURL = "https://CodePruner.com/"
+# languageCode = "en-us"
+# title = "CodePruner.com"
+# theme = "ananke"
+# sectionPagesMenu = "main"
 
-disqusShortname = "codepruner"
+# disqusShortname = "codepruner"
 
-[[module.mounts]]
-  source = 'static'
-  target = 'static'
-  excludeFiles = [ "**/bin", "**/obj", "**/*.csproj", "**/*.sln" ]
+# [[module.mounts]]
+#   source = 'static'
+#   target = 'static'
+#   excludeFiles = [ "**/bin", "**/obj", "**/*.csproj", "**/*.sln" ]
 
-[params] 
-  googleTagManager = "GTM-P3VB947"
-  recent_posts_number = 10
-  github_repo_name= "jwickowski/codepruner.com"
+# [params] 
+#   googleTagManager = "GTM-P3VB947"
+#   recent_posts_number = 10
+#   github_repo_name= "jwickowski/codepruner.com"
