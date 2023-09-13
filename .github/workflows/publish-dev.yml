@@ -46,7 +46,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: dev.codepruner.com
-          path: psrc/codepruner.com/public
+          path: src/codepruner.com/public
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
