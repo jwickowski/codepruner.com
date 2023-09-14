@@ -7,6 +7,7 @@ url: "posts/hugo/why-not-wordpress"
 date: 2021-03-23T6:40:58+01:00
 draft: false
 tags: ["hugo", "blog", "wordpress"]
+categories: ["hugo"]
 
 ---
 

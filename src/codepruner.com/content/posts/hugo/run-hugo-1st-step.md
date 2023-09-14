@@ -7,6 +7,7 @@ url: "posts/hugo/run-hugo-1st-step"
 date: 2021-03-23T9:40:58+01:00
 draft: false
 tags: ["hugo", "blog"]
+categories: ["hugo"]
 ---
 
 # My expetiation

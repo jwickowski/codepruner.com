@@ -7,6 +7,7 @@ url: "posts/frontend/fantastic-pattern-for-sleep-in-js"
 date: 2021-07-27T10:40:58+01:00
 draft: true
 tags: ["javascript", "typescript", "sleep", "thread", "promise", "async/await"]
+categories: ["frontend"]
 ---
 
 Sometimes you need to wait for something. In most cases there is something bad in your code or with your infrastructure, but sometimes it is required. When?

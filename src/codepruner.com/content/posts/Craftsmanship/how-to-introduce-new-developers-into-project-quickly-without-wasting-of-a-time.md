@@ -7,6 +7,7 @@ url: "posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-w
 date: 2021-11-19T08:40:58+01:00
 draft: true
 tags: ["ADR", "team", "cooperation", "introduction"]
+categories: ["craftsmanship"]
 ---
 
 

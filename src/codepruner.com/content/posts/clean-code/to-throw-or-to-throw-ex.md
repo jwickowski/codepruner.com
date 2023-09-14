@@ -7,6 +7,7 @@ url: "posts/clean-code/to-throw-or-to-throw-ex"
 date: 2021-06-14T11:40:58+01:00
 draft: false
 tags: ["legacy", "clean code", "exception", "C#"]
+categories: ["clean-code"]
 ---
 
 Some day I had to investigate a production issue based on logs. My luck that all exception's properties were logged, but there was a small vulnerability. Stack trace was missing. So my investigating was much longer than I expected.

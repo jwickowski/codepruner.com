@@ -7,6 +7,7 @@ url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
 date: 2021-03-29T21:40:58+01:00
 draft: false
 tags: ["legacy", "clean code", "idea", "pain points"]
+categories: ["clean-code"]
 ---
 
 Everyone of us is joining into old ugly legacy systems. When we see it we want to fix the whole application, but it isn't so easy. 

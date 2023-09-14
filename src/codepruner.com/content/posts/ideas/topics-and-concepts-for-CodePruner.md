@@ -7,6 +7,7 @@ url: "posts/ideas/topics-and-concepts-for-CodePruner"
 date: 2021-10-11T21:16:58+01:00
 draft: false
 tags: ["ideas", "blog", "codepruner"]
+categories: ["ideas"]
 ---
 
 We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "./welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 
