@@ -8,6 +8,7 @@ date: 2021-03-22T21:16:58+01:00
 draft: false
 tags: ["start a new thing", "blog"]
 categories: ["ideas"]
+type: "regular"
 ---
 
 # Welcome on Code Pruner blog

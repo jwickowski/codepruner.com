@@ -8,6 +8,7 @@ date: 2021-04-07T03:40:58+01:00
 draft: true
 tags: ["docker"]
 categories: ["devops"]
+type: "regular"
 ---
 
 How to fix that error: 

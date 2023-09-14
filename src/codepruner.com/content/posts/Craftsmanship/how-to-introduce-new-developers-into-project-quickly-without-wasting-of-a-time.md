@@ -8,6 +8,7 @@ date: 2021-11-19T08:40:58+01:00
 draft: true
 tags: ["ADR", "team", "cooperation", "introduction"]
 categories: ["craftsmanship"]
+type: "regular"
 ---
 
 

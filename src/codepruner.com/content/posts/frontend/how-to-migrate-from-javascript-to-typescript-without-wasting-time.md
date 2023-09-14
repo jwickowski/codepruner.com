@@ -8,6 +8,7 @@ date: 2021-07-18T10:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "legacy", "clean code", "ongoing refactor"]
 categories: ["frontend"]
+type: "regular"
 ---
 
 I prefer typescript to javascript. There are multiple of reasons for TS, but sometimes I join to projects made in JavaScript. 

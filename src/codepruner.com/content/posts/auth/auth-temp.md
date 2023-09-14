@@ -8,6 +8,7 @@ date: 2022-02-28T11:40:58+01:00
 draft: true
 tags: []
 categories: ["auth"]
+type: "regular"
 ---
 
 Have you ever implement authentication or authorization? As developer we do it very often, because it a task that have to be done only once in a project. I have that pleasure to do it in current project. 

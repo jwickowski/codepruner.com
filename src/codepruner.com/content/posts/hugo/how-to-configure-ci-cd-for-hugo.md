@@ -8,6 +8,7 @@ date: 2021-04-07T20:40:58+01:00
 draft: false
 tags: ["hugo", "docker", "devops"]
 categories: ["hugo"]
+type: "regular"
 ---
 
 # How the proces will look like

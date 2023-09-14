@@ -8,6 +8,7 @@ date: 2021-05-14T6:08:58+01:00
 draft: false
 tags: ["hugo", "blog", "GTM", ]
 categories: ["hugo"]
+type: "regular"
 ---
 
 # Why I want to add Google Tag Manager

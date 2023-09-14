@@ -8,6 +8,7 @@ date: 2023-08-10T10:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "apiClient", "api", "generator", "ongoing refactor", "code generator"]
 categories: ["frontend"]
+type: "regular"
 ---
 
 Have you ever forgot to update frontend endpoint address when backend specification were changed? I am sure you have! I did it multiple times. I know a great way for us to avoid that situations in the future.

@@ -8,6 +8,7 @@ date: 2021-04-20T08:40:58+01:00
 draft: false
 tags: ["legacy", "clean code", "idea", "c4"]
 categories: ["clean-code"]
+type: "regular"
 ---
 
 I am currently joining into new project, into new company. There is knowleadgle I don't know, but I have to be familiar with that. I know and everyone knows, it is not a perfect solution, but before I suggest any changes I need to undestand what is what.

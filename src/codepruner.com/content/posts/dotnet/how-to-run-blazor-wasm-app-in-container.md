@@ -8,6 +8,7 @@ date: 2023-09-02T14:42:00+01:00
 draft: false
 tags: ["dotnet", "docker", "container", "k8s", "kubernetes", "devops", "blazor","wasm","WebAssembly"]
 categories: ["dotnet"]
+type: "regular"
 ---
 
 In one of my project I decided to use Blazor WebAssembly and I wanted to run it in docker, but it did't work woth default confgiuration. So I wlil describe you what is wrong with default configurationa and what you need to change to be able to run Blazor WebAssembly app with docker.

@@ -8,6 +8,7 @@ date: 2023-09-02T14:42:00+01:00
 draft: true
 tags: ["dotnet", "docker", "container", "k8s", "kubernetes", "devops", "configuration"]
 categories: ["dotnet"]
+type: "regular"
 ---
 
 - how it is working

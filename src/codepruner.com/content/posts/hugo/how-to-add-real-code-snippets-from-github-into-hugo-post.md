@@ -8,6 +8,7 @@ date: 2021-08-30T6:40:58+01:00
 draft: false
 tags: ["hugo", "blog", "wordpress", "code", "github"]
 categories: ["hugo"]
+type: "regular"
 ---
 
 # It is a technical blog

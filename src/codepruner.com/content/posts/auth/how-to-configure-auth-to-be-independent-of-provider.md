@@ -8,6 +8,7 @@ date: 2022-06-22T11:40:58+01:00
 draft: false
 tags: ["auth", "jwt","backend"]
 categories: ["auth"]
+type: "regular"
 ---
 
 Have you ever implement authentication or authorization for a project you worked on? I can say,  we don't do it very often, because it is needed to be done only once in a project. There is a high probability you have never implemented it. It was true for me as well, but I am so lucky, I had that pleasure to do it. 

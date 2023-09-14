@@ -8,6 +8,7 @@ date: 2021-11-17T08:40:58+01:00
 draft: false
 tags: ["ADR", "architecture", "cooperation", "craftsmanship"]
 categories: ["craftsmanship"]
+type: "regular"
 ---
 
 ADR is an Architecture Decision Record, but if we leave it like that, it won't tell you anything. So let's deconstruct the name into smaller pieces.  

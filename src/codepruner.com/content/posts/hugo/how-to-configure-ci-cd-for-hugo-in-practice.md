@@ -8,6 +8,7 @@ date: 2021-04-16T04:40:58+01:00
 draft: false
 tags: ["hugo", "github actions", "devops"]
 categories: ["hugo"]
+type: "regular"
 ---
 
 Some time ago we talked what is good approch to depoloy hugo blog. Now I know we want to use GitHub to deploy it using FTP. Arguments for that solution you can find [here](how-to-configure-ci-cd-for-hugo). 

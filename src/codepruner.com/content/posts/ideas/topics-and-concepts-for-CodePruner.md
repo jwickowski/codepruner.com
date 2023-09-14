@@ -8,12 +8,14 @@ date: 2021-10-11T21:16:58+01:00
 draft: false
 tags: ["ideas", "blog", "codepruner"]
 categories: ["ideas"]
+type: "regular"
 ---
 
 We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "./welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 
 
 # Types of blogs
 We can split blogs into two categories:
+type: "regular"
 1. Blogs about nothing and about everything in the same time.
     - Just to write, just to share some ideas. 
     - Without any structure or longer plans.
@@ -58,6 +60,7 @@ Let's start with the name: `Code Pruner`.
 
 # The implementation 
 So when we have the main idea of the blog we can go to ordinary things. I am going to write articles in categories:
+type: "regular"
 - `Craftsmanship`
   - In that category we will talk about: Quality, CleanCode, Designs Patterns, Developer Workshop, Architecture
   - and how to improve our work to be able to focus on the most important areas

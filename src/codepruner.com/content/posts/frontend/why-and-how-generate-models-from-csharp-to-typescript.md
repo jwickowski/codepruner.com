@@ -8,6 +8,7 @@ date: 2021-08-31T05:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "C#", "clean code", "code generator"]
 categories: ["frontend"]
+type: "regular"
 ---
 
 I don't understand why developers doesn't automate their job. They can save a huge amount of time with very low effort. How? For example, by generating models from backend to frontend. We will talk about it today.

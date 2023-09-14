@@ -8,6 +8,7 @@ date: 2023-08-30T10:00:00+01:00
 draft: false
 tags: ["javascript", "typescript", "apiClient", "api", "generator", "swagger-typescript-api", "code generator"]
 categories: ["frontend"]
+type: "regular"
 ---
  
 In previous post I described [why and how you should generate TypeScript ApiClient based on Swagger]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}). After that post you should have a generated a client, and now I will show use how to use it in a real project.
