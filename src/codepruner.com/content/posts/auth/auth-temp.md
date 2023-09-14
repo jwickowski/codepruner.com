@@ -1,5 +1,6 @@
 ---
 title: "temp for the future"
+url: "posts/auth/auth-temp"
 date: 2022-02-28T11:40:58+01:00
 draft: true
 tags: []

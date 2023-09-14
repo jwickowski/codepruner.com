@@ -1,5 +1,6 @@
 ---
 title: "How to configure CI/CD for hugo with Azure DevOps Pipelines?"
+url: "posts/hugo/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines"
 date: 2023-09-13T05:40:58+01:00
 draft: false
 tags: ["hugo", "azure devops", "pipelines", "yaml", "devops", "gethugothemes", "multistage", "chocolatey"]

@@ -1,5 +1,6 @@
 ---
 title: "How to introduce new developers into project quickly without wasting of a time"
+url: "posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time"
 date: 2021-11-19T08:40:58+01:00
 draft: true
 tags: ["ADR", "team", "cooperation", "introduction"]

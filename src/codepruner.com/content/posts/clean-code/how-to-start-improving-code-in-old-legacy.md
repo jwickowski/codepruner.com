@@ -1,5 +1,6 @@
 ---
 title: "How to start improving code in old lagacy project"
+url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
 date: 2021-03-29T21:40:58+01:00
 draft: false
 tags: ["legacy", "clean code", "idea", "pain points"]
@@ -50,6 +51,7 @@ So.. I suggest tocreate a file in repo. You can name something like `PainPoints.
 
 --- 
 title: EAV Structure
+url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
 date: 2020.12.15
 description: Entity Attribute Value Structure in database make my queries complex. 
 So my work is slower and slower becaouse of it. 
@@ -66,6 +68,7 @@ description: It is complicated becaouse we have to write low level sqls to manag
 
 --- 
 title: code scattering
+url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
 date: 2020.11.13
 description: A code for connected logic is in different places. So I had to search in multiple folders and project to do a small change.
 

@@ -1,5 +1,6 @@
 ---
 title: "How to configure Auth to be independent of provider"
+url: "posts/auth/how-to-configure-auth-to-be-independent-of-provider"
 date: 2022-06-22T11:40:58+01:00
 draft: false
 tags: ["auth", "jwt","backend"]

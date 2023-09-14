@@ -1,5 +1,6 @@
 ---
 title: "Never hardcode api endpoints. Generate THEM!"
+url: "posts/frontend/never-hardcode-api-endpoints-on-frontend"
 date: 2023-08-10T10:40:58+01:00
 draft: false
 tags: ["javascript", "typescript", "apiClient", "api", "generator", "ongoing refactor", "code generator"]

@@ -1,5 +1,6 @@
 ---
 title: "Topics and concepts for CodePruner"
+url: "posts/ideas/topics-and-concepts-for-CodePruner"
 date: 2021-10-11T21:16:58+01:00
 draft: false
 tags: ["ideas", "blog", "codepruner"]

@@ -1,5 +1,6 @@
 ---
 title: "How to add real code snippets from github into hugo post"
+url: "posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post"
 date: 2021-08-30T6:40:58+01:00
 draft: false
 tags: ["hugo", "blog", "wordpress", "code", "github"]
