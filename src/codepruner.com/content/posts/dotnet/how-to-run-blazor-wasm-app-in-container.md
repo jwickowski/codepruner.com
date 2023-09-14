@@ -1,5 +1,6 @@
 ---
 title: "How to run blazor app in docker container"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/dotnet/how-to-run-blazor-wasm-app-in-container"

@@ -1,5 +1,6 @@
 ---
 title: "Why do I hate repositories?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/ddd/why-do-I-hate-repositories"

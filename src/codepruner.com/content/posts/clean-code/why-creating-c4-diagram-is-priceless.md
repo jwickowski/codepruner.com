@@ -1,5 +1,6 @@
 ---
 title: "Why creating c4 diagram is priceless"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/why-creating-c4-diagram-is-priceless"

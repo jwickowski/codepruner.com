@@ -1,5 +1,6 @@
 ---
 title: "Never hardcode api endpoints. Generate THEM!"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/never-hardcode-api-endpoints-on-frontend"

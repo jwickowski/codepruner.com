@@ -1,5 +1,6 @@
 ---
 title: "How to run hugo - 1st step"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/run-hugo-1st-step"

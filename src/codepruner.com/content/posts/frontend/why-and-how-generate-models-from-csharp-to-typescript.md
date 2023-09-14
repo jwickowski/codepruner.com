@@ -1,5 +1,6 @@
 ---
 title: "Why and how generate models from C# to Typescript"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/why-and-how-generate-models-from-csharp-to-typescript"

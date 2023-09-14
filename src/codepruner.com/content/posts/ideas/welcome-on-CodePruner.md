@@ -1,5 +1,6 @@
 ---
 title: "Welcome on CodePruner.com"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/ideas/welcome-on-CodePruner"

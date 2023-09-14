@@ -1,5 +1,6 @@
 ---
 title: "How to deploy Hugo website?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-deploy-hugo-website"

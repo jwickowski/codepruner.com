@@ -1,5 +1,6 @@
 ---
 title: "temp for the future"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/auth/auth-temp"

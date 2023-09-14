@@ -1,5 +1,6 @@
 ---
 title: "How to add real code snippets from github into hugo post"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post"

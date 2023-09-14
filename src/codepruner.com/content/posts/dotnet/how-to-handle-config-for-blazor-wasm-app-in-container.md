@@ -1,5 +1,6 @@
 ---
 title: "how-to-handle-config-for-blazor-wasm-app-in-container"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container"

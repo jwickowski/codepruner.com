@@ -1,5 +1,6 @@
 ---
 title: "How to start improving code in old lagacy project"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
@@ -53,6 +54,7 @@ So.. I suggest tocreate a file in repo. You can name something like `PainPoints.
 
 --- 
 title: EAV Structure
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
@@ -72,6 +74,7 @@ description: It is complicated becaouse we have to write low level sqls to manag
 
 --- 
 title: code scattering
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"

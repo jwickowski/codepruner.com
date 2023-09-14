@@ -1,5 +1,6 @@
 ---
 title: "Why not WordPress?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/why-not-wordpress"

@@ -1,5 +1,6 @@
 ---
 title: "How to persist project decisions for future developers and why you should add ADR to your project?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/Craftsmanship/what-is-ADR-and-why-you-should-add-it-into-your-project"

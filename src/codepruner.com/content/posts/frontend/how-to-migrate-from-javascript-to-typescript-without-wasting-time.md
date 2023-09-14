@@ -1,5 +1,6 @@
 ---
 title: "How to migrate from javascript to typescript without wasting time"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time"

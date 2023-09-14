@@ -1,5 +1,6 @@
 ---
 title: "Fantastic pattern to sleep in modern javascript"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/fantastic-pattern-for-sleep-in-js"

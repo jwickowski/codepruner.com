@@ -1,5 +1,6 @@
 ---
 title: "Topics and concepts for CodePruner"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/ideas/topics-and-concepts-for-CodePruner"

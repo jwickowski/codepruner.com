@@ -1,5 +1,6 @@
 ---
 title: "How to configure CI/CD for hugo?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-configure-ci-cd-for-hugo"

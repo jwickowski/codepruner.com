@@ -1,5 +1,6 @@
 ---
 title: "How to add Google Tag Manager to static hugo website?"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-add-GTM-to-static-hugo-website"

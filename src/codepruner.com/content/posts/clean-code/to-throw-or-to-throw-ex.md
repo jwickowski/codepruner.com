@@ -1,5 +1,6 @@
 ---
 title: "To throw or to throw ex. How to rethrow exceptions in C#"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/to-throw-or-to-throw-ex"

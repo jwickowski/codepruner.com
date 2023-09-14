@@ -1,5 +1,6 @@
 ---
 title: "How to introduce new developers into project quickly without wasting of a time"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time"

@@ -1,5 +1,6 @@
 ---
 title: "How to configure Auth to be independent of provider"
+author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/auth/how-to-configure-auth-to-be-independent-of-provider"
