@@ -12,7 +12,7 @@ description: "This is meta description"
 categories: ["newyork city", "food"]
 tags: ["city","food","taste"]
 type: "popular" # available type (epic, trending, popular, or regular)
-draft: false
+draft: true
 ---
 
 It’s no secret that the digital industry is booming. From exciting startups to global brands, companies

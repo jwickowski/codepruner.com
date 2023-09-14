@@ -13,7 +13,7 @@ description: "This is meta description"
 categories: ["microwave","tech"]
 tags: ["season","recipe"]
 type: "trending" # available type (epic, trending, popular, or regular)
-draft: false
+draft: true
 ---
 
 It’s no secret that the digital industry is booming. From exciting startups to global brands, companies
