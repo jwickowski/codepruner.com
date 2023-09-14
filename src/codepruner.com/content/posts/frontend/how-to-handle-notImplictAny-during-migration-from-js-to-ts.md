@@ -1,5 +1,7 @@
 ---
 title: "How  to handle notImplictAny during migration from js to ts without time wasting"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/how-to-handle-notImplictAny-during-migration-from-js-to-ts"
 date: 2021-07-18T10:40:58+01:00
 draft: false

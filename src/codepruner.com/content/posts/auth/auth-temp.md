@@ -1,5 +1,7 @@
 ---
 title: "temp for the future"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/auth/auth-temp"
 date: 2022-02-28T11:40:58+01:00
 draft: true

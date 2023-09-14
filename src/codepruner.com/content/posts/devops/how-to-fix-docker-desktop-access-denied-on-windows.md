@@ -1,5 +1,7 @@
 ---
 title: "How to fix \"Docker Desktop - Access denied\" - How to add user to \"docker-users\" group on widows"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/devops/how-to-fix-docker-desktop-access-denied-on-windows"
 date: 2021-04-07T03:40:58+01:00
 draft: true

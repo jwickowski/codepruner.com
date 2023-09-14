@@ -1,5 +1,7 @@
 ---
 title: "How to configure CI/CD for hugo with Azure DevOps Pipelines?"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines"
 date: 2023-09-13T05:40:58+01:00
 draft: false

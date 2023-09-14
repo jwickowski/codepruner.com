@@ -1,5 +1,7 @@
 ---
 title: "Never hardcode api endpoints. Generate THEM!"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/never-hardcode-api-endpoints-on-frontend"
 date: 2023-08-10T10:40:58+01:00
 draft: false

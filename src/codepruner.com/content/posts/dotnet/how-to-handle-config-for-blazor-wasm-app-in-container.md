@@ -1,5 +1,7 @@
 ---
 title: "how-to-handle-config-for-blazor-wasm-app-in-container"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container"
 date: 2023-09-02T14:42:00+01:00
 draft: true

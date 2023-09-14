@@ -1,5 +1,7 @@
 ---
 title: "How to migrate from javascript to typescript without wasting time"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time"
 date: 2021-07-18T10:40:58+01:00
 draft: false

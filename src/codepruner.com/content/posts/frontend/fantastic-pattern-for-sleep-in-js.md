@@ -1,5 +1,7 @@
 ---
 title: "Fantastic pattern to sleep in modern javascript"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/fantastic-pattern-for-sleep-in-js"
 date: 2021-07-27T10:40:58+01:00
 draft: true

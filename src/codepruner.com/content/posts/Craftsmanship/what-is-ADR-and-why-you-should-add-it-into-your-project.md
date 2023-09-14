@@ -1,5 +1,7 @@
 ---
 title: "How to persist project decisions for future developers and why you should add ADR to your project?"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/Craftsmanship/what-is-ADR-and-why-you-should-add-it-into-your-project"
 date: 2021-11-17T08:40:58+01:00
 draft: false

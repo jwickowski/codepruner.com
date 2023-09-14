@@ -1,5 +1,7 @@
 ---
 title: "How to configure CI/CD for hugo in practice with GitHub Actions?"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice"
 date: 2021-04-16T04:40:58+01:00
 draft: false

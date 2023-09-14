@@ -1,5 +1,7 @@
 ---
 title: "To throw or to throw ex. How to rethrow exceptions in C#"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/to-throw-or-to-throw-ex"
 date: 2021-06-14T11:40:58+01:00
 draft: false

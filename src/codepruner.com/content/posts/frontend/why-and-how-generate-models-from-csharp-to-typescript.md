@@ -1,5 +1,7 @@
 ---
 title: "Why and how generate models from C# to Typescript"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/frontend/why-and-how-generate-models-from-csharp-to-typescript"
 date: 2021-08-31T05:40:58+01:00
 draft: false

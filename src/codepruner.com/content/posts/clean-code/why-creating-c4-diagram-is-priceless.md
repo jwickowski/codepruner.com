@@ -1,5 +1,7 @@
 ---
 title: "Why creating c4 diagram is priceless"
+images:
+  - "images/blog/red-sharp-pruner.jpg"
 url: "posts/clean-code/why-creating-c4-diagram-is-priceless"
 date: 2021-04-20T08:40:58+01:00
 draft: false
