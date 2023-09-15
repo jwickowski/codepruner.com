@@ -1,31 +1,10 @@
 ---
 title: "About Me"
-image : "images/about-me.jpg"
+image : "images/author/jerzy-wickowski.jpg"
 # description
-description: "This is meta description"
+description: "A bit about the author: Jerzy Wickowski"
 layout: "about-me"
-draft: false
-
-# education
-education:
-  enable : true
-  title : "Educational Qualification <br> That I Have Gathered"
-  degree:
-  - name : "BEng Electronic Engineering"
-    duration : "September 2000 - May 2004"
-    academy : "University Of California"
-    
-  - name : "MSc in Research Methodology"
-    duration : "September 2000 - May 2004"
-    academy : "University Of California"
-    
-  - name : "BEng Electronic Engineering"
-    duration : "September 2000 - May 2004"
-    academy : "University Of California"
-    
-  - name : "MSc in Research Methodology"
-    duration : "September 2000 - May 2004"
-    academy : "University Of California"
+draft: true
 
 # mission
 mission:
@@ -40,7 +19,7 @@ youtube:
   title : "Don’t forget to subscribe my Youtube channel “Richi Andorn”"
   image : "images/youtube.png"
   video_id: "dyZcRRWiuuw"
-  channel : "https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"
+  channel : "https://www.youtube.com/@jerzywickowski_pl"
 
 # partners
 partners:
@@ -58,6 +37,6 @@ partners:
     - "images/logos/logo-9.png"
 ---
 
-## Helllo I’m Richi Andorn I’m a Biography Based researcher And Author 
+## Hello I’m Jurek
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit massa vitae felis augue. In venenatis scelerisque accumsan egestas mattis. Massa feugiat in sem pellentesque.

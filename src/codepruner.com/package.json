@@ -1,8 +1,8 @@
 {
-  "name": "reader-hugo",
-  "version": "2.1.0",
+  "name": "codepruner.com",
+  "version": "1.0.0",
   "license": "UNLICENSED",
-  "author": "gethugothemes",
+  "author": "Jerzy Wickowski",
   "scripts": {
     "dev": "hugo server",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",

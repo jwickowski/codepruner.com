@@ -4,7 +4,7 @@ image : "images/about-us-1.jpg"
 # description
 description: "This is meta description"
 layout: "about-us"
-draft: false
+draft: true
 
 # mission
 mission:
