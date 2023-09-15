@@ -7,7 +7,7 @@ logo = "images/logo.png"
 # Note: logo_width is not work with .svg file
 logo_width = "100px"
 # logo text will only show when logo is missing.
-logo_text = "Reader"
+logo_text = "Code Pruner"
 # menu align available option (left, right, or center )
 menu_align = "center"
 # content-gallery
@@ -23,13 +23,13 @@ custom_script = ""
 # search
 search = true
 # featured
-featured_post = true
+featured_post = false
 # layout
-post_layout = "full" # layout value (full, grid or list)
+post_layout = "list" # layout value (full, grid or list)
 # Sidebar
 sidebar = "right" # sidebar value (left, right or false)
 # main taxonomy that will show at header and post card
-main_taxonomy = "tag" # optional value (tag or category)
+main_taxonomy = "category" # optional value (tag or category)
 
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 
@@ -60,7 +60,7 @@ button_link = "https://themefisher.com/"
 
 # Subscription
 [subscription]
-enable = true
+enable = false
 # mailchimp subsciption
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"                                                           # replace this code with yours
@@ -72,10 +72,10 @@ access_token = "" # place your instagram access token here | see https://instafe
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
-keywords = ["Boilerplate", "Hugo", "Themefisher", "GetHugoThemes"]
+keywords = ["Code Pruner", "Development", "Craftmenship", "Blog"]
 description = "A blog about prunning the code."
 author = "Jerzy Wickowski"
-image = "images/logo.png"                                          # this image will be used as fallback if a page has no image of its own
+image = "images/logo.png"                                         # this image will be used as fallback if a page has no image of its own
 
 # matomo tracking: see https://matomo.org/
 [matomo]
@@ -107,7 +107,7 @@ facebook = "" # Your verification code
 
 # cookies
 [cookies]
-enable = false
+enable = true
 expire_days = 2
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"

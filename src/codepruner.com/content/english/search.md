@@ -1,6 +1,6 @@
 ---
 title: "Search Results"
-description: "This is meta description"
+description: "Search Results for CodePruner.com"
 layout: "search"
 draft: false
 ---

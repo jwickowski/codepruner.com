@@ -14,6 +14,6 @@ heading = "What Would You <br> Like To Read Today?"
 
 [en.params.about_me]
 # About widget
-title = "Hi, I am Alex!"
-image = "images/author.jpg"
-bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel in in donec iaculis tempus odio nunc laoreet . Libero ullamcorper."
+title = "Hi, I am Jurek!"
+image = "images/author/jerzy-wickowski.jpg"
+bio = "CodePruner.com author"
