@@ -96,8 +96,12 @@
           {{ template "_internal/disqus.html" . }}
         </div>
         {{ end }}
+        <!-- Subscribe after content -->
+        <div class="mt-5 border-default border p-4 bg-white">
+          <h2 class="widget-title"><span>{{ i18n "subscribe_newsletter" }}</span></h2>
+          {{- partial "ConvertKit_Form_AfterContent.html" . -}}
+        </div>
       </div>
-
       <!-- right sidebar -->
       {{ if eq $sidebar "right" }}
       <aside class="col-lg-4">
