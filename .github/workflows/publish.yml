@@ -41,7 +41,7 @@ jobs:
           value: "G-0W9RV30P6R"
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify --verbose
+        run: hugo --source "src/codepruner.com/" --minify --verbose -e production
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
