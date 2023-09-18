@@ -4,7 +4,7 @@ author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
 url: "posts/hugo/how-to-deploy-hugo-website"
-date: 2021-04-1T6:40:58+01:00
+date: 2021-04-01T6:40:58+01:00
 draft: false
 tags: ["hugo", "blog", "ftp", "azure"]
 categories: ["hugo"]
