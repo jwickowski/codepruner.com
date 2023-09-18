@@ -43,6 +43,11 @@ jobs:
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify --verbose -e production
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: codepruner.com
+          path: src/codepruner.com/public     
+          
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
