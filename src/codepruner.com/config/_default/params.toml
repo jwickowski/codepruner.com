@@ -115,6 +115,7 @@ button = "I Accept"
 ######################## sidebar widgets #########################
 [widgets]
 sidebar = [
+    "subscription-right",
     "search",
     "about-me",
     "promotion",
