@@ -1,0 +1,46 @@
+############# english navigation ##############
+
+
+[[main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+# Dropdown menu
+# [[main]]
+# weight = 4
+# name = "Pages"
+# hasChildren = true
+
+[[main]]
+name = "Frontend"
+url = "categories/frontend/"
+weight = 10
+
+
+[[main]]
+name = "GoHugo"
+url = "categories/hugo/"
+weight = 20
+
+[[main]]
+name = "About me"
+URL = "about-me/"
+weight = 30
+
+# [[main]]
+# parent = "Pages"
+# name = "Tags"
+# url = "tags/food/"
+# weight = 3
+
+# footer menu
+[[footer]]
+name = "Privacy Policy"
+URL = "privacy-policy/"
+weight = 1
+
+[[footer]]
+name = "Terms Conditions"
+URL = "terms-conditions/"
+weight = 2

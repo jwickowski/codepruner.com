@@ -4,3 +4,7 @@ src/codepruner.com/public/
 **/bin/**
 **/.vs/**
 **/.idea/**
+**/node_modules/**
+src/codepruner.com/resources/_gen/
+src/codepruner.com/hugo_stats.json
+src/codepruner.com/assets/jsconfig.json

@@ -1,7 +1,7 @@
 name: CI-dev
 on:
   push:
-    branches-ignore: 
+    branches-ignore:
       - "master"
 
   workflow_dispatch:
@@ -12,38 +12,48 @@ jobs:
     env:
       HUGO_ENV: production
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.85.0'
+          hugo-version: "0.113.0"
+          extended: true
+
+      - name: Install npm dependencies
+        run: npm install
+        working-directory: src/codepruner.com
 
       - name: Update baseURL in config.toml
         uses: ciiiii/toml-editor@1.0.0
         with:
-          file: "src/codepruner.com/config.toml"
+          file: "src/codepruner.com/config/_default/hugo.toml"
           key: "baseURL"
           value: "https://dev.CodePruner.com/"
-        
+
       - name: Update GTM in config.toml
         uses: ciiiii/toml-editor@1.0.0
         with:
-          file: "src/codepruner.com/config.toml"
+          file: "src/codepruner.com/config/_default/hugo.toml"
           key: "params.googleTagManager"
-          value: "GTM-NHNBLLS"
+          value: "G-1768EEZDT0"
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify --verbose  
+        run: hugo --source "src/codepruner.com/" --minify --verbose -e production
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dev.codepruner.com
+          path: src/codepruner.com/public
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: ${{ secrets.FTP_SERVER }} 
-          user: ${{ secrets.FTP_USERNAME }} 
-          password: ${{ secrets.FTP_PASSWORD }} 
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           localDir: "src/codepruner.com/public"
           remoteDir: "/public_html/dev"
           forceSsl: true

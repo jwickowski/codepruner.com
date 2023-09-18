@@ -1,0 +1,14 @@
+{{ "<!-- subscription-right -->" | safeHTML }}
+<style>
+  .formkit-powered-by-convertkit-container {
+    display: none !important;
+  }
+</style>
+
+<div class="widget">
+  <h2 class="widget-title"><span>{{ i18n "subscribe_newsletter" }}</span></h2>
+  <div class="bg-light-gray pa3 mt3 nested-list-reset nested-copy-line-height nested-links">
+    {{- partial "ConvertKit_Form_RightColumn.html" . -}}
+  </div>
+  </form>
+</div>
