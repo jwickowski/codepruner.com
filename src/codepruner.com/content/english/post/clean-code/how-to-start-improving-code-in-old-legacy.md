@@ -6,7 +6,7 @@ images:
 url: "posts/clean-code/how-to-start-improving-code-in-old-legacy"
 date: 2021-03-29T21:40:58+01:00
 draft: false
-tags: ["legacy", "clean code", "idea", "pain points"]
+tags: ["legacy", "clean code", "ideas", "pain points"]
 categories: ["clean-code"]
 type: "regular"
 ---
