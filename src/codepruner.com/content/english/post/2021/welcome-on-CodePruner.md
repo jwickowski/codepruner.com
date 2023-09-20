@@ -7,7 +7,7 @@ url: "posts/ideas/welcome-on-CodePruner"
 date: 2021-03-22T21:16:58+01:00
 draft: false
 tags: ["hugo", "blog", "ideas"]
-categories: ["ideas"]
+categories: ["blog"]
 type: "regular"
 ---
 
