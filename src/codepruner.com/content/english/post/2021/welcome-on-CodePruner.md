@@ -2,22 +2,21 @@
 title: "Welcome on CodePruner.com"
 author: "Jerzy Wickowski"
 images:
-  - "images/blog/red-sharp-pruner.jpg"
+  - "images/posts/2021/welcome-on-CodePruner.jpg" 
 url: "posts/ideas/welcome-on-CodePruner"
 date: 2021-03-22T21:16:58+01:00
 draft: false
-tags: ["start a new thing", "blog"]
+tags: ["hugo", "blog", "ideas"]
 categories: ["ideas"]
 type: "regular"
 ---
 
-# Welcome on Code Pruner blog
-Hi, I am Jurek Wickowski. I am developer and I am starting with a new project. It is Code Pruner Community. It will be based on this blog, at the beginnig, but it will grow. It is my plan at least.
+Hi, I am Jurek Wickowski. I am developer and I am starting with a new project. It is Code Pruner Community. It will be based on this blog, at the beginning, but it will grow. It is my plan at least.
 
-# What will be there?
-I am going to start blogging in English, because it is a great opportunity to reach to new people around the world. To spead the knowledge about clean coding, ongoing refactoring, team communiation and so on. In shortcut how to create software in great quality.
+## What will be there?
+I am going to start blogging in English, because it is a great opportunity to reach to new people around the world. To spread the knowledge about clean coding, ongoing refactoring, team communication and so on. In shortcut how to create software in great quality.
 
-# What is my plan?
+## What is my plan?
 * Write in English
   * To improve my language skills
   * To write worldwide
@@ -36,7 +35,7 @@ I am going to start blogging in English, because it is a great opportunity to re
   * To have safe backup
   * To be able to recreate blog automatically
 
-# How can you help me?
+## How can you help me?
 * If you find a mistake, create a PR to repo with posts [github.com/jwickowski/codepruner.com](https://github.com/jwickowski/codepruner.com).
 * If you want to talk or discuss, write an email to me or leave a comment.
-* If you think the content is valueable, share it.
+* If you think the content is valuable, share it.
