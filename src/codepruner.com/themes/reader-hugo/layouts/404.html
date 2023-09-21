@@ -700,13 +700,7 @@ F5ahEmnf/9LHREngJAHZQhsLg+y///7zvDVHBOF3j4c4jOE3fzwY8S8+updEf09N4YPJnOzpN38Q
           </i:pgf>
         </svg>
       </div>
-      <div class="col-lg-8 col-md-9">
-        <h1 class="mb-4">Ooopppps!!
-          We Can’t Seem To Find The
-          Page You’re Looking For</h1>
-        <h3 class="mb-4">Error Code : <span class="text-primary">404</span></h3>
-        <a href="{{site.BaseURL | absLangURL }}" class="btn btn-primary">{{i18n "back_to_home" }}</a>
-      </div>
+      {{- partial "404_content.html" . }}
     </div>
   </div>
 

@@ -2,5 +2,6 @@
     "cSpell.words": [
         "Anake",
         "getenv"
-    ]
+    ],
+    "dotnet.defaultSolution": "disable"
 }
