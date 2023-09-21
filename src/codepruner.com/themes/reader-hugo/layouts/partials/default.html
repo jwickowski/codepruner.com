@@ -39,7 +39,7 @@
                 <div class="swiper-wrapper">
                   {{ range .Params.images }}
                   <div class="swiper-slide">
-                    <a href="{{$Permalink}}"> {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-top`) }}
+                    <a href="{{$Permalink}}"> {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-top` "Size" "215x") }}
                     </a>
                   </div>
                   {{ end }}
@@ -52,7 +52,7 @@
               {{ else }}
               <div class="post-slider slider-sm">
                 {{ range .Params.images }}
-                <a href="{{$Permalink}}"> {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-top`) }}
+                <a href="{{$Permalink}}"> {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-top` "Size" "215x") }}
                 </a>
                 {{ end }}
               </div>
