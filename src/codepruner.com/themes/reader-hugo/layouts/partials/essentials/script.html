@@ -36,7 +36,8 @@
 {{ if hugo.IsProduction }}
   {{ $scripts = $scripts | fingerprint "sha512" }}
 {{ end }}
-<script crossorigin="anonymous" defer {{ if hugo.IsProduction }}integrity="{{ $scripts.Data.Integrity }}"{{end}} type="application/javascript">{{$scripts.Content | safeJS}}</script>
+
+<script crossorigin="anonymous" integrity="{{ $scripts.Data.Integrity }}" src="{{ $scripts.RelPermalink }}"></script>
 
 <!-- font family -->
 {{ $pf:= site.Params.variables.font_primary }}
