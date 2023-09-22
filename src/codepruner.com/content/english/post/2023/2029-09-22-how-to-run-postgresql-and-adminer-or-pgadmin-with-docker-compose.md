@@ -8,43 +8,16 @@ date: 2023-09-22T06:40:58+01:00
 draft: true
 tags: ["sql", "postgres", "docker", "adminer", "pgadmin", "docker compose"]
 categories: ["docker"]
-type: "regular"
+type: "trending"
 
 ---
 
-I usually develop in .net and use mssql database, but it is time to change a bit and try something new. I decided to use PostgreSQL. I will use it with Adminer and pgAdmin. I will run it with docker-compose.
+I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some troubles at the beginning with running it with docker compose.`Adminer` and `pgAdmin`. So take a look.
 
 ### Lets start with docker-compose.yml file
-```yaml
-version: "3.9"
-services:
-  postgres10:
-    container_name: pg_container
-    image: "postgres"
-    restart: always
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: root 
-      POSTGRES_DB: marten_testing
-  adminer:
-    image: dockette/adminer
-    restart: always
-    depends_on:
-      - postgres10
-    ports:
-      - 8080:80  
-  pgadmin:
-    container_name: pgadmin4_container
-    image: dpage/pgadmin4
-    restart: always
-    ports:
-      - 5050:80
-    environment:
-       PGADMIN_DEFAULT_EMAIL: "pg@admin.pl"
-       PGADMIN_DEFAULT_PASSWORD: "pgadmin"
-... 
+
+{{<code language="yaml" file="/static/examples/CodePruner.Examples/PostgresAndDockerCompose\docker-compose.yml" >}}
+
 
 Here I have defined three services:
 * postgres10 - PostgreSQL database

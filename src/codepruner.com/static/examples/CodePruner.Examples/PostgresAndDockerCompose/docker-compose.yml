@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: postgres_container
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: root 
+      POSTGRES_DB: example_datrabase
+  adminer:
+    image: dockette/adminer
+    ports:
+      - 8081:80  
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5050:80
+    environment:
+       PGADMIN_DEFAULT_EMAIL: "pg@admin.pl"
+       PGADMIN_DEFAULT_PASSWORD: "pgadmin"
