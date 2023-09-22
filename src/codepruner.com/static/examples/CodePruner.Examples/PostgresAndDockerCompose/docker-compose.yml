@@ -1,7 +1,6 @@
 version: "3.9"
 services:
   postgres:
-    container_name: postgres_container
     image: "postgres"
     ports:
       - "5432:5432"
@@ -12,11 +11,11 @@ services:
   adminer:
     image: dockette/adminer
     ports:
-      - 8081:80  
+      - 8080:80  
   pgadmin:
     image: dpage/pgadmin4
     ports:
       - 5050:80
     environment:
-       PGADMIN_DEFAULT_EMAIL: "pg@admin.pl"
-       PGADMIN_DEFAULT_PASSWORD: "pgadmin"
+       PGADMIN_DEFAULT_EMAIL: "pgadmin@codepruner.com"
+       PGADMIN_DEFAULT_PASSWORD: "pgadminP@ssw0rd!"

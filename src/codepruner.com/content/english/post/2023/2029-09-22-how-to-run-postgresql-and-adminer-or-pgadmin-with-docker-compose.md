@@ -5,50 +5,68 @@ images:
   - "images/posts/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.png" 
 url: "posts/2029-09-22/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose"
 date: 2023-09-22T06:40:58+01:00
-draft: true
+draft: false
 tags: ["sql", "postgres", "docker", "adminer", "pgadmin", "docker compose"]
 categories: ["docker"]
 type: "trending"
-
 ---
 
-I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some troubles at the beginning with running it with docker compose.`Adminer` and `pgAdmin`. So take a look.
+I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some troubles, because I wan't able to establish a connection by `Adminer` and `pgAdmin`, at the beginning with running it with docker compose. So take a look how to fix it.
 
 ### Lets start with docker-compose.yml file
-
 {{<code language="yaml" file="/static/examples/CodePruner.Examples/PostgresAndDockerCompose\docker-compose.yml" >}}
 
-
 Here I have defined three services:
-* postgres10 - PostgreSQL database
-* adminer - Adminer database management tool
-* pgadmin - pgAdmin database management tool
- describe parameters
+* `postgres` - a Postgress database
+* `adminer` - database management tool
+* `pgadmin` - database management tool
+ 
+All of the parameters are the standard ones, but if you would like I can extend the description. Just leave a comment :)
 
-ok you can run it with command: `docker compose up`
-and it should work, but 
-### how to connect to database?
-My first try was to open adminer or pgadmin on the browser
-- adminer: http://localhost:8080
-- pgadmin: http://localhost:5050
+### Time to run it
+You can run it with command: `docker compose up`. Wait a bit, and everything should start working.
 
-and it opened... I fill forms with data:
-- server: localhost:5432
-- user: root
-- password: postgres
+You can check if `adminer` or `pgadmin` are working, by opening browser with correct address:
+- adminer: `http://localhost:8080`
+- pgadmin: `http://localhost:5050`
 
-and it didn't work, but after a bit of investigation i have found a solution. I have to use docker container name instead of localhost. So I have to use:
-- server: pg_container:5432
-- user: root
-- password: postgres
+#### Lets start with `adminer`
+When it is open you can see a simple form with data to establish the connection.  
+My 1st rty was to fill it with data:
+- server: `localhost:5432`
+- user: `root`
+- password: `postgres`
 
-and then it works.
+and I got an error:
 
+{{< notice "warning" >}}
+  Unable to connect to PostgreSQL server: could not connect to server: Connection refused Is the server running on host "localhost" (127.0.0.1) and accepting TCP/IP connections on port 5432? could not connect to server: Address not available Is the server running on host "localhost" (::1) and accepting TCP/IP connections on port 5432?
+{{< /notice >}}
 
+then I started to search and investigate the issue. So you will not have to do it.
+You should to use docker container name instead of localhost. So when you use below data:
+- server: `postgres`
+- user: `root`
+- password: `postgres`
+
+You will be able to have the working connection to the database with `adminer`
+
+#### Lets start with `postgres`
+When you have the knowledge from the previous paragraph it became simple.
+* Login with credentials from the file:
+  * login: `pgadmin@codepruner.com`
+  * password: `pgadminP@ssw0rd!` 
+* Click `Add new server`
+* Fill data in connection tab:
+  * Host name/address: `postgres`
+  * username: `root`
+  * password: `postgres`
+* Fill name in 1st tab and click `Save`
+
+Then you are connected to the database with `pgadmin`.
 
 ### Did you have the same problem? 
 
-or maybe w different one?
+I hope I helped you. 
+Or maybe do you have a different problem?
 Let me know in comments.
-
-
