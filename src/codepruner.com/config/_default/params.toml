@@ -23,7 +23,7 @@ custom_script = ""
 # search
 search = true
 # featured
-featured_post = false
+featured_post = true
 # layout
 post_layout = "list" # layout value (full, grid or list)
 # Sidebar

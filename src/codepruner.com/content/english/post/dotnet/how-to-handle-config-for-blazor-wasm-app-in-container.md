@@ -1,5 +1,5 @@
 ---
-title: "how-to-handle-config-for-blazor-wasm-app-in-container"
+title: "How to handle-config-for-blazor-wasm-app-in-container"
 author: "Jerzy Wickowski"
 images:
   - "images/blog/red-sharp-pruner.jpg"
@@ -8,7 +8,7 @@ date: 2023-09-02T14:42:00+01:00
 draft: true
 tags: ["dotnet", "docker", "container", "k8s", "kubernetes", "devops", "configuration"]
 categories: ["dotnet"]
-type: "regular"
+type: "regiular"
 ---
 
 - how it is working

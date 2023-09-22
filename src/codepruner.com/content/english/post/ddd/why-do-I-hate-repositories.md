@@ -8,7 +8,7 @@ date: 2021-05-23T21:16:58+01:00
 draft: false
 tags: ["ddd", "repository"]
 categories: ["ddd"]
-type: "regular"
+type: "trending"
 ---
 
 I have started my developer adventure a bit more than 10 years ago and I hate repositories. ...or maybe I hated, becouse something changes, but we should start from the beginning.
