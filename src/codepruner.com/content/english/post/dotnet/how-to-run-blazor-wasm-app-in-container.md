@@ -11,7 +11,7 @@ categories: ["dotnet"]
 type: "epic"
 ---
 
-In one of my project I decided to use Blazor WebAssembly and I wanted to run it in docker, but it did't work woth default confgiuration. So I wlil describe you what is wrong with default configurationa and what you need to change to be able to run Blazor WebAssembly app with docker.
+In one of my project I decided to use Blazor WebAssembly and I wanted to run it in docker, but it did't work with default confgiuration. So I wlil describe you what is wrong with default configurationa and what you need to change to be able to run Blazor WebAssembly app with docker.
 
 # What is wrong with default config
 When I created new Blazor WebAssembly project, I have selected I want to run it with docker. It generated me a file. Here you can see it:
