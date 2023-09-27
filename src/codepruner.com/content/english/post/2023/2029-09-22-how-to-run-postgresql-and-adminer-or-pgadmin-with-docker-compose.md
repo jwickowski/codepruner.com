@@ -11,7 +11,7 @@ categories: ["docker"]
 type: "trending"
 ---
 
-I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some troubles, because I wan't able to establish a connection by `Adminer` and `pgAdmin`, at the beginning with running it with docker compose. So take a look how to fix it.
+I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some trouble at the beginning with running that with docker compose, because I wasn't able to establish a connection by `Adminer` and `pgAdmin`. Take a look at how to fix it.
 
 ### Lets start with docker-compose.yml file
 {{<code language="yaml" file="/static/examples/CodePruner.Examples/PostgresAndDockerCompose/docker-compose.yml" >}}
@@ -32,7 +32,7 @@ You can check if `adminer` or `pgadmin` are working, by opening browser with cor
 
 #### Lets start with `adminer`
 When it is open you can see a simple form with data to establish the connection.  
-My 1st rty was to fill it with data:
+My 1st try was to fill it with data:
 - server: `localhost:5432`
 - user: `root`
 - password: `postgres`
