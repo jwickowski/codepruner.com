@@ -3,7 +3,7 @@ title: "How to run postgresql and adminer/pgadmin with docker compose"
 author: "Jerzy Wickowski"
 images:
   - "images/posts/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.png" 
-url: "posts/2029-09-22/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose"
+aliases: ["/posts/2029-09-22/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose"]
 date: 2023-09-22T06:40:58+01:00
 draft: false
 tags: ["sql", "postgres", "docker", "adminer", "pgadmin", "docker compose"]
