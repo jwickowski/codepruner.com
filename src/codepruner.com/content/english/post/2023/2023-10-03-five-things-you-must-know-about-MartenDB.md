@@ -2,7 +2,7 @@
 title: "5 things you have to know when you think about MartenDB"
 author: "Jerzy Wickowski"
 images:
-  - "images/posts/2023/2023-09-29-first-thoughts-about-martenDB.png" 
+  - "images/posts/2023/2023-10-03-five-things-you-must-know-about-MartenDB.png" 
 date: 2023-10-03T04:40:58+01:00
 draft: false
 tags: ["sql", "postgresql", "postgres", "martemDB", "event sourcing", "documents", "json"]
