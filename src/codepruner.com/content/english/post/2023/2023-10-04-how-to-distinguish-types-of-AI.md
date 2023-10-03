@@ -4,7 +4,7 @@ author: "Jerzy Wickowski"
 images:
   - "images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg" 
 date: 2023-10-04T04:40:58+01:00
-draft: true
+draft: false
 tags: ["ai", "machine-learning", "deep-learning", "reinforcement-learning"]
 categories: ["AI"]
 type: "popular"
