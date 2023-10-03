@@ -47,6 +47,9 @@
 
 	setTimeout(function () {
 		let instagramSlider = document.querySelector(".instagram-slider");
+		if (instagramSlider === null) {
+			return;
+		}
 		instagramSlider.classList.add('show');
 
 		new Swiper('.instagram-slider', {
