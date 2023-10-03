@@ -54,6 +54,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "src/codepruner.com/public"
+          local-dir: "src/codepruner.com/public/"
           server-dir: "/public_html"
           protocol: ftps
