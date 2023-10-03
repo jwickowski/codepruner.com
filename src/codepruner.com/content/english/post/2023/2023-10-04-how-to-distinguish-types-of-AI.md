@@ -2,21 +2,19 @@
 title: "How to distinguish types of AI?"
 author: "Jerzy Wickowski"
 images:
-  - "images/posts/2023/2023-10-03-how-to-distinguish-types-of-AI.png" 
+  - "images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg" 
 date: 2023-10-04T04:40:58+01:00
 draft: true
-tags: ["ai"]
+tags: ["ai", "machine-learning", "deep-learning", "reinforcement-learning"]
 categories: ["AI"]
-type: "regular"
+type: "popular"
 companies: ["esatto"]
 ---
 
 Before we start working with Artificial Intelligence we should know what it is, at least a bit. There are many definitions of AI and there are multiple types of AI. Prepare a mug of coffee and let's start.
 
-
 ### What is AI?
 There are many definitions of AI and many rules and to be honest any one can say his own definition, but there is one generic sentence we can apply for it to say what the  Artificial Intelligence is. 
-
 
 > Artificial Intelligence is a computer program that can solve problems without strict instructions how to do it.
 
@@ -27,7 +25,6 @@ It is really good definition, because it can be adapted to every of AI definitio
     - From experience, when you give the system a feedback after its response. Then the system can adjust its behavior for the next times.
 
 - To meet the definition it needs to change its behavior during time. So there should be a feedback loop to allow the system to do it.
-
 
 ### Weak AI vs Strong AI
 The first one is to distinguish between weak and strong AI. It is not very practical division, but it is more about ideas and concepts.
