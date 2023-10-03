@@ -2,8 +2,8 @@
 title: "How to run blazor app in docker container"
 author: "Jerzy Wickowski"
 images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/dotnet/how-to-run-blazor-wasm-app-in-container"
+  - "images/posts/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container.png"
+aliases: ["/posts/dotnet/how-to-run-blazor-wasm-app-in-container"]
 date: 2023-09-02T14:42:00+01:00
 draft: false
 tags: ["dotnet", "docker", "container", "k8s", "kubernetes", "devops", "blazor","wasm","WebAssembly"]
