@@ -47,13 +47,13 @@ jobs:
         with:
           name: codepruner.com
           path: src/codepruner.com/public     
-          
+
       - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "src/codepruner.com/public"
-          remoteDir: "/public_html"
-          forceSsl: true
+          local-dir: "src/codepruner.com/public/"
+          server-dir: "/public_html/"
+          protocol: ftps
