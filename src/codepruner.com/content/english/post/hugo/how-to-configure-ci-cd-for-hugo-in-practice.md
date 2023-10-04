@@ -7,7 +7,7 @@ url: "posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice"
 date: 2021-04-16T04:40:58+01:00
 draft: false
 tags: ["hugo", "github actions", "devops"]
-categories: ["hugo"]
+categories: ["blog"]
 type: "regular"
 ---
 
