@@ -190,7 +190,9 @@
               {{ if .Params.images }}
               {{ range first 1 .Params.images }}
               <a href="{{$Permalink}}">
-                {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-sm` "Size" "100x100" "Command" "Fill") }}
+                {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-sm` "Size" "180x120"
+                "Command"
+                "Fill") }}
               </a>
               {{ end }}
               {{ else }}

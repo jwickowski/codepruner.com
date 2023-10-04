@@ -7,11 +7,11 @@
   <article class="widget-card">
     <div class="d-flex">
       {{ if .Params.images }}
-        {{ range first 1 .Params.images }}
-        <a href="{{$Permalink}}"> 
-          {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-sm`) }}
-        </a>
-        {{ end }}
+      {{ range first 1 .Params.images }}
+      <a href="{{$Permalink}}">
+        {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `card-img-sm` "Size" "180x120") }}
+      </a>
+      {{ end }}
       {{ else }}
       <div class="image-fallback-sm"><span>{{.Title | truncate 1}}</span></div>
       {{ end }}
