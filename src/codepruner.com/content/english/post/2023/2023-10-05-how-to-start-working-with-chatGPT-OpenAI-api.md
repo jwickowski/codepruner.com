@@ -1,5 +1,5 @@
 ---
-title: "How to distinguish types of AI?"
+title: "2023-10-05-how-to-start-working-with-chatGPT-OpenAI-api"
 author: "Jerzy Wickowski"
 images:
   - "images/posts/2023/2023-10-05-how-to-start-working-with-chatGPT-OpenAI-api.jpg" 
