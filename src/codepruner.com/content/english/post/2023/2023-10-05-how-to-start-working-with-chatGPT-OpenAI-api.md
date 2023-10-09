@@ -13,6 +13,70 @@ companies: ["esatto"]
 
 Is ChatGPT only a web page where you can ask some question? Of course not. It's also an API. You can use it in your own application to enhance your app with AI features. If you are interested in how to do it, grab a mug of tea and read this article.
 
+
+### Important information form documentation
+1. API 
+  - the same for azure
+  - more power then chat
+  - 
+1. Temperature
+2. Roles, how it will behave
+3. Plans
+  - Different result
+  - different price
+4. No history. You have to keep it and send it every time
+5. Lean how to promt (with roles)
+6. function calling
+  - it will not call a fuction 
+    - you need to define a function
+    - then ain a responce can be an information to call a function
+    - then you can map it on your side 
+    - and call a function
+7. ?????
+
+3. Tokens
+4. Function calling
+5. Prompts
+6. Parameters
+7. 
+8. API
+9. History
+10. Azure API
+11. Train my own model
+
+- to start working with API you need to generate a access key
+- plans:
+  - they recommend to use:
+     - gpt-3.5-turbo-instruct
+     - gpt-3.5-turbo
+     - basuese they are cheaper
+  - but there are different models and they are specialized in different scenatios
+- you can define different roler
+  - user: it is you what you ask (do a prompt)
+  - system: you describe how the api should behave. 
+      - it sets the bahavior of assistant
+      - examples:
+         - You will find keywords in the article and return them in json format with information about the frequent
+         - You will be helpful asistant
+         - You will find the most atractive 2 sentences in the article
+
+  - asistant: it is answering to you 
+      - (or and examle answer to e able to give you a simillar answer in the future)
+  - api has no history, so you have to store it by yourself and send every time  in a message content
+- api. They suggest to use [azure api for .net](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/openai/Azure.AI.OpenAI). It should be compatible with openAI api.
+
+- there is an option to train my own model with chatGPT => https://platform.openai.com/docs/guides/fine-tuning
+- As I understand it is important how to do `prompts` to get what we want. It is a type 
+- parameters:
+   - temperature - what is the probability of choosing the next token. The higher the value, the more random the result will be. The lower the value, the more predictable the result will be.
+       - It is beeter to get smaller value if you want ot have a stable answer
+       - IT is better to have higher value if you want to have a creative or variety answer
+- tokens, as i understand 
+  - all of input/output is tokenized. eg. splitted into smaller parts. 
+  - there is a probability what the next tokem will be
+
+- 
+    
 <!--more-->
 TO do it you need following steps:
 - create an account on OpenAI
@@ -62,3 +126,22 @@ Console.WriteLine(result);
 ```
 
 
+
+
+Open AI Embeddings - process to see text as a nubmer
+
+
+### How to fill AI with my owkn data
+- I can train my own model
+- I can use in-context (so add the text in the prompt)
+- RAG ?????
+  - embeding... 
+- I can use a fine-tuning ?????
+ 
+
+
+
+ ### locally
+ - https://ollama.ai 
+ - use uncenzored data
+ 
