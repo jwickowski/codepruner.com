@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.BlazorWasm.Containerization", "CodePruner.Examples.BlazorWasm.Containerization\CodePruner.Examples.BlazorWasm.Containerization.csproj", "{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.AI.ChatGPT", "CodePruner.Examples.AI.ChatGPT\CodePruner.Examples.AI.ChatGPT.csproj", "{2EE8949C-084A-472D-BE31-451C340F205A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE8949C-084A-472D-BE31-451C340F205A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE8949C-084A-472D-BE31-451C340F205A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE8949C-084A-472D-BE31-451C340F205A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE8949C-084A-472D-BE31-451C340F205A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
