@@ -27,6 +27,11 @@ target = "assets"
 source = "hugo_stats.json"
 target = "assets/watching/hugo_stats.json"
 
+[[module.mounts]]
+source = 'static'
+target = 'static'
+excludeFiles = ["**/examples"]
+
 
 ############################# Build ##############################
 [build]
