@@ -23,8 +23,9 @@ There are also more specialized models to use them im more specific scenarios li
   - `DALL·E` - a model to generate images from text or manipulate existing images
   - `Whisper` - a model to recognize speech
 
-#### Example: 
-"A man has two children. One has brother and the second has no brother. Hwo it the 2nd child?"
+#### Example with region: 
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe" >}}
+
 
 ### 2. Fill the temperature
 When you do a first 
