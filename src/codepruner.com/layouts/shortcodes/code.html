@@ -1,5 +1,31 @@
 {{ $file := .Get "file" | readFile }}
 {{ $lang := .Get "language" }}
-{{ (print "```" $lang "\n" $file "\n```") | markdownify }}
+{{ $region := default "" (.Get "region")}}
 
-<!-- "linenos=false,linenostart=1" -->
+{{ if eq $region ""}}
+    {{ (print "```" $lang "\n" $file "\n```") | markdownify }}
+
+
+{{ else }}
+    {{ $startMarker := print "#region " $region }}
+    {{ $endMarker := "#endregion" }}
+   
+    {{ $content := split $file "\r\n" }}
+    {{ $insideRegion := false }}
+    {{ $result := "" }}
+    {{ range $content }}
+        {{ if $insideRegion }}
+            {{ if strings.Contains . $endMarker }}
+                {{ $insideRegion = false }}
+            {{ else }}
+                {{ $result = (print $result . "\n") }}
+            {{ end }}
+        {{ else if strings.Contains . $startMarker }}
+            {{ $insideRegion = true }}
+        {{ end }}
+    {{ end }}
+
+
+    {{ (print "```" $lang  $result "```") | markdownify }}
+
+{{ end }}
