@@ -10,7 +10,7 @@
     {{ $startMarker := print "#region " $region  }}
     {{ $endMarker := "#endregion" }}
    
-    {{ $content := split $file "\r\n" }}
+    {{ $content := split $file "\n" }}
     {{ $insideRegion := false }}
     {{ $result := "" }}
     {{ range $content }}
