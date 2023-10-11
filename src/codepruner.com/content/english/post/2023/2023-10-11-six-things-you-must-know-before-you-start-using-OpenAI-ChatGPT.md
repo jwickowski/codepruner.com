@@ -82,9 +82,7 @@ Celebrate revolutions align, pixels to lend--breferences evolved Souls layer und
 {{< /tab>}}
 {{</ tabs >}}
 
-Difference is huge, isn't it? Mostly when you see answer with really high temperature `1.8`, in that case it is not even a text, but a set of words, but maybe in different scenarios it can be helpful. When I discover that scenarios I will let you know. 
-
-Maybe you know good examples of it? Let me know in comments.
+Difference is huge, isn't it? Mostly when you see answer with really high temperature `1.8`, in that case it is not even a text, but a set of words, but maybe in different scenarios it can be helpful. When I discover that scenarios I will let you know. Maybe you know good examples of it? Leave a comment with them.
 
 ### 3. Roles, the chat behavior
 It is very important part of the API. Using roles you will have power to define how the chat will behave. There are three main roles:
@@ -104,6 +102,10 @@ It is very important part of the API. Using roles you will have power to define 
     - You will find the most attractive 2 sentences in the article
 
 #### Some useful examples of system role
+{{< notice "info" >}}
+All of the examples you can find the [CodePruner.com repository](https://github.com/jwickowski/codepruner.com/tree/master/src/codepruner.com/static/examples/CodePruner.Examples)
+{{</ notice >}}
+
 When we ask a detailed question and when Chat doesn't know the answer then it will hallucinate. It means the chat will lie to you.
 {{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="default_role_jerzy_wickowski_in_desperation" >}}
 
@@ -161,7 +163,7 @@ and... now it is more useful, because answer like that is easy to parse and proc
 {{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_with_strict_units_json" >}}
 
 ### 6. How to pass your data to ChatGPT
-There is no dedicated way to do it. You are not able to train chat GPT with your own data. But there is a way to allow it working in your context You just need to add the information to the prompt. Of course is it limited but lets see how it works:
+There is no dedicated way to do it. You are not able to train chat GPT with your own data. But there is a way to allow it working in your context. You just need to add the information to the prompt. Of course is it limited, but let's see how it works:
 
 When there is no context it won't be able to tell you anything:
 {{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_without_context" >}}
