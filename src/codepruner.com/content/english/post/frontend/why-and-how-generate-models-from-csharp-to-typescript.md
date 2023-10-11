@@ -62,25 +62,25 @@ So let's get started
 ## Getting metadata
 
 At the beginning we need a model to keep fields in a simple flat format.
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendField.cs" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendField.cs" >}}
 
 When we have model we can get it from metadata. We will use reflection for this:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendFieldGetter.cs" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/BackendFieldGetter.cs" >}}
 
 Ok. It is done. Not we need to consume that data and create file content
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptContentGenerator.cs" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptContentGenerator.cs" >}}
 
 And join it as a one class to simplify the usage:
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators/TypeScriptModelGenerator.cs" >}}
 
 OK. Before we start it we should write a unit test to be sure that the code is working properly"
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.UnitTests/TypeScriptModelGeneratorTests.cs" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.UnitTests/TypeScriptModelGeneratorTests.cs" >}}
 
 And finally we can write a Runner, I mean a console app that combines all it together and we will be able to regenerate models as often as we wish:
 
-{{<code language="csharp"  file="/static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.Runner/Program.cs" >}}
+{{<code language="csharp"  file="static/examples/CodePruner.Examples/CodePruner.Examples.TypeScriptCodeGenerators.Runner/Program.cs" >}}
 
 Of course it is not a mature solution. There are multiple things to improve like:
 

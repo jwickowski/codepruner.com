@@ -14,7 +14,7 @@ type: "trending"
 I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some trouble at the beginning with running that with docker compose, because I wasn't able to establish a connection by `Adminer` and `pgAdmin`. Take a look at how I solved the issue.
 
 ### Lets start with docker-compose.yml file
-{{<code language="yaml" file="/static/examples/CodePruner.Examples/PostgresAndDockerCompose/docker-compose.yml" >}}
+{{<code language="yaml" file="static/examples/CodePruner.Examples/PostgresAndDockerCompose/docker-compose.yml" >}}
 
 Here I have defined three services:
 * `postgres` - a Postgress database

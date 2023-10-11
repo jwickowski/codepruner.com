@@ -107,21 +107,21 @@ All of the examples you can find the [CodePruner.com repository](https://github.
 {{</ notice >}}
 
 When we ask a detailed question and when Chat doesn't know the answer then it will hallucinate. It means the chat will lie to you.
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="default_role_jerzy_wickowski_in_desperation" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="default_role_jerzy_wickowski_in_desperation" >}}
 
 but you can define the system role to tell only the truth, then it will be more useful in real life scenarios. 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="honest_role_jerzy_wickowski_in_desperation" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="honest_role_jerzy_wickowski_in_desperation" >}}
 
 ### 4. There it no history
 When you use ChatGPT UI you can see the history of the chat. You can see what you asked and what was the answer. Moreover the UI keeps the history as a context. So following asnwers make sense with the previous messages. When you use API every request is independent, so you have to store the history yourself. How to do it? You have to keep the history and pass it in next requests. I think it will looks better with examples:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="lose_the_context" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="lose_the_context" >}}
 Here is the proof it doesn't keep the history, but we can implement it in different way. Take a look:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="keep_the_context" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="keep_the_context" >}}
 As you can see the continuation is kept. So if you want to keep the context you can do it like that. Moreover you can pass prepare the examples yourself to pass to the AI the context you wish. No one will stop you from doing things like that:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="prepare_the_context" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="prepare_the_context" >}}
 Of course in real life you can add to the context better information about your app, your company, your product or user context. We will do more logic experiments in further posts.
 
 
@@ -152,25 +152,25 @@ If you want to use the tool in real life you must learn how to create prompts. T
       - 00,123 => 0,123 - OK
 
 #### You can also define the answer format like here:
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_1" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_1" >}}
 
 but... to be honest it is a nice feature as a chat or Google alternative. If you would like to make it more useful from developer perspective you can modify the prompt to return th data in JSON format for examle. It can look like that:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_json" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_json" >}}
 
 and... now it is more useful, because answer like that is easy to parse and process in a further steps. You still have to be careful, because in example like that there are no information about the unit. You cannot be sure if the are is in square kilometers or miles. The same with population. It can be millions or thousands. So it is always better to be more strict when you ask about data like that and you can see it in the next example.
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_with_strict_units_json" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_with_strict_units_json" >}}
 
 ### 6. How to pass your data to ChatGPT
 There is no dedicated way to do it. You are not able to train chat GPT with your own data. But there is a way to allow it working in your context. You just need to add the information to the prompt. Of course is it limited, but let's see how it works:
 
 When there is no context it won't be able to tell you anything:
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_without_context" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_without_context" >}}
 
 You you can add there some context. To allow answering it with more sense:
 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_with_context" >}}
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_with_context" >}}
 
 Of course it is a simple data you can make it more complex. It depends on your needs. There are more ways to prepare the context, but I will show you them in the next posts.
 
