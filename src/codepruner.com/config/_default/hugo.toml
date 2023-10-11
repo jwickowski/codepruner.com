@@ -30,7 +30,7 @@ target = "assets/watching/hugo_stats.json"
 [[module.mounts]]
 source = 'static'
 target = 'static'
-excludeFiles = ["**/examples"]
+excludeFiles = ["**/bin", "**/obj", "**/*.csproj", "**/*.sln"]
 
 
 ############################# Build ##############################

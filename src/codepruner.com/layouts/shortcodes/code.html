@@ -7,7 +7,7 @@
 
 
 {{ else }}
-    {{ $startMarker := print "#region " $region }}
+    {{ $startMarker := print "#region " $region  }}
     {{ $endMarker := "#endregion" }}
    
     {{ $content := split $file "\r\n" }}
@@ -24,6 +24,9 @@
             {{ $insideRegion = true }}
         {{ end }}
     {{ end }}
+    {{ if eq $result ""}}
+        {{ errorf (print "There is no region: '" $region "' in file: '" (.Get "file") "'") }}
+    {{ end}}
 
 
     {{ (print "```" $lang  $result "```") | markdownify }}

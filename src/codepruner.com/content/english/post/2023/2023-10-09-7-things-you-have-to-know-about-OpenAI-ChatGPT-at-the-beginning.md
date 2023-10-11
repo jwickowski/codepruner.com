@@ -1,15 +1,16 @@
 ---
-title: "2023-10-09-7-things-you-have-to-know-about-OpenAI-ChatGPT-at-the-beginning"
+title: "6 things you must know before you start using OpenAI ChatGPT"
 author: "Jerzy Wickowski"
 images:
-  - "images/posts/2023/2023-10-09-7-things-you-have-to-know-about-OpenAI-ChatGPT-at-the-beginning.jpg" 
+  - "images/posts/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT.jpg" 
 date: 2023-10-09T04:40:58+01:00
-draft: true
+draft: false
 tags: ["ai", "openai", "chatGPT", "api", "temperature"]
 categories: ["AI"]
-type: "regular"
+type: "trending"
 companies: ["esatto"]
 ---
+
 
 ChatGPT it great tool. You can test it's capability on [webpage chat.openai.com](https://chat.openai.com/). It will answer your question, suggest a solution, write a bit code for you or write a nice post to Twitter(x) :). But if you limit your usage of that tool only to the chat, it will be only a toy. Nice, technological advanced, but only a toy. To discover to full potential you have to use it as an API. In this article I will show 7 things you should know about ChatGPT API before you start using it..
 
@@ -23,135 +24,160 @@ There are also more specialized models to use them im more specific scenarios li
   - `DALL·E` - a model to generate images from text or manipulate existing images
   - `Whisper` - a model to recognize speech
 
-#### Example with region: 
-{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe" >}}
+Just keep it in mind that there are more options to more complex or different scenarios.
 
+### 2. Feel the temperature
+When you use ChatGPT UI you have only a chat. You can ask a question and see the an answer. You have not option to pass more parameters and there is one really important parameter you should know. It is called `temperature`.  By adjusting `temperature` you can modify how random the answer will be. For example if you want to have analyze something you should set tempreture as low value, but you need more creativity then the value should be higher.
 
-### 2. Fill the temperature
-When you do a first 
+#### Application name examples
+> Can you provide me 3 short fancy names for an application to calculate boring reports?
 
-2. Roles, how it will behave
-3. Plans
-  - Different result
-  - different price
-4. No history. You have to keep it and send it every time, context
-5. Lean how to prompt (with roles)
-6. function calling
-  - it will not call a function 
-    - you need to define a function
-    - then ain a response can be an information to call a function
-    - then you can map it on your side 
-    - and call a function
-7. ?????
-
-3. Tokens
-4. Function calling
-5. Prompts
-6. Parameters
-7. 
-8. API
-9. History
-10. Azure API
-11. Train my own model
-
-- to start working with API you need to generate a access key
-- plans:
-  - they recommend to use:
-     - gpt-3.5-turbo-instruct
-     - gpt-3.5-turbo
-     - basuese they are cheaper
-  - but there are different models and they are specialized in different scenatios
-- you can define different roler
-  - user: it is you what you ask (do a prompt)
-  - system: you describe how the api should behave. 
-      - it sets the bahavior of assistant
-      - examples:
-         - You will find keywords in the article and return them in json format with information about the frequent
-         - You will be helpful asistant
-         - You will find the most atractive 2 sentences in the article
-
-  - asistant: it is answering to you 
-      - (or and examle answer to e able to give you a simillar answer in the future)
-  - api has no history, so you have to store it by yourself and send every time  in a message content
-- api. They suggest to use [azure api for .net](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/openai/Azure.AI.OpenAI). It should be compatible with openAI api.
-
-- there is an option to train my own model with chatGPT => https://platform.openai.com/docs/guides/fine-tuning
-- As I understand it is important how to do `prompts` to get what we want. It is a type 
-- parameters:
-   - temperature - what is the probability of choosing the next token. The higher the value, the more random the result will be. The lower the value, the more predictable the result will be.
-       - It is beeter to get smaller value if you want ot have a stable answer
-       - IT is better to have higher value if you want to have a creative or variety answer
-- tokens, as i understand 
-  - all of input/output is tokenized. eg. splitted into smaller parts. 
-  - there is a probability what the next tokem will be
-
-- 
-    
-<!--more-->
-TO do it you need following steps:
-- create an account on OpenAI
-- create an API key
-- install OpenAI .NET library
-- use it in your application
-
-to use it in your application you need to:
-- create a new project
-- add OpenAI .NET library
-- add a reference to the library
-- add a using statement
-- create a new instance of the OpenAI class
-- set the API key
-- set the engine
-- set the prompt
-- set the temperature
-- set the max tokens
-- set the top p
-- set the frequency penalty
-- set the presence penalty
-- set the stop sequence
-- call the Complete method
-- display the result
-- run the application
-- check the result
-
-
-with code samples it will looke like:
-```csharp
-using OpenAI;
-
-// do a request to opensi
-var openAi = new OpenAIClient("your api key");
-var result = openAi.Complete(engine: Engine.Davinci, prompt: "Once upon a time", maxTokens: 5);
-Console.WriteLine(result);
+{{< tabs "application_name" >}}
+{{< tab "Temp: 0" >}}
 ```
-
-to add there your own data you need to write:
-```csharp
-using OpenAI;
-
-// do a request to opensi
-var openAi = new OpenAIClient("your api key");
-var result = openAi.Complete(engine: Engine.Davinci, prompt: "Once upon a time", maxTokens: 5, stop: new[] { "\n" }, temperature: 0.7, topP: 1, frequencyPenalty: 0, presencePenalty: 0);
-Console.WriteLine(result);
+1. Elysian Analytics
+2. Opulent Insights
+3. Regal Reports
 ```
+{{</ tab >}}
+{{< tab "Temp: 1" >}}
+```
+1. Elysian Analytics
+2. LuxeMetrics
+3. Opulent Insights
+```
+{{< /tab>}}
+{{< tab "Temp: 2" >}}
+```
+1. Eoplectify
+2. Exancitus Veˈdonderovalesh
+3. Spectrofuture Analytics
+```
+{{< /tab>}}
+{{</ tabs >}}
+
+I know it is not very useful example, but you can see the difference between. It is great trick to unlock your brain with some ideas or generate a name for something new in an application. 
+
+#### Twitter post examples
+>  Write a attractive Twitter post about AI in bookkeeping?
+It should be 5 sentences long and there should be references music bands.
+Use rhymes.
+
+{{< tabs "twitter_post_example" >}}
+{{< tab "Temp: 0" >}}
+```
+🎵 Move over, old-school bookkeeping, AI is here to rock the charts! 📚🎸 Embrace the future of financial management with #AI-powered bookkeeping, where accuracy and efficiency harmonize like never before. 🤘📊 Say goodbye to tedious number crunching and hello to a symphony of automated processes that'll make your books sing! 🎶📚 Let AI be your backstage crew, freeing up time for you to jam with your favorite music bands. 🎵🎉 #BookkeepingRevolution #RockingWithAI
+```
+{{</ tab >}}
+{{< tab "Temp: 1" >}}
+```
+🎵 Groove to the future and let AI do the math - a bookkeeping revolution in your path! 📚💻✨ With AI technology, accuracy is tight, freeing your time to rock the mic!🔥🎶 Say goodbye to paper piles, 'cause AI's got the style! 📊💯 From AC/DC to Led Zeppelin vibes, AI ensures bookkeeping thrives! 🎸📝 Let the rhythm of automation and efficiency play, while AI keeps your numbers in perfect sway! 🤘💫 #AIBookkeeping #RockingTheBooks
+```
+{{< /tab>}}
+{{< tab "Temp: 1.8" >}}
+```
+🎵🤖who ushered AI, now on bookkeeping stage? 📚 Listen up, your off-key numerals are pages locked stage;
+Celebrate revolutions align, pixels to lend--breferences evolved Souls layer undeflooralready
+```
+{{< /tab>}}
+{{</ tabs >}}
+
+Difference is huge, isn't it? Mostly when you see answer with really high temperature `1.8`, in that case it is not even a text, but a set of words, but maybe in different scenarios it can be helpful. When I discover that scenarios I will let you know. 
+
+Maybe you know good examples of it? Let me know in comments.
+
+### 3. Roles, the chat behavior
+It is very important part of the API. Using roles you will have power to define how the chat will behave. There are three main roles:
+- user
+  - It the the input you will provide to the chat. 
+  - It it the main prompt you send to the chat.
+  - You use that role when you use the UI.
+- assistant
+  - It is the output of the chat.
+  - It is the answer you will get from the chat.
+- system
+  - It is the behavior of the chat or rather the behavior of the assistant.
+  - It gives you a huge power to make it much more useful.
+  - examples:
+    - You will find keywords in the article and return them in JSON format with information about the frequent
+    - You will be helpful assistant
+    - You will find the most attractive 2 sentences in the article
+
+#### Some useful examples of system role
+When we ask a detailed question and when Chat doesn't know the answer then it will hallucinate. It means the chat will lie to you.
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="default_role_jerzy_wickowski_in_desperation" >}}
+
+but you can define the system role to tell only the truth, then it will be more useful in real life scenarios. 
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/SystemRoleTests.cs" region="honest_role_jerzy_wickowski_in_desperation" >}}
+
+### 4. There it no history
+When you use ChatGPT UI you can see the history of the chat. You can see what you asked and what was the answer. Moreover the UI keeps the history as a context. So following asnwers make sense with the previous messages. When you use API every request is independent, so you have to store the history yourself. How to do it? You have to keep the history and pass it in next requests. I think it will looks better with examples:
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="lose_the_context" >}}
+Here is the proof it doesn't keep the history, but we can implement it in different way. Take a look:
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="keep_the_context" >}}
+As you can see the continuation is kept. So if you want to keep the context you can do it like that. Moreover you can pass prepare the examples yourself to pass to the AI the context you wish. No one will stop you from doing things like that:
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/HistoryTests.cs" region="prepare_the_context" >}}
+Of course in real life you can add to the context better information about your app, your company, your product or user context. We will do more logic experiments in further posts.
+
+
+### 5. Lean how to prompt
+If you want to use the tool in real life you must learn how to create prompts. Then you will gets wanted results. Let assume you want to create a regex to find leading zeros from a number. 
+- There are some requirements:
+  - If zero is at the beginning then is should be find
+  - If there is comma after zero then is should be ignored
+- Prompt examples:
+  - Simple question
+    - prompt: "What is regex to remove leading zeros"
+    - answer: `^0+`
+    - test samples: 
+      - 000231 => 231 - OK
+      - 000,231 => 000,231 - Not OK
+    - It is a simple answer for simple question. We didn't pass all out requirements. Let's try to so it.
+  - Simple Question with requirements:
+    - prompt: "What is regex to remove leading zeros. If zero is at the beginning then is should be find. If there is comma after zero then is should be ignored."
+    - answer: `^(0+)(?![,])`
+    - test samples:
+      - 00123 => 123 - OK
+      - 00,123 => 0,123 - OK
+  - You can do it by passing examples:
+    - prompt: What is regex to remove leading zeros. Examples: 0001 => 1; 00123 => 123; 0,12 => 0,12; 00000,423 => 0,423;
+    - answer: `^0+(?=\d)`
+    - test samples: 
+      - 00123 => 123 - OK
+      - 00,123 => 0,123 - OK
+
+#### You can also define the answer format like here:
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_1" >}}
+
+but... to be honest it is a nice feature as a chat or Google alternative. If you would like to make it more useful from developer perspective you can modify the prompt to return th data in JSON format for examle. It can look like that:
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_json" >}}
+
+and... now it is more useful, because answer like that is easy to parse and process in a further steps. You still have to be careful, because in example like that there are no information about the unit. You cannot be sure if the are is in square kilometers or miles. The same with population. It can be millions or thousands. So it is always better to be more strict when you ask about data like that and you can see it in the next example.
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ModelsTests.cs" region="ask_about_capitols_in_europe_with_strict_units_json" >}}
+
+### 6. How to pass your data to ChatGPT
+There is no dedicated way to do it. You are not able to train chat GPT with your own data. But there is a way to allow it working in your context You just need to add the information to the prompt. Of course is it limited but lets see how it works:
+
+When there is no context it won't be able to tell you anything:
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_without_context" >}}
+
+You you can add there some context. To allow answering it with more sense:
+
+{{<code language="csharp" file="/static/examples/CodePruner.Examples/CodePruner.Examples.AI.ChatGPT/ContextCinemaTests.cs" region="prompt_with_context" >}}
+
+Of course it is a simple data you can make it more complex. It depends on your needs. There are more ways to prepare the context, but I will show you them in the next posts.
+
+
+### Summary
+Thank you for reading the article. I hope you know what you came here. If no, let me know what you are looking for and I will try to help you with that.
 
 
 
 
-Open AI Embeddings - process to see text as a nubmer
-
-
-### How to fill AI with my owkn data
-- I can train my own model
-- I can use in-context (so add the text in the prompt)
-- RAG ?????
-  - embeding... 
-- I can use a fine-tuning ?????
  
 
-
-
- ### locally
- - https://ollama.ai 
- - use uncenzored data
- 
