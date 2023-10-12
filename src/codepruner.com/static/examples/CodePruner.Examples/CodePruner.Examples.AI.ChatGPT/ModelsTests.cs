@@ -19,7 +19,7 @@ public class ModelsTests
 
         var completionsOptions = new ChatCompletionsOptions(new []
         {
-            new ChatMessage(ChatRole.User, "What are 5 the biggest cities in Polish?")
+            new ChatMessage(ChatRole.User, "What are 5 the biggest cities in Poland?")
         });
         var result = await aiClient.GetChatCompletionsAsync("gpt-3.5-turbo", completionsOptions);
        

@@ -20,7 +20,7 @@ public class HistoryTests
 
         var completionsOptions = new ChatCompletionsOptions(new[]
         {
-            new ChatMessage(ChatRole.User, "What are 3 the biggest cities in Polish?")
+            new ChatMessage(ChatRole.User, "What are 3 the biggest cities in Poland?")
         });
         var result = await aiClient.GetChatCompletionsAsync("gpt-3.5-turbo", completionsOptions);
 
