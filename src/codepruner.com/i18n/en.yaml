@@ -40,8 +40,8 @@
 - id: subscribe
   translation: Subscribe now
 
-- id: subscribe_newsletter
-  translation: Subscribe Newsletter
+- id: subscribe_newsletter_after_content
+  translation: Are you still here? Subscribe for more content!
 
 - id: social
   translation: Social Links
