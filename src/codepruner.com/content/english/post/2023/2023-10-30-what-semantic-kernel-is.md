@@ -20,6 +20,9 @@ It is an open-source library, created by Microsoft. You can understand it as an 
 
 ### How to create it. 1st step.
 
+- Add Nuget `Microsoft.SemanticKernel`
+  - Currently there is only beta version: `1.0.0-beta3`
+{{<code language="yaml" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_semantic_kernel" >}}
 
 
 What MS write about Sematic Kernel
