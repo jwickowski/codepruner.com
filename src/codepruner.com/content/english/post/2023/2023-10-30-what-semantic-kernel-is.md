@@ -18,11 +18,17 @@ When I have started my adventure with AI I started with [exploring the OpenAI AP
 It is an open-source library, created by Microsoft. You can understand it as an abstraction layer above AI API with some features to do all required work to integrate you app with AI. Creators describe it:
 > Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face ... and automatically orchestrate plugins with AI
 
+
 ### How to create it. 1st step.
 
 - Add Nuget `Microsoft.SemanticKernel`
   - Currently there is only beta version: `1.0.0-beta3`
-{{<code language="yaml" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_semantic_kernel" >}}
+- Create a `KernelBuilder` to create a kernel
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_simple_semantic_kernel" >}}
+- You can also pass a console logger for example bit more configuration like:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_semantic_kernel_with_console_logging" >}}
+
+
 
 
 What MS write about Sematic Kernel
