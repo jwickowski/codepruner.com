@@ -23,4 +23,13 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Plugins\BikePlugin\BikeJoke\config.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Plugins\BikePlugin\BikeJoke\skprompt.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

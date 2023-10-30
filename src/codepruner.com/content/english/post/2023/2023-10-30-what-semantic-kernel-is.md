@@ -29,7 +29,40 @@ It is an open-source library, created by Microsoft. You can understand it as an 
 {{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_semantic_kernel_with_console_logging" >}}
 
 
+### Plugins in Sematic Kernel
+The main concept present is in the SK is a plugin system. It is build with two types of plugin functions `NativeFunction` and `SemanticFunction`. Both of them are designed to extend or encapsulate a logic for specifics tasks. Let's check some details and diffrences between them.
 
+#### SemanticFunction
+It is a way to create a predefined query to AI. It is nothing else like already prepared and configured, ready to use prompt to UI. It is build with:
+- Prompt
+  - It is a simple text
+  - It can include some placeholders to inject some values to the prompt
+- Configuration - It is a JSON file with the configuration for the prompt. like:
+    - Description - a description of the function. 
+      - It it used for users to know the intention of the function, 
+      - but also for the `planner`(we will talk about it later) to know what the function does.
+    - Temperature - to set how random or predictable the response should be
+    - MaxTokens - to set the length of the response
+    - and more
+- It can be defined inline:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="semantic_function_bike_joke_inline" >}}
+As you can see in that example. When you create one `SemanticFunction` and use it in different situations. 
+
+- or, better it can be defined in two seperate files:
+  - `skprompt.txt` - a  text file with a function prompt
+{{<code language="text" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/Plugins/BikePlugin/BikeJoke/skprompt.txt" >}}
+  - `config.json` - configuration
+{{<code language="json" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/Plugins/BikePlugin/BikeJoke/config.json" >}}
+ - and here you can see the example of usage:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="semantic_function_bike_joke_files" >}}
+
+#### NativeFunction
+It is a way to create your own part of code to run it thought the kernel. It can be responsible for calculations, doing API calls, saving or loading some data. The definition can look like that:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/Plugins/BikeSizePlugin.cs">}}
+and execution:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="native_function_bike_size" >}}
+
+I know the current example doesn't have too much sense, but it is just a simple example. It will give you a bit more sense when we combine them with a pipeline. 
 
 What MS write about Sematic Kernel
 - OpenSource SDK
