@@ -2,12 +2,12 @@
 title: "What SemanticKernel is and how to use it?"
 author: "Jerzy Wickowski"
 images:
-  - "images/posts/2023/2023-10-126-XXXXXXXXXXXXXXXXXXXXXXXXXXX.jpg" 
+  - "images/posts/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it.png" 
 date: 2023-10-30T04:40:58+01:00
 draft: false
-tags: ["ai", "openai", "chatGPT", "Semantic Kernel"]
+tags: ["ai", "openai", "Semantic Kernel", "planner", "pipeline"]
 categories: ["AI"]
-type: "regular"
+type: "trending"
 companies: ["esatto"]
 ---
 
@@ -62,22 +62,32 @@ It is a way to create your own part of code to run it thought the kernel. It can
 and execution:
 {{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="native_function_bike_size" >}}
 
-I know the current example doesn't have too much sense, but it is just a simple example. It will give you a bit more sense when we combine them with a pipeline. 
+I know the current example doesn't have too much sense. Why did I use the kernel to execute the function if I just could call it directly from `BikeSizePlugin`?
+- Remember, that it is just a simple example to show you how to create `NativeFuction`.
+- It will give you a bit more sense when we combine them with a pipeline. 
 
-What MS write about Sematic Kernel
-- OpenSource SDK
-- Semantic Kernel has been engineered to allow developers to flexibly integrate AI services into their existing apps
-- A core for copilots
-- A sample copilot: https://github.com/Azure-Samples/miyagi
-- It is for an orchestration a copilot
-- there is an alternative like: LangChain 
-- inside
-  - prompt and response filtering
-  - metaprompt - 
-- SC - uses context variables and semantic functions
+### Pipeline
+It is a way to running multiple functions, `Semantic` or `Native` in order with passing the output from one function to the following one. To achieve it you can configure it manually or use `planer`. Let's start with the 1st option:
+
+#### Manual pipeline configuration
+You can configure how the pipeline should look like. Check the example:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="manual_pipeline" >}}
+
+#### Planner
+You can do it in a different way. It still needs to be tested for more complex examples, but let see how it works in that example: 
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="sequential_planner" >}}
+
+As you can se, we just registered plugins and used `SequentialPlanner` to prepare a pipeline for asked query. The planner can use Native or Semantic functions. Because it knows what the function does, what is the input and output. 
 
 
-Conetxt
+
+### Summary
+Thank you that you are still here. I think you know main concepts of Semantic Kernel now. There are still some topics like: `Context` and `Memory`, but it is a topic for a different article.
+
+Let me know if you have any questions or comments. I will be happy to answer them.
+
+
+### Context
 - You can create on kernel like `var context = kernel.CreateNewContext();`
 - Then you can add values to it:  like `var history = ""; context.Variables["history"] = history;`
 - Then between commends you can add it like: 

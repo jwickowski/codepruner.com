@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.AI.OpenAI;
 using Microsoft.SemanticKernel.Orchestration;
+using Microsoft.SemanticKernel.Planners;
 using Microsoft.SemanticKernel.TemplateEngine;
 using Xunit.Abstractions;
 
@@ -129,11 +130,85 @@ public class ExploringSemanticKernel
     public async Task native_function_bike_size()
     {
         var kernel = SemanticKernelBuilderFactory.Create().Build();
-        var pluginFunctions = kernel.ImportFunctions(new BikeSizePlugin(), "BikeSizePlugin");
+        var pluginFunctions = kernel.ImportFunctions(new BikeApiPlugin(), "BikeSizePlugin");
         var responseResult = await kernel.RunAsync("175", pluginFunctions["CalculateBikeSize"]);
 
         var result = responseResult.GetValue<string>();
         Assert.Equal("M", result);
+    }
+
+    #endregion
+
+    #region manual_pipeline
+
+    [Fact]
+    public async Task manual_pipeline()
+    {
+        var kernel = SemanticKernelBuilderFactory.Create().Build();
+
+        var getTobTitleFunction = kernel.CreateSemanticFunction(
+            """
+            What is my Job, based on description?
+            Result should max two words like: Software Developer, Football Player, etc.
+            DESCRIPTION:
+            {{$input}}
+            """,
+            new OpenAIRequestSettings() {Temperature = 0.0});
+
+        var pluginsPath = Path.Combine(Directory.GetCurrentDirectory(), "Plugins");
+        kernel.ImportSemanticFunctionsFromDirectory(pluginsPath, "BikePlugin");
+
+        var responseResult = await kernel.RunAsync("I mostly create a code and sometimes I do a deploy. I do also some research in AI",
+            getTobTitleFunction,
+            kernel.Functions.GetFunction("BikePlugin", "BikeJoke"));
+
+        var result = responseResult.GetValue<string>();
+        Console.WriteLine(result);
+        // Example result:
+        // Why did the cyclist become an AI researcher?
+        //     Because they wanted to pedal their way to the future, but realized they could just program a bike to do it for them! Talk about taking the easy route!
+        
+        
+        
+        var responseResult2 = await kernel.RunAsync("I try to find a bad guys and put them in jail. I also like to drive a car and shoot a gun.",
+            getTobTitleFunction,
+            kernel.Functions.GetFunction("BikePlugin", "BikeJoke"));
+
+        var result2 = responseResult2.GetValue<string>();
+        Console.WriteLine(result2);
+        //Example result:
+        // Why did the Law Enforcement Officer give the cyclist a ticket?
+        //     Because the cyclist was going too fast... for a snail! Talk about breaking the sound barrier on two wheels! 🚴‍♂️💨
+        //     But hey, at least the snail didn't need a helmet! Safety first, right? 😄
+    }
+
+
+    #endregion
+
+
+    #region sequential_planner
+
+    [Fact]
+    public async Task sequential_planner()
+    {
+        var kernel = SemanticKernelBuilderFactory.Create().Build();
+        var pluginsPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Plugins");
+        kernel.ImportSemanticFunctionsFromDirectory(pluginsPath, "BikePlugin");
+        kernel.ImportFunctions(new BikeApiPlugin(), "BikeSizePlugin");
+
+        var planner = new SequentialPlanner(kernel);
+        var plan = await planner.CreatePlanAsync(
+            "What bike size should I buy if I am 175cm tall? I also like riding in the forest. Mostly in hilly areas.");
+
+        Console.WriteLine(string.Join(",", plan.Steps.Select(x => $"{x.PluginName}.{x.Name}")));
+        // Example plan:
+        // BikeSizePlugin.CalculateBikeSize,BikeSizePlugin.BikeForMe
+        var responseResult = await kernel.RunAsync(plan);
+
+        var result = responseResult.GetValue<string>();
+        Console.WriteLine(result);
+        // Example result:
+        // You should get a M Mountain bike
     }
 
     #endregion

@@ -30,6 +30,9 @@
       <None Update="Plugins\BikePlugin\BikeJoke\skprompt.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="Plugins\BikePlugin\BikeName\skprompt.txt">
+        <DependentUpon>config.json</DependentUpon>
+      </None>
     </ItemGroup>
 
 </Project>
