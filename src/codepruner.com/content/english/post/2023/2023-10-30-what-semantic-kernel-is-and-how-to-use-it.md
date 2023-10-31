@@ -1,5 +1,5 @@
 ---
-title: "What is SemanticFunction how to use it?"
+title: "What is SemanticKernel how to use it?"
 author: "Jerzy Wickowski"
 images:
   - "images/posts/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it.png" 
