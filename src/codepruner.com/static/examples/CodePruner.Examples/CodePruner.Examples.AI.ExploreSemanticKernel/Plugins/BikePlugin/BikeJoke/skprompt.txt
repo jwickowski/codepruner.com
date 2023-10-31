@@ -1,0 +1,6 @@
+Write a joke about cyclists
+It must be funny
+It should be sarcastic
+It should be in style of dad jokes
+It should be written in simple language
+It should be about bike and {{$input}}
