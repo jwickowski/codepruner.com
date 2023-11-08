@@ -1,5 +1,7 @@
 ﻿
  
+ #Install-Module -Name PowerShell-Yaml
+
 #  param (
 #         [Parameter(Mandatory)]
 #         [string] 
@@ -24,6 +26,9 @@ function Add-DisqusDataToFrontMatter {
          [string] 
          $FilePath
     )
+    $frontMatterData = Parse-FrontMatter -Path $FilePath
+    ## manipulate, add remove
+    Update-FrontMAtter -Path $FilePath -frontMatter $frontMatterData
    $urlExists = $false;
    $url = "";
     
@@ -77,7 +82,9 @@ function Add-DisqusDataToFrontMatter {
 
 
 
+$filePath = "C:\Projects\jw\codepruner.com\src\codepruner.com\content\english\post\2023\2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.md"    
+     # Add-DisqusDataToFrontMatterForOneFile -FilePath "C:\Projects\jw\codepruner.com\src\codepruner.com\content\english\post\2023\2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.mdt"
 
-     Add-DisqusDataToFrontMatterForOneFile -FilePath "C:\Projects\jw\codepruner.com\src\codepruner.com\content\english\post\2023\2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.mdt"
+     Get-Metadata -Path $filePath
 
 
