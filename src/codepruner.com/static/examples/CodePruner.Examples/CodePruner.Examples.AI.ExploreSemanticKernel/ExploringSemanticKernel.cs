@@ -2,6 +2,7 @@ using CodePruner.Examples.AI.ExploreSemanticKernel.Plugins;
 using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.AI.OpenAI;
+using Microsoft.SemanticKernel.Diagnostics;
 using Microsoft.SemanticKernel.Orchestration;
 using Microsoft.SemanticKernel.Planners;
 using Microsoft.SemanticKernel.TemplateEngine;
@@ -181,8 +182,7 @@ public class ExploringSemanticKernel
 
 
     #endregion
-
-
+    
     #region sequential_planner
 
     [Fact]
@@ -206,6 +206,85 @@ public class ExploringSemanticKernel
         Console.WriteLine(result);
         // Example result:
         // You should get a M Mountain bike
+    }
+
+    #endregion
+    
+    
+    #region throw_SKException_Function_not_available_GLOBAL_FUNCTIONS_input
+
+    [Fact]
+    public async Task throw_SKException_Function_not_available_GLOBAL_FUNCTIONS_input()
+    {
+        var kernel = SemanticKernelBuilderFactory.Create().Build();
+
+        string promptTemplate = """
+                                Give me 3 most interesting cities in a specific country.
+                                Return it in JSON format with fields: name, area, interesting attraction.
+                                The country is {{input}}
+                                """;
+
+        var semanticFunction =
+            kernel.CreateSemanticFunction(promptTemplate, "GetInterestingCountries", "CountriesPlugin", 
+                "Get a list of interesting cities in a specific county in Json format", new OpenAIRequestSettings()
+                {
+                    MaxTokens = 250,
+                    Temperature = 0.5
+                });
+
+        
+        var skException =
+            await Assert.ThrowsAsync<SKException>(async () => await kernel.RunAsync("Poland", semanticFunction));
+       Assert.Contains("Function not available _GLOBAL_FUNCTIONS_.input", skException.Message);
+    }
+
+    #endregion
+    
+    #region fix_throw_SKException_Function_not_available_GLOBAL_FUNCTIONS_input
+
+    [Fact]
+    public async Task fix_throw_SKException_Function_not_available_GLOBAL_FUNCTIONS_input()
+    {
+        var kernel = SemanticKernelBuilderFactory.Create().Build();
+
+        string promptTemplate = """
+                                Give me 3 most interesting cities in a specific country.
+                                Return it in JSON format with fields: name, area, interesting attraction.
+                                The country is {{$input}}
+                                """;
+
+        var semanticFunction =
+            kernel.CreateSemanticFunction(promptTemplate, "GetInterestingCountries", "CountriesPlugin", 
+                "Get a list of interesting cities in a specific county in Json format", new OpenAIRequestSettings()
+                {
+                    MaxTokens = 250,
+                    Temperature = 0.5
+                });
+
+        
+      var resultResponse = await kernel.RunAsync("Slovakia", semanticFunction);
+      var result = resultResponse.GetValue<string>();
+      Console.WriteLine(result);
+      // Example result:
+      // {
+      //     "cities": [
+      //     {
+      //         "name": "Bratislava",
+      //         "area": "368.45 square kilometers",
+      //         "interesting_attraction": "Bratislava Castle"
+      //     },
+      //     {
+      //         "name": "Košice",
+      //         "area": "242.77 square kilometers",
+      //         "interesting_attraction": "St. Elisabeth Cathedral"
+      //     },
+      //     {
+      //         "name": "Banská Štiavnica",
+      //         "area": "50.35 square kilometers",
+      //         "interesting_attraction": "Old Castle"
+      //     }
+      //     ]
+      // }
     }
 
     #endregion
