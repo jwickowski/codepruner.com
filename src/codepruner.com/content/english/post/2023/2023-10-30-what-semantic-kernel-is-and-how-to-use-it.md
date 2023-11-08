@@ -24,7 +24,7 @@ Remember! All of the examples you can find the [CodePruner.com repository](https
 ### How to create it. 1st step.
 
 - Add Nuget `Microsoft.SemanticKernel`
-  - Currently only beta is available. The version is `1.0.0-beta3`
+  - Currently only beta is available. The version is ~~`1.0.0-beta3`~~ `1.0.0-beta5`
 - Create a `KernelBuilder` to create a kernel
 {{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.AI.ExploreSemanticKernel/ExploringSemanticKernel.cs" region="create_simple_semantic_kernel" >}}
 - You can also pass a console logger to the builder to see a bit more:
