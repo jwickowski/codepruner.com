@@ -5,6 +5,7 @@ using Microsoft.SemanticKernel.Connectors.AI.OpenAI;
 using Microsoft.SemanticKernel.Orchestration;
 using Microsoft.SemanticKernel.Planners;
 using Microsoft.SemanticKernel.TemplateEngine;
+using Microsoft.SemanticKernel.TemplateEngine.Basic;
 using Xunit.Abstractions;
 
 namespace CodePruner.Examples.AI.ExploreSemanticKernel;
@@ -78,12 +79,8 @@ public class ExploringSemanticKernel
 
         var promptConfig = new PromptTemplateConfig();
         promptConfig.ModelSettings.Add(bikeJokeRequestSettings);
-
-        var bikeJokePromptTemplate = new PromptTemplate(
-            bikeJokePrompt,
-            promptConfig,
-            kernel
-        );
+        var promptTemplateFactory = new BasicPromptTemplateFactory();
+        var bikeJokePromptTemplate = promptTemplateFactory.Create(bikeJokePrompt, promptConfig);
 
         var bikeJokeFunction =
             kernel.RegisterSemanticFunction("BikePlugin", "BikeJoke", promptConfig, bikeJokePromptTemplate);
