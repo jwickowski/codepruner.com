@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "updateFrontMatter": "npx ts-node   updateFrontMatter.ts --path ../codepruner.com/content/"
+    "updateFrontMatter": "npx ts-node   updateFrontMatter.ts --path ../codepruner.com/content/english/post"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
