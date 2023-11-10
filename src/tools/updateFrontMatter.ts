@@ -5,20 +5,11 @@ import matter from 'gray-matter';
 import yaml from 'js-yaml';
 
 const params = getParameters();
-console.log("Parameters passed: ", params)
-
 var files = findFilesInDir(params.path, ".md");
-console.log("Files found: ");
-console.table(files);
-
 
 files.forEach(filePath => {
     console.log("Processing file: ", filePath);
     const frontMatter = getFrontMatter(filePath);
-    console.log("Front matter: ", frontMatter);
-
-    frontMatter.dupa = "dupa"
-
     overrideFrontMatter(filePath, frontMatter)
 
 });
@@ -68,12 +59,8 @@ function getFrontMatter(filePath: string) {
 
 function overrideFrontMatter(filePath: string, newFrontMatter: object) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
-
     const { content } = matter(fileContent);
-    console.log("Existing content: ", content);
     const yamlFrontMatter = yaml.dump(newFrontMatter, { sortKeys: true });
-
     const newFileContent = `---\n${yamlFrontMatter}---\n${content}`;
-
     fs.writeFileSync(filePath, newFileContent);
 }
