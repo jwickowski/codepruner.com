@@ -10,40 +10,26 @@ var files = findFilesInDir(params.path, ".md");
 files.forEach(filePath => {
     console.log("Processing file: ", filePath);
     const oldFrontMatter = getFrontMatter(filePath);
-    const newFrontMatter = processFrontMatter(oldFrontMatter, filePath);
+    const newFrontMatter = processFrontMatter(oldFrontMatter, filePath, params.domain);
     overrideFrontMatter(filePath, newFrontMatter)
 
 });
 
-function processFrontMatter(frontMatter: FrontMatterType, filePath: string): FrontMatterType {
-    Object.keys(frontMatter).forEach(key => {
-        if(frontMatter["url"] == undefined){
-            frontMatter["url"] = getUrlFromFilePath(filePath);
-        }
-        var value = frontMatter[key];
-      switch (key) {
-        case 'url':
-            //frontMatter["diquisXXXX"] = value;
-            break;
-            case 'tags':
-               // console.log('tags TYPE:', Array.isArray(value) ? "ARRAY": "notARRAY" )
-                break;
-        default:
-           // console.log("Unknown key: ", key);
-           // console.log("Unknown value: ", value);
-            break;
-      }
-    });
+function processFrontMatter(frontMatter: FrontMatterType, filePath: string,  domain: string): FrontMatterType {
+    if (frontMatter["url"] == undefined) {
+        frontMatter["url"] = getUrlFromFilePath(filePath);
+    }
 
-
+    frontMatter["disqus_title"] = frontMatter["title"]
+    frontMatter["disqus_url"] = `${domain}/${frontMatter["url"]}`
+    frontMatter["disqus_identifier"] = `${domain}/${frontMatter["url"]}`
     return frontMatter;
-
 }
 
 function getUrlFromFilePath(filePath: string): string {
     var prefixToSearch = "\\content\\english\\";
     var contentIndex = filePath.indexOf(prefixToSearch);
-    var url = filePath.substring(contentIndex+prefixToSearch.length, filePath.length-3);
+    var url = filePath.substring(contentIndex + prefixToSearch.length, filePath.length - 3);
     console.log("url: ", url);
     url = url.replace(/\\/g, "/");
     return url;
@@ -59,6 +45,7 @@ function getParameters(): ScriptParams {
 
 type ScriptParams = {
     path: string;
+    domain: string
 }
 
 function findFilesInDir(startPath: string, extension: string): string[] {
@@ -79,8 +66,7 @@ function findFilesInDir(startPath: string, extension: string): string[] {
             const filesINDeeperDir = findFilesInDir(filename, extension); // recurse
             results = results.concat(filesINDeeperDir);
         } else if (filename.endsWith(extension)) {
-            if(filename.indexOf("_index.md") == -1)
-            {
+            if (filename.indexOf("_index.md") == -1) {
                 results.push(filename);
             }
         }
