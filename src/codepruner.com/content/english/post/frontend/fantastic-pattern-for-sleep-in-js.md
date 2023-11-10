@@ -1,14 +1,24 @@
 ---
-title: "Fantastic pattern to sleep in modern javascript"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/frontend/fantastic-pattern-for-sleep-in-js"
-date: 2021-07-27T10:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - frontend
+date: 2021-07-27T09:40:58.000Z
+disqus_identifier: 'https://codepruner.com/posts/frontend/fantastic-pattern-for-sleep-in-js'
+disqus_title: Fantastic pattern to sleep in modern javascript
+disqus_url: 'https://codepruner.com/posts/frontend/fantastic-pattern-for-sleep-in-js'
 draft: true
-tags: ["javascript", "typescript", "sleep", "thread", "promise", "async/await"]
-categories: ["frontend"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - javascript
+  - typescript
+  - sleep
+  - thread
+  - promise
+  - async/await
+title: Fantastic pattern to sleep in modern javascript
+type: regular
+url: posts/frontend/fantastic-pattern-for-sleep-in-js
 ---
 
 Sometimes you need to wait for something. In most cases there is something bad in your code or with your infrastructure, but sometimes it is required. When?

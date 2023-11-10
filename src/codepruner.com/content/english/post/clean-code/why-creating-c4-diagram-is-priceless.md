@@ -1,14 +1,22 @@
 ---
-title: "Why creating c4 diagram is priceless"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/clean-code/why-creating-c4-diagram-is-priceless"
-date: 2021-04-20T08:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - clean-code
+date: 2021-04-20T07:40:58.000Z
+disqus_identifier: 'https://codepruner.com/posts/clean-code/why-creating-c4-diagram-is-priceless'
+disqus_title: Why creating c4 diagram is priceless
+disqus_url: 'https://codepruner.com/posts/clean-code/why-creating-c4-diagram-is-priceless'
 draft: false
-tags: ["legacy", "clean code", "ideas", "c4"]
-categories: ["clean-code"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - legacy
+  - clean code
+  - ideas
+  - c4
+title: Why creating c4 diagram is priceless
+type: regular
+url: posts/clean-code/why-creating-c4-diagram-is-priceless
 ---
 
 I am currently joining into new project, into new company. There is knowleadgle I don't know, but I have to be familiar with that. I know and everyone knows, it is not a perfect solution, but before I suggest any changes I need to undestand what is what.

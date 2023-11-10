@@ -1,15 +1,21 @@
 ---
-title: "Why not WordPress?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2021/why-not-wordpress.jpg" 
-url: "posts/hugo/why-not-wordpress"
-date: 2021-03-23T6:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-03-23T05:40:58.000Z
+disqus_identifier: 'https://codepruner.com/posts/hugo/why-not-wordpress'
+disqus_title: Why not WordPress?
+disqus_url: 'https://codepruner.com/posts/hugo/why-not-wordpress'
 draft: false
-tags: ["hugo", "blog", "wordpress"]
-categories: ["blog"]
-type: "popular"
-
+images:
+  - images/posts/2021/why-not-wordpress.jpg
+tags:
+  - hugo
+  - blog
+  - wordpress
+title: Why not WordPress?
+type: popular
+url: posts/hugo/why-not-wordpress
 ---
 
 At the beginning I need to confess you something.

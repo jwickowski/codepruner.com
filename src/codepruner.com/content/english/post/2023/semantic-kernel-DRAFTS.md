@@ -1,14 +1,24 @@
 ---
-title: "Context and Memory in SemanticKernel?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-10-126-XXXXXXXXXXXXXXXXXXXXXXXXXXX.jpg" 
-date: 2023-11-01T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - AI
+companies:
+  - esatto
+date: 2023-11-01T03:40:58.000Z
+disqus_identifier: 'https://codepruner.com/post/2023/semantic-kernel-DRAFTS'
+disqus_title: Context and Memory in SemanticKernel?
+disqus_url: 'https://codepruner.com/post/2023/semantic-kernel-DRAFTS'
 draft: true
-tags: ["ai", "openai", "chatGPT", "Semantic Kernel"]
-categories: ["AI"]
-type: "regular"
-companies: ["esatto"]
+images:
+  - images/posts/2023/2023-10-126-XXXXXXXXXXXXXXXXXXXXXXXXXXX.jpg
+tags:
+  - ai
+  - openai
+  - chatGPT
+  - Semantic Kernel
+title: Context and Memory in SemanticKernel?
+type: regular
+url: post/2023/semantic-kernel-DRAFTS
 ---
 
 

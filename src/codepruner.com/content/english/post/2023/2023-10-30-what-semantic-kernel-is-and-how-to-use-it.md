@@ -1,14 +1,27 @@
 ---
-title: "What is SemanticKernel how to use it?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it.png" 
-date: 2023-10-30T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - AI
+companies:
+  - esatto
+date: 2023-10-30T03:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/post/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it
+disqus_title: What is SemanticKernel how to use it?
+disqus_url: >-
+  https://codepruner.com/post/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it
 draft: false
-tags: ["ai", "openai", "Semantic Kernel", "planner", "pipeline"]
-categories: ["AI"]
-type: "trending"
-companies: ["esatto"]
+images:
+  - images/posts/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it.png
+tags:
+  - ai
+  - openai
+  - Semantic Kernel
+  - planner
+  - pipeline
+title: What is SemanticKernel how to use it?
+type: trending
+url: post/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it
 ---
 
 When I have started my adventure with AI I [explored the OpenAI API]({{< relref "./2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT.md" >}}). It worked, but during my trip, deeper and deeper I discovered there were more and more concepts. All of them are important and we need to understand and implement like history, context, prompt sequential, external API requests. Everything can be done with API and you code, but there is something like SemanticKernel that can help you with it.

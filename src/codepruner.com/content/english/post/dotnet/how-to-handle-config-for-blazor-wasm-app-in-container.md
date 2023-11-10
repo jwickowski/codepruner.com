@@ -1,14 +1,27 @@
 ---
-title: "How to handle-config-for-blazor-wasm-app-in-container"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container"
-date: 2023-09-02T14:42:00+01:00
+author: Jerzy Wickowski
+categories:
+  - dotnet
+date: 2023-09-02T13:42:00.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
+disqus_title: How to handle-config-for-blazor-wasm-app-in-container
+disqus_url: >-
+  https://codepruner.com/posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
 draft: true
-tags: ["dotnet", "docker", "container", "k8s", "kubernetes", "devops", "configuration"]
-categories: ["dotnet"]
-type: "regiular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - dotnet
+  - docker
+  - container
+  - k8s
+  - kubernetes
+  - devops
+  - configuration
+title: How to handle-config-for-blazor-wasm-app-in-container
+type: regiular
+url: posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
 ---
 
 - how it is working

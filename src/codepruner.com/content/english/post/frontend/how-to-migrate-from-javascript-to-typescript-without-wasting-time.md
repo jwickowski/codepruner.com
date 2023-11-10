@@ -1,14 +1,26 @@
 ---
-title: "How to migrate from javascript to typescript without wasting time"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time"
-date: 2021-07-18T10:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - frontend
+date: 2021-07-18T09:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time
+disqus_title: How to migrate from javascript to typescript without wasting time
+disqus_url: >-
+  https://codepruner.com/posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time
 draft: false
-tags: ["javascript", "typescript", "legacy", "clean code", "ongoing refactor"]
-categories: ["frontend"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - javascript
+  - typescript
+  - legacy
+  - clean code
+  - ongoing refactor
+title: How to migrate from javascript to typescript without wasting time
+type: regular
+url: >-
+  posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time
 ---
 
 I prefer typescript to javascript. There are multiple of reasons for TS, but sometimes I join to projects made in JavaScript. 

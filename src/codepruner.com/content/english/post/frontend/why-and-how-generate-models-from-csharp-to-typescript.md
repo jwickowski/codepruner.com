@@ -1,14 +1,25 @@
 ---
-title: "Why and how generate models from C# to Typescript"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/frontend/why-and-how-generate-models-from-csharp-to-typescript"
-date: 2021-08-31T05:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - frontend
+date: 2021-08-31T04:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
+disqus_title: Why and how generate models from C# to Typescript
+disqus_url: >-
+  https://codepruner.com/posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
 draft: false
-tags: ["javascript", "typescript", "C#", "clean code", "code generator"]
-categories: ["frontend"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - javascript
+  - typescript
+  - C#
+  - clean code
+  - code generator
+title: Why and how generate models from C# to Typescript
+type: regular
+url: posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
 ---
 
 I don't understand why developers doesn't automate their job. They can save a huge amount of time with very low effort. How? For example, by generating models from backend to frontend. We will talk about it today.
