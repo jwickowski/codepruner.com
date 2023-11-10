@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - frontend
 date: 2021-07-27T09:40:58.000Z
+disqus_identifier: 'https://codepruner.com/posts/frontend/fantastic-pattern-for-sleep-in-js'
+disqus_title: Fantastic pattern to sleep in modern javascript
+disqus_url: 'https://codepruner.com/posts/frontend/fantastic-pattern-for-sleep-in-js'
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

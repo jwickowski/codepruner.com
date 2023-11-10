@@ -6,6 +6,11 @@ author: Jerzy Wickowski
 categories:
   - docker
 date: 2023-09-22T05:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
+disqus_title: How to run postgresql and adminer/pgadmin with docker compose
+disqus_url: >-
+  https://codepruner.com/post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 draft: false
 images:
   - >-

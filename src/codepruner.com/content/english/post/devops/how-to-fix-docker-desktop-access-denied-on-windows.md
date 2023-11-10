@@ -3,6 +3,13 @@ author: Jerzy Wickowski
 categories:
   - devops
 date: 2021-04-07T02:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
+disqus_title: >-
+  How to fix "Docker Desktop - Access denied" - How to add user to
+  "docker-users" group on widows
+disqus_url: >-
+  https://codepruner.com/posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

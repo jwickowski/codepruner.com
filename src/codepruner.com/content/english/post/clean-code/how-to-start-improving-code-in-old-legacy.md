@@ -3,6 +3,11 @@ author: Jerzy Wickowski
 categories:
   - clean-code
 date: 2021-03-29T20:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/clean-code/how-to-start-improving-code-in-old-legacy
+disqus_title: How to start improving code in old lagacy project
+disqus_url: >-
+  https://codepruner.com/posts/clean-code/how-to-start-improving-code-in-old-legacy
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

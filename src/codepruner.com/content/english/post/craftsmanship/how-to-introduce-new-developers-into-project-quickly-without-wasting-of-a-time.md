@@ -3,6 +3,11 @@ author: Jerzy Wickowski
 categories:
   - craftsmanship
 date: 2021-11-19T07:40:58.000Z
+disqus_identifier: >-
+  https://codepruner.com/posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
+disqus_title: How to introduce new developers into project quickly without wasting of a time
+disqus_url: >-
+  https://codepruner.com/posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg
