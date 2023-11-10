@@ -9,10 +9,33 @@ var files = findFilesInDir(params.path, ".md");
 
 files.forEach(filePath => {
     console.log("Processing file: ", filePath);
-    const frontMatter = getFrontMatter(filePath);
-    overrideFrontMatter(filePath, frontMatter)
+    const oldFrontMatter = getFrontMatter(filePath);
+    const newFrontMatter = processFrontMatter(oldFrontMatter);
+    overrideFrontMatter(filePath, newFrontMatter)
 
 });
+
+function processFrontMatter(frontMatter: FrontMatterType): FrontMatterType {
+    Object.keys(frontMatter).forEach(key => {
+        var value = frontMatter[key];
+      switch (key) {
+        case 'url':
+            //frontMatter["diquisXXXX"] = value;
+            break;
+            case 'tags':
+               // console.log('tags TYPE:', Array.isArray(value) ? "ARRAY": "notARRAY" )
+                break;
+        default:
+           // console.log("Unknown key: ", key);
+           // console.log("Unknown value: ", value);
+            break;
+      }
+    });
+
+
+    return frontMatter;
+
+}
 
 function getParameters(): ScriptParams {
     const argv: ScriptParams = yargs(process.argv).argv;
@@ -64,3 +87,5 @@ function overrideFrontMatter(filePath: string, newFrontMatter: object) {
     const newFileContent = `---\n${yamlFrontMatter}---\n${content}`;
     fs.writeFileSync(filePath, newFileContent);
 }
+
+type FrontMatterType = { [key: string]: any };
