@@ -10,13 +10,16 @@ var files = findFilesInDir(params.path, ".md");
 files.forEach(filePath => {
     console.log("Processing file: ", filePath);
     const oldFrontMatter = getFrontMatter(filePath);
-    const newFrontMatter = processFrontMatter(oldFrontMatter);
+    const newFrontMatter = processFrontMatter(oldFrontMatter, filePath);
     overrideFrontMatter(filePath, newFrontMatter)
 
 });
 
-function processFrontMatter(frontMatter: FrontMatterType): FrontMatterType {
+function processFrontMatter(frontMatter: FrontMatterType, filePath: string): FrontMatterType {
     Object.keys(frontMatter).forEach(key => {
+        if(frontMatter["url"] == undefined){
+            frontMatter["url"] = getUrlFromFilePath(filePath);
+        }
         var value = frontMatter[key];
       switch (key) {
         case 'url':
@@ -35,6 +38,15 @@ function processFrontMatter(frontMatter: FrontMatterType): FrontMatterType {
 
     return frontMatter;
 
+}
+
+function getUrlFromFilePath(filePath: string): string {
+    var prefixToSearch = "\\content\\english\\";
+    var contentIndex = filePath.indexOf(prefixToSearch);
+    var url = filePath.substring(contentIndex+prefixToSearch.length, filePath.length-3);
+    console.log("url: ", url);
+    url = url.replace(/\\/g, "/");
+    return url;
 }
 
 function getParameters(): ScriptParams {
@@ -67,7 +79,10 @@ function findFilesInDir(startPath: string, extension: string): string[] {
             const filesINDeeperDir = findFilesInDir(filename, extension); // recurse
             results = results.concat(filesINDeeperDir);
         } else if (filename.endsWith(extension)) {
-            results.push(filename);
+            if(filename.indexOf("_index.md") == -1)
+            {
+                results.push(filename);
+            }
         }
     }
 

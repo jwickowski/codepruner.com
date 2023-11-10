@@ -16,6 +16,7 @@ tags:
   - json
 title: 5 things you have to know when you think about MartenDB
 type: trending
+url: post/2023/2023-10-03-five-things-you-must-know-about-MartenDB
 ---
 
 Most of my developer's career I work with SQLServer as database. Mostly because for .NET it's a natural choice and all of the tools are very well supported and integrated. But in my new project I want to use EventSourcing. After investigation I have found MartenDB. There are my first thoughts about it.

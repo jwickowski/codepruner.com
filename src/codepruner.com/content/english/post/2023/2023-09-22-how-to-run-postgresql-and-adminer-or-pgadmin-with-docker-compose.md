@@ -19,6 +19,8 @@ tags:
   - docker compose
 title: How to run postgresql and adminer/pgadmin with docker compose
 type: trending
+url: >-
+  post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 ---
 
 I usually develop in .net and I use SqlServer database, but sometimes it is time to change the environment a bit and try something new. I decided to use PostgreSQL. It is a new tool for me, so I had some trouble at the beginning with running that with docker compose, because I wasn't able to establish a connection by `Adminer` and `pgAdmin`. Take a look at how I solved the issue.

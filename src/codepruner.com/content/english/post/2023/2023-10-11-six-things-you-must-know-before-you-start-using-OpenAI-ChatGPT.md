@@ -17,6 +17,8 @@ tags:
   - temperature
 title: 6 things you must know before you start using OpenAI ChatGPT
 type: trending
+url: >-
+  post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT
 ---
 
 

@@ -15,6 +15,7 @@ tags:
   - reinforcement-learning
 title: How to distinguish types of AI?
 type: popular
+url: post/2023/2023-10-04-how-to-distinguish-types-of-AI
 ---
 
 Before we start working with Artificial Intelligence we should know what it is, at least a bit. There are many definitions of AI and there are multiple types of AI. Prepare a mug of coffee and let's start.

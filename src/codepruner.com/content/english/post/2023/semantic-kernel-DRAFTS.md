@@ -15,6 +15,7 @@ tags:
   - Semantic Kernel
 title: Context and Memory in SemanticKernel?
 type: regular
+url: post/2023/semantic-kernel-DRAFTS
 ---
 
 
