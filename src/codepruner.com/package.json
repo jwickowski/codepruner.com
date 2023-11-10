@@ -13,13 +13,18 @@
     "update-modules": "node ./scripts/clearModules.js && hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy",
     "project-setup": "node ./scripts/projectSetup.js",
     "theme-setup": "node ./scripts/themeSetup.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "updateFrontMatter": "npx ts-node   updateFrontMatter.ts --path ./content/"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@types/node": "^20.9.0",
+    "gray-matter": "^4.0.3",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "prettier": "^2.8.1",
-    "prettier-plugin-go-template": "0.0.13"
+    "prettier-plugin-go-template": "0.0.13",
+    "ts-node": "^10.9.1",
+    "yargs": "^17.7.2"
   }
 }

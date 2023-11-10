@@ -1,0 +1,17 @@
+{
+  "name": "codepruner.tools",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "author": "Jerzy Wickowski",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "updateFrontMatter": "npx ts-node   updateFrontMatter.ts --path ../codepruner.com/content/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "gray-matter": "^4.0.3",
+    "ts-node": "^10.9.1",
+    "yargs": "^17.7.2"
+  }
+}
