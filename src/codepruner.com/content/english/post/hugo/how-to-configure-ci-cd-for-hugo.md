@@ -1,14 +1,18 @@
 ---
-title: "How to configure CI/CD for hugo?"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/hugo/how-to-configure-ci-cd-for-hugo"
-date: 2021-04-07T20:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-04-07T19:40:58.000Z
 draft: false
-tags: ["hugo", "docker", "devops"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - hugo
+  - docker
+  - devops
+title: How to configure CI/CD for hugo?
+type: regular
+url: posts/hugo/how-to-configure-ci-cd-for-hugo
 ---
 
 # How the proces will look like

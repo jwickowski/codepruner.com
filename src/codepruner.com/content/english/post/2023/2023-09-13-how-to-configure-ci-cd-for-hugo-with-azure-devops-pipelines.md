@@ -1,14 +1,25 @@
 ---
-title: "How to configure CI/CD for hugo with Azure DevOps Pipelines?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines.jpg" 
-aliases: ["/posts/hugo/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines"]
-date: 2023-09-13T05:40:58+01:00
+aliases:
+  - /posts/hugo/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2023-09-13T04:40:58.000Z
 draft: false
-tags: ["hugo", "azure devops", "pipelines", "yaml", "devops", "gethugothemes", "multistage", "chocolatey"]
-categories: ["blog"]
-type: "regular"
+images:
+  - >-
+    images/posts/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines.jpg
+tags:
+  - hugo
+  - azure devops
+  - pipelines
+  - yaml
+  - devops
+  - gethugothemes
+  - multistage
+  - chocolatey
+title: How to configure CI/CD for hugo with Azure DevOps Pipelines?
+type: regular
 ---
 
 When I have started the blog more than two years ago I decided to [automate the deployment with GitHub Actions]({{< relref "./2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines.md" >}}). It still works, but I had a need to create another hugo page, but this time, the source code is in AzureDevops. So I would like to invite you to read how to configure deployment Hugo with Azure DevOps Pipelines in multistage YAML.

@@ -1,14 +1,17 @@
 ---
-title: "How to run hugo - 1st step"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/hugo/run-hugo-1st-step"
-date: 2021-03-23T9:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-03-23T08:40:58.000Z
 draft: false
-tags: ["hugo", "blog"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - hugo
+  - blog
+title: How to run hugo - 1st step
+type: regular
+url: posts/hugo/run-hugo-1st-step
 ---
 
 # My expetiation

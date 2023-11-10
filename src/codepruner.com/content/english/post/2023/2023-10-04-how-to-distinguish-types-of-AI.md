@@ -1,14 +1,20 @@
 ---
-title: "How to distinguish types of AI?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg" 
-date: 2023-10-04T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - AI
+companies:
+  - esatto
+date: 2023-10-04T03:40:58.000Z
 draft: false
-tags: ["ai", "machine-learning", "deep-learning", "reinforcement-learning"]
-categories: ["AI"]
-type: "popular"
-companies: ["esatto"]
+images:
+  - images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg
+tags:
+  - ai
+  - machine-learning
+  - deep-learning
+  - reinforcement-learning
+title: How to distinguish types of AI?
+type: popular
 ---
 
 Before we start working with Artificial Intelligence we should know what it is, at least a bit. There are many definitions of AI and there are multiple types of AI. Prepare a mug of coffee and let's start.

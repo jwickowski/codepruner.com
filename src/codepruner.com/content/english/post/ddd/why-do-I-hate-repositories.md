@@ -1,14 +1,17 @@
 ---
-title: "Why do I hate repositories?"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/ddd/why-do-I-hate-repositories"
-date: 2021-05-23T21:16:58+01:00
+author: Jerzy Wickowski
+categories:
+  - ddd
+date: 2021-05-23T20:16:58.000Z
 draft: false
-tags: ["ddd", "repository"]
-categories: ["ddd"]
-type: "trending"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - ddd
+  - repository
+title: Why do I hate repositories?
+type: trending
+url: posts/ddd/why-do-I-hate-repositories
 ---
 
 I have started my developer adventure a bit more than 10 years ago and I hate repositories. ...or maybe I hated, becouse something changes, but we should start from the beginning.

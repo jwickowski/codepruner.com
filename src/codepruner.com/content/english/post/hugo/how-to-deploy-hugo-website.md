@@ -1,14 +1,19 @@
 ---
-title: "How to deploy Hugo website?"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/hugo/how-to-deploy-hugo-website"
-date: 2021-04-01T6:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-04-01T05:40:58.000Z
 draft: false
-tags: ["hugo", "blog", "ftp", "azure"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - hugo
+  - blog
+  - ftp
+  - azure
+title: How to deploy Hugo website?
+type: regular
+url: posts/hugo/how-to-deploy-hugo-website
 ---
 
 # I have some posts ready. What's next?

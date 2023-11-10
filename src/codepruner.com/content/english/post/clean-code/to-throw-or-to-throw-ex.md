@@ -1,14 +1,19 @@
 ---
-title: "To throw or to throw ex. How to rethrow exceptions in C#"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2021/to-throw-or-to-throw-ex.png"
-url: "posts/clean-code/to-throw-or-to-throw-ex"
-date: 2021-06-14T11:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - clean-code
+date: 2021-06-14T10:40:58.000Z
 draft: false
-tags: ["legacy", "clean code", "exception", "C#"]
-categories: ["clean-code"]
-type: "trending"
+images:
+  - images/posts/2021/to-throw-or-to-throw-ex.png
+tags:
+  - legacy
+  - clean code
+  - exception
+  - C#
+title: To throw or to throw ex. How to rethrow exceptions in C#
+type: trending
+url: posts/clean-code/to-throw-or-to-throw-ex
 ---
 
 Some day I had to investigate a production issue based on logs. My luck that all exception's properties were logged, but there was a small vulnerability. Stack trace was missing. So my investigating was much longer than I expected.

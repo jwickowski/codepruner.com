@@ -1,14 +1,18 @@
 ---
-title: "Welcome on CodePruner.com"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2021/welcome-on-CodePruner.jpg" 
-url: "posts/ideas/welcome-on-CodePruner"
-date: 2021-03-22T21:16:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-03-22T20:16:58.000Z
 draft: false
-tags: ["hugo", "blog", "ideas"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/posts/2021/welcome-on-CodePruner.jpg
+tags:
+  - hugo
+  - blog
+  - ideas
+title: Welcome on CodePruner.com
+type: regular
+url: posts/ideas/welcome-on-CodePruner
 ---
 
 Hi, I am Jurek Wickowski. I am developer and I am starting with a new project. It is Code Pruner Community. It will be based on this blog, at the beginning, but it will grow. It is my plan at least.

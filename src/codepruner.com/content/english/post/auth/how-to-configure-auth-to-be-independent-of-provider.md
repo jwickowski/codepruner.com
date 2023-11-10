@@ -1,14 +1,18 @@
 ---
-title: "How to configure Auth to be independent of provider"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/auth/how-to-configure-auth-to-be-independent-of-provider"
-date: 2022-06-22T11:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - auth
+date: 2022-06-22T10:40:58.000Z
 draft: false
-tags: ["auth", "jwt","backend"]
-categories: ["auth"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - auth
+  - jwt
+  - backend
+title: How to configure Auth to be independent of provider
+type: regular
+url: posts/auth/how-to-configure-auth-to-be-independent-of-provider
 ---
 
 Have you ever implement authentication or authorization for a project you worked on? I can say,  we don't do it very often, because it is needed to be done only once in a project. There is a high probability you have never implemented it. It was true for me as well, but I am so lucky, I had that pleasure to do it. 

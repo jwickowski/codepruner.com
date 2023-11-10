@@ -1,14 +1,20 @@
 ---
-title: "How to introduce new developers into project quickly without wasting of a time"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time"
-date: 2021-11-19T08:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - craftsmanship
+date: 2021-11-19T07:40:58.000Z
 draft: true
-tags: ["ADR", "team", "cooperation", "introduction"]
-categories: ["craftsmanship"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - ADR
+  - team
+  - cooperation
+  - introduction
+title: How to introduce new developers into project quickly without wasting of a time
+type: regular
+url: >-
+  posts/Craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 ---
 
 

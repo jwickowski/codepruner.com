@@ -1,14 +1,20 @@
 ---
-title: "How to add real code snippets from github into hugo post"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post"
-date: 2021-08-30T6:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-08-30T05:40:58.000Z
 draft: false
-tags: ["hugo", "blog", "wordpress", "code", "github"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - hugo
+  - blog
+  - wordpress
+  - code
+  - github
+title: How to add real code snippets from github into hugo post
+type: regular
+url: posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post
 ---
 
 # It is a technical blog

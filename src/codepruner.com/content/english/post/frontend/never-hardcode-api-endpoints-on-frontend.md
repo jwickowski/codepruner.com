@@ -1,14 +1,22 @@
 ---
-title: "Never hardcode api endpoints. Generate THEM!"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/frontend/never-hardcode-api-endpoints-on-frontend"
-date: 2023-08-10T10:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - frontend
+date: 2023-08-10T09:40:58.000Z
 draft: false
-tags: ["javascript", "typescript", "apiClient", "api", "generator", "ongoing refactor", "code generator"]
-categories: ["frontend"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - javascript
+  - typescript
+  - apiClient
+  - api
+  - generator
+  - ongoing refactor
+  - code generator
+title: Never hardcode api endpoints. Generate THEM!
+type: regular
+url: posts/frontend/never-hardcode-api-endpoints-on-frontend
 ---
 
 Have you ever forgot to update frontend endpoint address when backend specification were changed? I am sure you have! I did it multiple times. I know a great way for us to avoid that situations in the future.

@@ -1,14 +1,18 @@
 ---
-title: "How to configure CI/CD for hugo in practice with GitHub Actions?"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice"
-date: 2021-04-16T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - blog
+date: 2021-04-16T03:40:58.000Z
 draft: false
-tags: ["hugo", "github actions", "devops"]
-categories: ["blog"]
-type: "regular"
+images:
+  - images/blog/red-sharp-pruner.jpg
+tags:
+  - hugo
+  - github actions
+  - devops
+title: How to configure CI/CD for hugo in practice with GitHub Actions?
+type: regular
+url: posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice
 ---
 
 Some time ago we talked what is good approch to depoloy hugo blog. Now I know we want to use GitHub to deploy it using FTP. Arguments for that solution you can find [here](how-to-configure-ci-cd-for-hugo). 

@@ -1,14 +1,23 @@
 ---
-title: "How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from SemanticKernel?"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-11-08-what_is_skexception_and_how_to_fix_it_in_semantickernel.jpg" 
-date: 2023-11-08T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - AI
+companies:
+  - esatto
+date: 2023-11-08T03:40:58.000Z
 draft: false
-tags: ["ai", "openai", "Semantic Kernel", "Exception"]
-categories: ["AI"]
-type: "regular"
-companies: ["esatto"]
+images:
+  - >-
+    images/posts/2023/2023-11-08-what_is_skexception_and_how_to_fix_it_in_semantickernel.jpg
+tags:
+  - ai
+  - openai
+  - Semantic Kernel
+  - Exception
+title: >-
+  How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from
+  SemanticKernel?
+type: regular
 ---
 
 When I have created my 1st or 2nd semantic plugin for SemanticKernel I have got an exception: `SKException` with message`Function not available _GLOBAL_FUNCTIONS_.input`. After a bit of investigation I have discovered the issue. Here you can read how to reproduce that bug and how to fix it.

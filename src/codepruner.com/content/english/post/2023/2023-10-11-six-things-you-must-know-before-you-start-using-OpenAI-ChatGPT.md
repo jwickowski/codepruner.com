@@ -1,14 +1,22 @@
 ---
-title: "6 things you must know before you start using OpenAI ChatGPT"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT.jpg" 
-date: 2023-10-09T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - AI
+companies:
+  - esatto
+date: 2023-10-09T03:40:58.000Z
 draft: false
-tags: ["ai", "openai", "chatGPT", "api", "temperature"]
-categories: ["AI"]
-type: "trending"
-companies: ["esatto"]
+images:
+  - >-
+    images/posts/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT.jpg
+tags:
+  - ai
+  - openai
+  - chatGPT
+  - api
+  - temperature
+title: 6 things you must know before you start using OpenAI ChatGPT
+type: trending
 ---
 
 

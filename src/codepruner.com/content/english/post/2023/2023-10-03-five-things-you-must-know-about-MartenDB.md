@@ -1,13 +1,21 @@
 ---
-title: "5 things you have to know when you think about MartenDB"
-author: "Jerzy Wickowski"
-images:
-  - "images/posts/2023/2023-10-03-five-things-you-must-know-about-MartenDB.png" 
-date: 2023-10-03T04:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - EventSourcing
+date: 2023-10-03T03:40:58.000Z
 draft: false
-tags: ["sql", "postgresql", "postgres", "martemDB", "event sourcing", "documents", "json"]
-categories: ["EventSourcing"]
-type: "trending"
+images:
+  - images/posts/2023/2023-10-03-five-things-you-must-know-about-MartenDB.png
+tags:
+  - sql
+  - postgresql
+  - postgres
+  - martemDB
+  - event sourcing
+  - documents
+  - json
+title: 5 things you have to know when you think about MartenDB
+type: trending
 ---
 
 Most of my developer's career I work with SQLServer as database. Mostly because for .NET it's a natural choice and all of the tools are very well supported and integrated. But in my new project I want to use EventSourcing. After investigation I have found MartenDB. There are my first thoughts about it.

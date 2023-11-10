@@ -1,14 +1,15 @@
 ---
-title: "temp for the future"
-author: "Jerzy Wickowski"
-images:
-  - "images/blog/red-sharp-pruner.jpg"
-url: "posts/auth/auth-temp"
-date: 2022-02-28T11:40:58+01:00
+author: Jerzy Wickowski
+categories:
+  - auth
+date: 2022-02-28T10:40:58.000Z
 draft: true
+images:
+  - images/blog/red-sharp-pruner.jpg
 tags: []
-categories: ["auth"]
-type: "regular"
+title: temp for the future
+type: regular
+url: posts/auth/auth-temp
 ---
 
 Have you ever implement authentication or authorization? As developer we do it very often, because it a task that have to be done only once in a project. I have that pleasure to do it in current project. 
