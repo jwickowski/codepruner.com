@@ -6,10 +6,10 @@ companies:
   - esatto
 date: 2023-10-09T03:40:58.000Z
 disqus_identifier: >-
-  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT
+  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 disqus_title: 6 things you must know before you start using OpenAI ChatGPT
 disqus_url: >-
-  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT
+  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 draft: false
 images:
   - >-
@@ -23,7 +23,7 @@ tags:
 title: 6 things you must know before you start using OpenAI ChatGPT
 type: trending
 url: >-
-  post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT
+  post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 ---
 
 

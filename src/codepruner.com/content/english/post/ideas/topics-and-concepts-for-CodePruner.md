@@ -3,9 +3,9 @@ author: Jerzy Wickowski
 categories:
   - ideas
 date: 2021-10-11T20:16:58.000Z
-disqus_identifier: 'https://codepruner.com/posts/ideas/topics-and-concepts-for-CodePruner'
+disqus_identifier: 'https://codepruner.com/posts/ideas/topics-and-concepts-for-codepruner'
 disqus_title: Topics and concepts for CodePruner
-disqus_url: 'https://codepruner.com/posts/ideas/topics-and-concepts-for-CodePruner'
+disqus_url: 'https://codepruner.com/posts/ideas/topics-and-concepts-for-codepruner'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -15,7 +15,7 @@ tags:
   - codepruner
 title: Topics and concepts for CodePruner
 type: regular
-url: posts/ideas/topics-and-concepts-for-CodePruner
+url: posts/ideas/topics-and-concepts-for-codepruner
 ---
 
 We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "../2021/welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 

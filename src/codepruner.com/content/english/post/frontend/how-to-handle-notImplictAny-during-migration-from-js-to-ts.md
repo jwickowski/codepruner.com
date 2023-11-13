@@ -6,12 +6,12 @@ categories:
   - frontend
 date: 2021-07-18T09:40:58.000Z
 disqus_identifier: >-
-  https://codepruner.com/posts/frontend/how-to-handle-notImplictAny-during-migration-from-js-to-ts
+  https://codepruner.com/posts/frontend/how-to-handle-notimplictany-during-migration-from-js-to-ts
 disqus_title: >-
   How  to handle notImplictAny during migration from js to ts without time
   wasting
 disqus_url: >-
-  https://codepruner.com/posts/frontend/how-to-handle-notImplictAny-during-migration-from-js-to-ts
+  https://codepruner.com/posts/frontend/how-to-handle-notimplictany-during-migration-from-js-to-ts
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -26,7 +26,7 @@ title: >-
   How  to handle notImplictAny during migration from js to ts without time
   wasting
 type: regular
-url: posts/frontend/how-to-handle-notImplictAny-during-migration-from-js-to-ts
+url: posts/frontend/how-to-handle-notimplictany-during-migration-from-js-to-ts
 ---
 
 When you are trying to migrate from JavaScript to TypeScript you will have an error `noImplicitAny` when you variable or parameter will not have assigned type. 
