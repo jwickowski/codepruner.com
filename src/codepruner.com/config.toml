@@ -4,7 +4,7 @@
 # theme = "ananke"
 # sectionPagesMenu = "main"
 
-# disqusShortname = "codepruner"
+# disqusShortname = "codepruner-com"
 
 # [[module.mounts]]
 # source = 'static'
