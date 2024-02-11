@@ -39,7 +39,7 @@ jobs:
           value: "G-1768EEZDT0"
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify --verbose -e production
+        run: hugo --source "src/codepruner.com/" --minify --logLevel info -e production
 
       - uses: actions/upload-artifact@v3
         with:
