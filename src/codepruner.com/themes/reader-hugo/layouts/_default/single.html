@@ -91,7 +91,7 @@
           <div class="content">{{ .Content }}</div>
         </article>
         <!-- comments -->
-        {{ if site.DisqusShortname }}
+        {{ if .Site.Config.Services.Disqus.Shortname }}
         <div class="mt-5 border-default border p-4 bg-white">
           {{ template "_internal/disqus.html" . }}
         </div>
