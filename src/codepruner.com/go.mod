@@ -1,6 +1,6 @@
 module gethugothemes.com
 
-go 1.21.6
+go 1.21
 
 require (
 	github.com/gethugothemes/hugo-modules/adsense v0.0.0-20230705095442-1f2d5ac8b18d // indirect
