@@ -5,7 +5,8 @@ categories:
 date: 2023-09-02T13:42:00.000Z
 disqus_identifier: posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
 disqus_title: How to handle-config-for-blazor-wasm-app-in-container
-disqus_url: posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
+disqus_url: >-
+  https://codepruner.com/posts/dotnet/how-to-handle-config-for-blazor-wasm-app-in-container
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

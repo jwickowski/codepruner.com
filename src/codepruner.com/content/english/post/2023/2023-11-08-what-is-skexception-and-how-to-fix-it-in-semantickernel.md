@@ -9,7 +9,8 @@ disqus_identifier: post/2023/2023-11-08-what-is-skexception-and-how-to-fix-it-in
 disqus_title: >-
   How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from
   SemanticKernel?
-disqus_url: post/2023/2023-11-08-what-is-skexception-and-how-to-fix-it-in-semantickernel
+disqus_url: >-
+  https://codepruner.com/post/2023/2023-11-08-what-is-skexception-and-how-to-fix-it-in-semantickernel
 draft: false
 images:
   - >-

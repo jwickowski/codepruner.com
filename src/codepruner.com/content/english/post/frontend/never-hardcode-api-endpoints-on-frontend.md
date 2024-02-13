@@ -5,7 +5,7 @@ categories:
 date: 2023-08-10T09:40:58.000Z
 disqus_identifier: posts/frontend/never-hardcode-api-endpoints-on-frontend
 disqus_title: Never hardcode api endpoints. Generate THEM!
-disqus_url: posts/frontend/never-hardcode-api-endpoints-on-frontend
+disqus_url: 'https://codepruner.com/posts/frontend/never-hardcode-api-endpoints-on-frontend'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

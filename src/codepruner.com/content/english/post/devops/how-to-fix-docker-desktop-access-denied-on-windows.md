@@ -7,7 +7,8 @@ disqus_identifier: posts/devops/how-to-fix-docker-desktop-access-denied-on-windo
 disqus_title: >-
   How to fix "Docker Desktop - Access denied" - How to add user to
   "docker-users" group on widows
-disqus_url: posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
+disqus_url: >-
+  https://codepruner.com/posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

@@ -9,7 +9,7 @@ disqus_identifier: >-
   post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 disqus_title: 6 things you must know before you start using OpenAI ChatGPT
 disqus_url: >-
-  post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
+  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 draft: false
 images:
   - >-

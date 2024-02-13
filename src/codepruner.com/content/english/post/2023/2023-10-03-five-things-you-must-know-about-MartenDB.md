@@ -5,7 +5,8 @@ categories:
 date: 2023-10-03T03:40:58.000Z
 disqus_identifier: post/2023/2023-10-03-five-things-you-must-know-about-martendb
 disqus_title: 5 things you have to know when you think about MartenDB
-disqus_url: post/2023/2023-10-03-five-things-you-must-know-about-martendb
+disqus_url: >-
+  https://codepruner.com/post/2023/2023-10-03-five-things-you-must-know-about-martendb
 draft: false
 images:
   - images/posts/2023/2023-10-03-five-things-you-must-know-about-MartenDB.png

@@ -10,7 +10,7 @@ disqus_identifier: >-
   post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 disqus_title: How to run postgresql and adminer/pgadmin with docker compose
 disqus_url: >-
-  post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
+  https://codepruner.com/post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 draft: false
 images:
   - >-

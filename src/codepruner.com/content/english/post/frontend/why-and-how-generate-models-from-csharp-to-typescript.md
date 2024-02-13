@@ -5,7 +5,8 @@ categories:
 date: 2021-08-31T04:40:58.000Z
 disqus_identifier: posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
 disqus_title: Why and how generate models from C# to Typescript
-disqus_url: posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
+disqus_url: >-
+  https://codepruner.com/posts/frontend/why-and-how-generate-models-from-csharp-to-typescript
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

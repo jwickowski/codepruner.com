@@ -9,7 +9,7 @@ disqus_identifier: >-
   post/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
 disqus_title: How to configure CI/CD for hugo with Azure DevOps Pipelines?
 disqus_url: >-
-  post/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
+  https://codepruner.com/post/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
 draft: false
 images:
   - >-

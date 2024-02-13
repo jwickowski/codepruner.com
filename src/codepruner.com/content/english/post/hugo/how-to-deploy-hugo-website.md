@@ -5,7 +5,7 @@ categories:
 date: 2021-04-01T05:40:58.000Z
 disqus_identifier: posts/hugo/how-to-deploy-hugo-website
 disqus_title: How to deploy Hugo website?
-disqus_url: posts/hugo/how-to-deploy-hugo-website
+disqus_url: 'https://codepruner.com/posts/hugo/how-to-deploy-hugo-website'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

@@ -5,7 +5,8 @@ categories:
 date: 2022-06-22T10:40:58.000Z
 disqus_identifier: posts/auth/how-to-configure-auth-to-be-independent-of-provider
 disqus_title: How to configure Auth to be independent of provider
-disqus_url: posts/auth/how-to-configure-auth-to-be-independent-of-provider
+disqus_url: >-
+  https://codepruner.com/posts/auth/how-to-configure-auth-to-be-independent-of-provider
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

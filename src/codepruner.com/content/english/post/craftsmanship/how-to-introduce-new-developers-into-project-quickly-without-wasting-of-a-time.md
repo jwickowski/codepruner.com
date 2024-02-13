@@ -7,7 +7,7 @@ disqus_identifier: >-
   posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 disqus_title: How to introduce new developers into project quickly without wasting of a time
 disqus_url: >-
-  posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
+  https://codepruner.com/posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

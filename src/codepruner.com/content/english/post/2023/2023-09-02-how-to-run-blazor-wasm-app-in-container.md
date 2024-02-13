@@ -7,7 +7,8 @@ categories:
 date: 2023-09-02T13:42:00.000Z
 disqus_identifier: post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
 disqus_title: How to run blazor app in docker container
-disqus_url: post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
+disqus_url: >-
+  https://codepruner.com/post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
 draft: false
 images:
   - images/posts/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container.png

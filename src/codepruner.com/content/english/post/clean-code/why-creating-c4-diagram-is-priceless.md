@@ -5,7 +5,7 @@ categories:
 date: 2021-04-20T07:40:58.000Z
 disqus_identifier: posts/clean-code/why-creating-c4-diagram-is-priceless
 disqus_title: Why creating c4 diagram is priceless
-disqus_url: posts/clean-code/why-creating-c4-diagram-is-priceless
+disqus_url: 'https://codepruner.com/posts/clean-code/why-creating-c4-diagram-is-priceless'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

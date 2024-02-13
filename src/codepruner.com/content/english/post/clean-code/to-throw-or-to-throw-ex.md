@@ -5,7 +5,7 @@ categories:
 date: 2021-06-14T10:40:58.000Z
 disqus_identifier: posts/clean-code/to-throw-or-to-throw-ex
 disqus_title: To throw or to throw ex. How to rethrow exceptions in C#
-disqus_url: posts/clean-code/to-throw-or-to-throw-ex
+disqus_url: 'https://codepruner.com/posts/clean-code/to-throw-or-to-throw-ex'
 draft: false
 images:
   - images/posts/2021/to-throw-or-to-throw-ex.png

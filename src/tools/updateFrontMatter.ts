@@ -21,7 +21,7 @@ function processFrontMatter(frontMatter: FrontMatterType, filePath: string,  dom
     }
     frontMatter["url"] = frontMatter["url"].toLowerCase();
     frontMatter["disqus_title"] = frontMatter["title"]
-    frontMatter["disqus_url"] = `${frontMatter["url"]}`
+    frontMatter["disqus_url"] = `${domain}/${frontMatter["url"]}`
     frontMatter["disqus_identifier"] = `${frontMatter["url"]}`
     return frontMatter;
 }
