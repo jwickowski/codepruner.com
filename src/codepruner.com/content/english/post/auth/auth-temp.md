@@ -3,9 +3,9 @@ author: Jerzy Wickowski
 categories:
   - auth
 date: 2022-02-28T10:40:58.000Z
-disqus_identifier: 'https://codepruner.com/posts/auth/auth-temp'
+disqus_identifier: posts/auth/auth-temp
 disqus_title: temp for the future
-disqus_url: 'https://codepruner.com/posts/auth/auth-temp'
+disqus_url: posts/auth/auth-temp
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg

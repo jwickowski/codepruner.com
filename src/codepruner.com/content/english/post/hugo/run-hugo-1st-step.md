@@ -3,9 +3,9 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-03-23T08:40:58.000Z
-disqus_identifier: 'https://codepruner.com/posts/hugo/run-hugo-1st-step'
+disqus_identifier: posts/hugo/run-hugo-1st-step
 disqus_title: How to run hugo - 1st step
-disqus_url: 'https://codepruner.com/posts/hugo/run-hugo-1st-step'
+disqus_url: posts/hugo/run-hugo-1st-step
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

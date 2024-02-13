@@ -6,10 +6,10 @@ companies:
   - esatto
 date: 2023-01-04T03:40:58.000Z
 disqus_identifier: >-
-  https://codepruner.com/post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-serach
-disqus_title: How to configure indexing files from blob in azure AI search 
+  post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+disqus_title: How to configure indexing files from blob in azure AI search
 disqus_url: >-
-  https://codepruner.com/post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+  post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
 draft: false
 images:
   - >-

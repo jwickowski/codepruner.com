@@ -3,13 +3,11 @@ author: Jerzy Wickowski
 categories:
   - craftsmanship
 date: 2021-11-17T07:40:58.000Z
-disqus_identifier: >-
-  https://codepruner.com/posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
+disqus_identifier: posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
 disqus_title: >-
   How to persist project decisions for future developers and why you should add
   ADR to your project?
-disqus_url: >-
-  https://codepruner.com/posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
+disqus_url: posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
