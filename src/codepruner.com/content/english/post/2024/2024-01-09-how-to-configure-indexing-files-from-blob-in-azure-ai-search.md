@@ -10,7 +10,7 @@ disqus_identifier: >-
 disqus_title: How to configure indexing files from blob in azure AI search
 disqus_url: >-
   post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
-draft: false
+draft: true
 images:
   - >-
     images/posts/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search.jpg
