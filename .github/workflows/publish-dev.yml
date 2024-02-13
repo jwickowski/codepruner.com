@@ -17,7 +17,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.113.0"
+          hugo-version: "0.122.0"
           extended: true
 
       - name: Install npm dependencies
@@ -39,7 +39,7 @@ jobs:
           value: "G-1768EEZDT0"
 
       - name: Build
-        run: hugo --source "src/codepruner.com/" --minify --verbose -e production
+        run: hugo --source "src/codepruner.com/" --minify --logLevel info -e production
 
       - uses: actions/upload-artifact@v3
         with:
