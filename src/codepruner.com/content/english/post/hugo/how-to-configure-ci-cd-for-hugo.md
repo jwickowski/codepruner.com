@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-04-07T19:40:58.000Z
-disqus_identifier: posts/hugo/how-to-configure-ci-cd-for-hugo
+disqus_identifier: posts-hugo/how-to-configure-ci-cd-for-hugo
 disqus_title: How to configure CI/CD for hugo?
 disqus_url: 'https://codepruner.com/posts/hugo/how-to-configure-ci-cd-for-hugo'
 draft: false

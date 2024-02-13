@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - ideas
 date: 2021-10-11T20:16:58.000Z
-disqus_identifier: posts/ideas/topics-and-concepts-for-codepruner
+disqus_identifier: posts-ideas/topics-and-concepts-for-codepruner
 disqus_title: Topics and concepts for CodePruner
 disqus_url: 'https://codepruner.com/posts/ideas/topics-and-concepts-for-codepruner'
 draft: false

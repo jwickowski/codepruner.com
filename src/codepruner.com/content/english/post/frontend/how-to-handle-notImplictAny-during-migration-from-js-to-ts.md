@@ -5,7 +5,7 @@ author: Jerzy Wickowski
 categories:
   - frontend
 date: 2021-07-18T09:40:58.000Z
-disqus_identifier: posts/frontend/how-to-handle-notimplictany-during-migration-from-js-to-ts
+disqus_identifier: posts-frontend/how-to-handle-notimplictany-during-migration-from-js-to-ts
 disqus_title: >-
   How  to handle notImplictAny during migration from js to ts without time
   wasting

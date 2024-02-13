@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-03-23T05:40:58.000Z
-disqus_identifier: posts/hugo/why-not-wordpress
+disqus_identifier: posts-hugo/why-not-wordpress
 disqus_title: Why not WordPress?
 disqus_url: 'https://codepruner.com/posts/hugo/why-not-wordpress'
 draft: false

@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-04-16T03:40:58.000Z
-disqus_identifier: posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice
+disqus_identifier: posts-hugo/how-to-configure-ci-cd-for-hugo-in-practice
 disqus_title: How to configure CI/CD for hugo in practice with GitHub Actions?
 disqus_url: 'https://codepruner.com/posts/hugo/how-to-configure-ci-cd-for-hugo-in-practice'
 draft: false
