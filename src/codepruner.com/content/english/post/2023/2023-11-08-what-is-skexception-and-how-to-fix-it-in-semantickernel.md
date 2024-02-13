@@ -5,7 +5,7 @@ categories:
 companies:
   - esatto
 date: 2023-11-08T03:40:58.000Z
-disqus_identifier: post-2023/2023-11-08-what-is-skexception-and-how-to-fix-it-in-semantickernel
+disqus_identifier: post_2023_2023-11-08-what-is-skexception-and-how-to-fix-it-in-semantickernel
 disqus_title: >-
   How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from
   SemanticKernel?

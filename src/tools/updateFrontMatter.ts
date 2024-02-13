@@ -22,7 +22,7 @@ function processFrontMatter(frontMatter: FrontMatterType, filePath: string,  dom
     frontMatter["url"] = frontMatter["url"].toLowerCase();
     frontMatter["disqus_title"] = frontMatter["title"]
     frontMatter["disqus_url"] = `${domain}/${frontMatter["url"]}`
-    frontMatter["disqus_identifier"] = `${frontMatter["url"]}`.replace("/", "-")
+    frontMatter["disqus_identifier"] = `${frontMatter["url"]}`.replace(/\//g, '_');
     return frontMatter;
 }
 

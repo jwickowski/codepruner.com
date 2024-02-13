@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-03-22T20:16:58.000Z
-disqus_identifier: posts-ideas/welcome-on-codepruner
+disqus_identifier: posts_ideas_welcome-on-codepruner
 disqus_title: Welcome on CodePruner.com
 disqus_url: 'https://codepruner.com/posts/ideas/welcome-on-codepruner'
 draft: false

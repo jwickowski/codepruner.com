@@ -5,7 +5,7 @@ categories:
 companies:
   - esatto
 date: 2023-10-30T03:40:58.000Z
-disqus_identifier: post-2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it
+disqus_identifier: post_2023_2023-10-30-what-semantic-kernel-is-and-how-to-use-it
 disqus_title: What is SemanticKernel how to use it?
 disqus_url: >-
   https://codepruner.com/post/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it

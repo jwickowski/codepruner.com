@@ -5,7 +5,7 @@ categories:
 companies:
   - esatto
 date: 2023-10-04T03:40:58.000Z
-disqus_identifier: post-2023/2023-10-04-how-to-distinguish-types-of-ai
+disqus_identifier: post_2023_2023-10-04-how-to-distinguish-types-of-ai
 disqus_title: How to distinguish types of AI?
 disqus_url: 'https://codepruner.com/post/2023/2023-10-04-how-to-distinguish-types-of-ai'
 draft: false

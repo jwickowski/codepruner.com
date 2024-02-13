@@ -5,7 +5,7 @@ categories:
 companies:
   - esatto
 date: 2023-11-01T03:40:58.000Z
-disqus_identifier: post-2023/semantic-kernel-drafts
+disqus_identifier: post_2023_semantic-kernel-drafts
 disqus_title: Context and Memory in SemanticKernel?
 disqus_url: 'https://codepruner.com/post/2023/semantic-kernel-drafts'
 draft: true

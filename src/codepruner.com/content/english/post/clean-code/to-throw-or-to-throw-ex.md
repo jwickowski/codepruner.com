@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - clean-code
 date: 2021-06-14T10:40:58.000Z
-disqus_identifier: posts-clean-code/to-throw-or-to-throw-ex
+disqus_identifier: posts_clean-code_to-throw-or-to-throw-ex
 disqus_title: To throw or to throw ex. How to rethrow exceptions in C#
 disqus_url: 'https://codepruner.com/posts/clean-code/to-throw-or-to-throw-ex'
 draft: false
