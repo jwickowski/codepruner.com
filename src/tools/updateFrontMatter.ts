@@ -16,13 +16,24 @@ files.forEach(filePath => {
 });
 
 function processFrontMatter(frontMatter: FrontMatterType, filePath: string,  domain: string): FrontMatterType {
-    if (frontMatter["url"] == undefined) {
-        frontMatter["url"] = getUrlFromFilePath(filePath);
+    var properUrl = getUrlFromFilePath(filePath);
+    var currentUrl = frontMatter["url"];
+
+    if (currentUrl === undefined) {
+        frontMatter["url"] = properUrl;
+    }
+    else if(currentUrl !== properUrl){
+        frontMatter["url"] = properUrl;
+        var aliases = frontMatter["aliases"] || [];
+        aliases.push(currentUrl);
+        // Remove duplicates
+        aliases = aliases.filter((value, index, self) => self.indexOf(value) === index);
+        frontMatter["aliases"] = aliases;
     }
     frontMatter["url"] = frontMatter["url"].toLowerCase();
     frontMatter["disqus_title"] = frontMatter["title"]
     frontMatter["disqus_url"] = `${domain}/${frontMatter["url"]}`
-    frontMatter["disqus_identifier"] = `${frontMatter["url"]}`.replace(/\//g, '_');
+    frontMatter["disqus_identifier"] = `${frontMatter["url"]}`
     return frontMatter;
 }
 
@@ -30,8 +41,12 @@ function getUrlFromFilePath(filePath: string): string {
     var prefixToSearch = "\\content\\english\\";
     var contentIndex = filePath.indexOf(prefixToSearch);
     var url = filePath.substring(contentIndex + prefixToSearch.length, filePath.length - 3);
+
     console.log("url: ", url);
     url = url.replace(/\\/g, "/");
+    url = url.replace(new RegExp("\\w{4}/\\d{4}/\\d{4}-\\d{2}-\\d{2}-"), "");
+    url = url.lastIndexOf("/") === -1 ?? url ? url : url.substring(url.lastIndexOf("/") + 1);
+    console.log("url AFTER CHANGE: ", url);
     return url;
 }
 
