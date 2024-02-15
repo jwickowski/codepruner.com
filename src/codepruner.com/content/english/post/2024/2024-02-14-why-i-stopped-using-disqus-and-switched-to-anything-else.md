@@ -33,6 +33,26 @@ Comments were still duplicated....
 
 I didn't stop my analyzing. I googled a bit I asked Disqus support to help me solve that issue. 
 
+I have found and information that I should add `this.identifier` and `this.url` to Disqus initialisation script. I was verry happy when I discovered that GoHugo supports it. So I have created a bit of code to add `disqus_identifier`, `disqus_url`, `disqus_title` to FrontMatter of every post.  Then I noticed that correct values were added to pages. It is good. It looks I did everything what I should.  , , to the Disqus shortcode. I did it, and I also added a comment to the shortcode:
+
+<!-- ```html
+{{ if .Params.disqus_identifier }}
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.identifier = '{{ .Params.disqus_identifier }}';
+            this.page.url = '{{ .Permalink }}';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://codepruner.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{{ end }}
+``` -->
 // Story about this.identfier and this.urls and that is has sense
 
 ... but it didn't help, and comments were still duplicated....
@@ -51,9 +71,16 @@ No, they didn't help me. They said me:
 
 
 # The real solution
-I decided to stop using Disqus and switch to something else. I am still not sure what use, but when I do an investigation and when I use new comment system, I will let you know. 
+I decided to stop using Disqus and switch to something else. I am in the middle of searching new tool, but currently there are three  nice options:
+- https://fastcomments.com/
+- https://commento.io/
+- https://talk.hyvor.com/
+
+
+I am still not sure what use, but when I do an investigation and when I use new comment system, I will let you know. 
 
 Did you have the same adventure with disqus? Can you suggest any comment tool for static blogs?
+
 
 
 
