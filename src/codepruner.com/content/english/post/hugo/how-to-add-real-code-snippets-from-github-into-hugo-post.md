@@ -1,12 +1,14 @@
 ---
+aliases:
+  - posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post
 author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-08-30T05:40:58.000Z
-disqus_identifier: posts_hugo_how-to-add-real-code-snippets-from-github-into-hugo-post
+disqus_identifier: how-to-add-real-code-snippets-from-github-into-hugo-post
 disqus_title: How to add real code snippets from github into hugo post
 disqus_url: >-
-  https://codepruner.com/posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post
+  https://codepruner.com/how-to-add-real-code-snippets-from-github-into-hugo-post
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -18,7 +20,7 @@ tags:
   - github
 title: How to add real code snippets from github into hugo post
 type: regular
-url: posts/hugo/how-to-add-real-code-snippets-from-github-into-hugo-post
+url: how-to-add-real-code-snippets-from-github-into-hugo-post
 ---
 
 # It is a technical blog

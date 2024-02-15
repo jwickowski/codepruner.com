@@ -1,15 +1,17 @@
 ---
+aliases:
+  - >-
+    post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 author: Jerzy Wickowski
 categories:
   - AI
 companies:
   - esatto
 date: 2023-10-09T03:40:58.000Z
-disqus_identifier: >-
-  post_2023_2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
+disqus_identifier: six-things-you-must-know-before-you-start-using-openai-chatgpt
 disqus_title: 6 things you must know before you start using OpenAI ChatGPT
 disqus_url: >-
-  https://codepruner.com/post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
+  https://codepruner.com/six-things-you-must-know-before-you-start-using-openai-chatgpt
 draft: false
 images:
   - >-
@@ -22,8 +24,7 @@ tags:
   - temperature
 title: 6 things you must know before you start using OpenAI ChatGPT
 type: trending
-url: >-
-  post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
+url: six-things-you-must-know-before-you-start-using-openai-chatgpt
 ---
 
 

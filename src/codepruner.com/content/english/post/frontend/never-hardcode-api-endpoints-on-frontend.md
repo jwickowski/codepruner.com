@@ -1,11 +1,13 @@
 ---
+aliases:
+  - posts/frontend/never-hardcode-api-endpoints-on-frontend
 author: Jerzy Wickowski
 categories:
   - frontend
 date: 2023-08-10T09:40:58.000Z
-disqus_identifier: posts_frontend_never-hardcode-api-endpoints-on-frontend
+disqus_identifier: never-hardcode-api-endpoints-on-frontend
 disqus_title: Never hardcode api endpoints. Generate THEM!
-disqus_url: 'https://codepruner.com/posts/frontend/never-hardcode-api-endpoints-on-frontend'
+disqus_url: 'https://codepruner.com/never-hardcode-api-endpoints-on-frontend'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -19,7 +21,7 @@ tags:
   - code generator
 title: Never hardcode api endpoints. Generate THEM!
 type: regular
-url: posts/frontend/never-hardcode-api-endpoints-on-frontend
+url: never-hardcode-api-endpoints-on-frontend
 ---
 
 Have you ever forgot to update frontend endpoint address when backend specification were changed? I am sure you have! I did it multiple times. I know a great way for us to avoid that situations in the future.

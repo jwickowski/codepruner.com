@@ -1,11 +1,13 @@
 ---
+aliases:
+  - posts/hugo/why-not-wordpress
 author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-03-23T05:40:58.000Z
-disqus_identifier: posts_hugo_why-not-wordpress
+disqus_identifier: why-not-wordpress
 disqus_title: Why not WordPress?
-disqus_url: 'https://codepruner.com/posts/hugo/why-not-wordpress'
+disqus_url: 'https://codepruner.com/why-not-wordpress'
 draft: false
 images:
   - images/posts/2021/why-not-wordpress.jpg
@@ -15,7 +17,7 @@ tags:
   - wordpress
 title: Why not WordPress?
 type: popular
-url: posts/hugo/why-not-wordpress
+url: why-not-wordpress
 ---
 
 At the beginning I need to confess you something.

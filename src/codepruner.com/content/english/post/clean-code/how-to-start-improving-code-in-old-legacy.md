@@ -1,12 +1,13 @@
 ---
+aliases:
+  - posts/clean-code/how-to-start-improving-code-in-old-legacy
 author: Jerzy Wickowski
 categories:
   - clean-code
 date: 2021-03-29T20:40:58.000Z
-disqus_identifier: posts_clean-code_how-to-start-improving-code-in-old-legacy
+disqus_identifier: how-to-start-improving-code-in-old-legacy
 disqus_title: How to start improving code in old lagacy project
-disqus_url: >-
-  https://codepruner.com/posts/clean-code/how-to-start-improving-code-in-old-legacy
+disqus_url: 'https://codepruner.com/how-to-start-improving-code-in-old-legacy'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -17,7 +18,7 @@ tags:
   - pain points
 title: How to start improving code in old lagacy project
 type: regular
-url: posts/clean-code/how-to-start-improving-code-in-old-legacy
+url: how-to-start-improving-code-in-old-legacy
 ---
 
 Everyone of us is joining into old ugly legacy systems. When we see it we want to fix the whole application, but it isn't so easy. 

@@ -1,11 +1,13 @@
 ---
+aliases:
+  - posts/hugo/run-hugo-1st-step
 author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-03-23T08:40:58.000Z
-disqus_identifier: posts_hugo_run-hugo-1st-step
+disqus_identifier: run-hugo-1st-step
 disqus_title: How to run hugo - 1st step
-disqus_url: 'https://codepruner.com/posts/hugo/run-hugo-1st-step'
+disqus_url: 'https://codepruner.com/run-hugo-1st-step'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -14,7 +16,7 @@ tags:
   - blog
 title: How to run hugo - 1st step
 type: regular
-url: posts/hugo/run-hugo-1st-step
+url: run-hugo-1st-step
 ---
 
 # My expetiation
