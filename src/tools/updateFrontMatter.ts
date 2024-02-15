@@ -15,25 +15,26 @@ files.forEach(filePath => {
 
 });
 
-function processFrontMatter(frontMatter: FrontMatterType, filePath: string,  domain: string): FrontMatterType {
+function processFrontMatter(frontMatter: FrontMatterType, filePath: string, domain: string): FrontMatterType {
     var properUrl = getUrlFromFilePath(filePath);
     var currentUrl = frontMatter["url"];
 
     if (currentUrl === undefined) {
         frontMatter["url"] = properUrl;
     }
-    else if(currentUrl !== properUrl){
+    else if (currentUrl !== properUrl) {
         frontMatter["url"] = properUrl;
         var aliases = frontMatter["aliases"] || [];
         aliases.push(currentUrl);
         // Remove duplicates
         aliases = aliases.filter((value, index, self) => self.indexOf(value) === index);
         frontMatter["aliases"] = aliases;
-    }
-    frontMatter["url"] = frontMatter["url"].toLowerCase();
+    }    
     frontMatter["disqus_title"] = frontMatter["title"]
     frontMatter["disqus_url"] = `${domain}/${frontMatter["url"]}`
-    frontMatter["disqus_identifier"] = `${frontMatter["url"]}`
+    if (frontMatter["disqus_identifier"] === undefined) {
+        frontMatter["disqus_identifier"] = `${frontMatter["url"]}`
+    }
     return frontMatter;
 }
 
@@ -47,6 +48,7 @@ function getUrlFromFilePath(filePath: string): string {
     url = url.replace(new RegExp("\\w{4}/\\d{4}/\\d{4}-\\d{2}-\\d{2}-"), "");
     url = url.lastIndexOf("/") === -1 ?? url ? url : url.substring(url.lastIndexOf("/") + 1);
     console.log("url AFTER CHANGE: ", url);
+    url = url.toLowerCase();
     return url;
 }
 
