@@ -3,6 +3,10 @@ author: Jerzy Wickowski
 categories:
   - blog
 date: 2023-02-14T03:40:58.000Z
+disqus_identifier: why-i-stopped-using-disqus-and-switched-to-anything-else
+disqus_title: why-i-stopped-using-disqus-and-switched-to-anything-else
+disqus_url: >-
+  https://codepruner.com/why-i-stopped-using-disqus-and-switched-to-anything-else
 draft: true
 images:
   - >-
@@ -15,6 +19,7 @@ tags:
   - search
 title: why-i-stopped-using-disqus-and-switched-to-anything-else
 type: regular
+url: why-i-stopped-using-disqus-and-switched-to-anything-else
 ---
 
 When I started that blog I have created an account on Disqus and added it to the blog. It was easy and it worked, mostly because it come out of the box with Hugo. 

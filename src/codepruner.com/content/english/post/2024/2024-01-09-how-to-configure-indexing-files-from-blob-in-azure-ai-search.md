@@ -1,15 +1,17 @@
 ---
+aliases:
+  - >-
+    post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
 author: Jerzy Wickowski
 categories:
   - AI
 companies:
   - esatto
 date: 2023-01-04T03:40:58.000Z
-disqus_identifier: >-
-  post_2024_2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+disqus_identifier: how-to-configure-indexing-files-from-blob-in-azure-ai-search
 disqus_title: How to configure indexing files from blob in azure AI search
 disqus_url: >-
-  https://codepruner.com/post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+  https://codepruner.com/how-to-configure-indexing-files-from-blob-in-azure-ai-search
 draft: true
 images:
   - >-
@@ -22,8 +24,7 @@ tags:
   - search
 title: How to configure indexing files from blob in azure AI search
 type: trending
-url: >-
-  post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+url: how-to-configure-indexing-files-from-blob-in-azure-ai-search
 ---
 
 How to give AI knowleadge about your business?

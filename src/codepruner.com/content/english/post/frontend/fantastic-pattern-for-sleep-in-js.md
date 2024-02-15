@@ -1,11 +1,13 @@
 ---
+aliases:
+  - posts/frontend/fantastic-pattern-for-sleep-in-js
 author: Jerzy Wickowski
 categories:
   - frontend
 date: 2021-07-27T09:40:58.000Z
-disqus_identifier: posts_frontend_fantastic-pattern-for-sleep-in-js
+disqus_identifier: fantastic-pattern-for-sleep-in-js
 disqus_title: Fantastic pattern to sleep in modern javascript
-disqus_url: 'https://codepruner.com/posts/frontend/fantastic-pattern-for-sleep-in-js'
+disqus_url: 'https://codepruner.com/fantastic-pattern-for-sleep-in-js'
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -18,7 +20,7 @@ tags:
   - async/await
 title: Fantastic pattern to sleep in modern javascript
 type: regular
-url: posts/frontend/fantastic-pattern-for-sleep-in-js
+url: fantastic-pattern-for-sleep-in-js
 ---
 
 Sometimes you need to wait for something. In most cases there is something bad in your code or with your infrastructure, but sometimes it is required. When?

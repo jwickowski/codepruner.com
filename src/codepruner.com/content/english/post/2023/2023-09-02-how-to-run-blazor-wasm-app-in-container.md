@@ -1,14 +1,14 @@
 ---
 aliases:
   - /posts/dotnet/how-to-run-blazor-wasm-app-in-container
+  - post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
 author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2023-09-02T13:42:00.000Z
-disqus_identifier: post_2023_2023-09-02-how-to-run-blazor-wasm-app-in-container
+disqus_identifier: how-to-run-blazor-wasm-app-in-container
 disqus_title: How to run blazor app in docker container
-disqus_url: >-
-  https://codepruner.com/post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
+disqus_url: 'https://codepruner.com/how-to-run-blazor-wasm-app-in-container'
 draft: false
 images:
   - images/posts/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container.png
@@ -24,7 +24,7 @@ tags:
   - WebAssembly
 title: How to run blazor app in docker container
 type: epic
-url: post/2023/2023-09-02-how-to-run-blazor-wasm-app-in-container
+url: how-to-run-blazor-wasm-app-in-container
 ---
 
 In one of my project I decided to use Blazor WebAssembly and I wanted to run it in docker, but it did't work with default confgiuration. So I wlil describe you what is wrong with default configurationa and what you need to change to be able to run Blazor WebAssembly app with docker.

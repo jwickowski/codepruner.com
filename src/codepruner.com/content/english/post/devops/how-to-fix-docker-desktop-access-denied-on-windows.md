@@ -1,14 +1,15 @@
 ---
+aliases:
+  - posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
 author: Jerzy Wickowski
 categories:
   - devops
 date: 2021-04-07T02:40:58.000Z
-disqus_identifier: posts_devops_how-to-fix-docker-desktop-access-denied-on-windows
+disqus_identifier: how-to-fix-docker-desktop-access-denied-on-windows
 disqus_title: >-
   How to fix "Docker Desktop - Access denied" - How to add user to
   "docker-users" group on widows
-disqus_url: >-
-  https://codepruner.com/posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
+disqus_url: 'https://codepruner.com/how-to-fix-docker-desktop-access-denied-on-windows'
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -18,7 +19,7 @@ title: >-
   How to fix "Docker Desktop - Access denied" - How to add user to
   "docker-users" group on widows
 type: regular
-url: posts/devops/how-to-fix-docker-desktop-access-denied-on-windows
+url: how-to-fix-docker-desktop-access-denied-on-windows
 ---
 
 How to fix that error: 

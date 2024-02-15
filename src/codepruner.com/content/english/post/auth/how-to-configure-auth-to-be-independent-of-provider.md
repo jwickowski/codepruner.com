@@ -1,12 +1,13 @@
 ---
+aliases:
+  - posts/auth/how-to-configure-auth-to-be-independent-of-provider
 author: Jerzy Wickowski
 categories:
   - auth
 date: 2022-06-22T10:40:58.000Z
-disqus_identifier: posts_auth_how-to-configure-auth-to-be-independent-of-provider
+disqus_identifier: how-to-configure-auth-to-be-independent-of-provider
 disqus_title: How to configure Auth to be independent of provider
-disqus_url: >-
-  https://codepruner.com/posts/auth/how-to-configure-auth-to-be-independent-of-provider
+disqus_url: 'https://codepruner.com/how-to-configure-auth-to-be-independent-of-provider'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -16,7 +17,7 @@ tags:
   - backend
 title: How to configure Auth to be independent of provider
 type: regular
-url: posts/auth/how-to-configure-auth-to-be-independent-of-provider
+url: how-to-configure-auth-to-be-independent-of-provider
 ---
 
 Have you ever implement authentication or authorization for a project you worked on? I can say,  we don't do it very often, because it is needed to be done only once in a project. There is a high probability you have never implemented it. It was true for me as well, but I am so lucky, I had that pleasure to do it. 

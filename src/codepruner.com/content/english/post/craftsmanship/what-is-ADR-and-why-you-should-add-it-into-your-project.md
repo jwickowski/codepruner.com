@@ -1,14 +1,15 @@
 ---
+aliases:
+  - posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
 author: Jerzy Wickowski
 categories:
   - craftsmanship
 date: 2021-11-17T07:40:58.000Z
-disqus_identifier: posts_craftsmanship_what-is-adr-and-why-you-should-add-it-into-your-project
+disqus_identifier: what-is-adr-and-why-you-should-add-it-into-your-project
 disqus_title: >-
   How to persist project decisions for future developers and why you should add
   ADR to your project?
-disqus_url: >-
-  https://codepruner.com/posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
+disqus_url: 'https://codepruner.com/what-is-adr-and-why-you-should-add-it-into-your-project'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -21,7 +22,7 @@ title: >-
   How to persist project decisions for future developers and why you should add
   ADR to your project?
 type: regular
-url: posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
+url: what-is-adr-and-why-you-should-add-it-into-your-project
 ---
 
 ADR is an Architecture Decision Record, but if we leave it like that, it won't tell you anything. So let's deconstruct the name into smaller pieces.  

@@ -1,13 +1,15 @@
 ---
+aliases:
+  - >-
+    posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 author: Jerzy Wickowski
 categories:
   - craftsmanship
 date: 2021-11-19T07:40:58.000Z
-disqus_identifier: >-
-  posts_craftsmanship_how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
+disqus_identifier: how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 disqus_title: How to introduce new developers into project quickly without wasting of a time
 disqus_url: >-
-  https://codepruner.com/posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
+  https://codepruner.com/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 draft: true
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -18,8 +20,7 @@ tags:
   - introduction
 title: How to introduce new developers into project quickly without wasting of a time
 type: regular
-url: >-
-  posts/craftsmanship/how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
+url: how-to-introduce-new-developers-into-project-quickly-without-wasting-of-a-time
 ---
 
 

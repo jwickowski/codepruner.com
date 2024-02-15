@@ -1,11 +1,13 @@
 ---
+aliases:
+  - posts/hugo/how-to-add-gtm-to-static-hugo-website
 author: Jerzy Wickowski
 categories:
   - blog
 date: 2021-05-14T05:08:58.000Z
-disqus_identifier: posts_hugo_how-to-add-gtm-to-static-hugo-website
+disqus_identifier: how-to-add-gtm-to-static-hugo-website
 disqus_title: How to add Google Tag Manager to static hugo website?
-disqus_url: 'https://codepruner.com/posts/hugo/how-to-add-gtm-to-static-hugo-website'
+disqus_url: 'https://codepruner.com/how-to-add-gtm-to-static-hugo-website'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg
@@ -15,7 +17,7 @@ tags:
   - GTM
 title: How to add Google Tag Manager to static hugo website?
 type: regular
-url: posts/hugo/how-to-add-gtm-to-static-hugo-website
+url: how-to-add-gtm-to-static-hugo-website
 ---
 
 # Why I want to add Google Tag Manager

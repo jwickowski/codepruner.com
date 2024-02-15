@@ -1,13 +1,15 @@
 ---
+aliases:
+  - post/2023/2023-10-04-how-to-distinguish-types-of-ai
 author: Jerzy Wickowski
 categories:
   - AI
 companies:
   - esatto
 date: 2023-10-04T03:40:58.000Z
-disqus_identifier: post_2023_2023-10-04-how-to-distinguish-types-of-ai
+disqus_identifier: how-to-distinguish-types-of-ai
 disqus_title: How to distinguish types of AI?
-disqus_url: 'https://codepruner.com/post/2023/2023-10-04-how-to-distinguish-types-of-ai'
+disqus_url: 'https://codepruner.com/how-to-distinguish-types-of-ai'
 draft: false
 images:
   - images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg
@@ -18,7 +20,7 @@ tags:
   - reinforcement-learning
 title: How to distinguish types of AI?
 type: popular
-url: post/2023/2023-10-04-how-to-distinguish-types-of-ai
+url: how-to-distinguish-types-of-ai
 ---
 
 Before we start working with Artificial Intelligence we should know what it is, at least a bit. There are many definitions of AI and there are multiple types of AI. Prepare a mug of coffee and let's start.
