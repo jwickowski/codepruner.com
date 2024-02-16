@@ -8,22 +8,17 @@ companies:
   - esatto
 date: 2023-11-08T03:40:58.000Z
 disqus_identifier: what-is-skexception-and-how-to-fix-it-in-semantickernel
-disqus_title: >-
-  How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from
-  SemanticKernel?
+disqus_title: 'How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from SemanticKernel?'
 disqus_url: 'https://codepruner.com/what-is-skexception-and-how-to-fix-it-in-semantickernel'
 draft: false
 images:
-  - >-
-    images/posts/2023/2023-11-08-what_is_skexception_and_how_to_fix_it_in_semantickernel.jpg
+  - images/posts/2023/2023-11-08-what_is_skexception_and_how_to_fix_it_in_semantickernel.jpg
 tags:
   - ai
   - openai
   - Semantic Kernel
   - Exception
-title: >-
-  How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from
-  SemanticKernel?
+title: 'How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from SemanticKernel?'
 type: regular
 url: what-is-skexception-and-how-to-fix-it-in-semantickernel
 ---

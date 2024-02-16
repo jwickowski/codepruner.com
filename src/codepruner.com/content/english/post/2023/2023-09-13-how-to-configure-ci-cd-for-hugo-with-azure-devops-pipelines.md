@@ -1,20 +1,17 @@
 ---
 aliases:
   - /posts/hugo/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
-  - >-
-    post/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
+  - post/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
 author: Jerzy Wickowski
 categories:
   - blog
 date: 2023-09-13T04:40:58.000Z
 disqus_identifier: how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
 disqus_title: How to configure CI/CD for hugo with Azure DevOps Pipelines?
-disqus_url: >-
-  https://codepruner.com/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines
+disqus_url: 'https://codepruner.com/how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines'
 draft: false
 images:
-  - >-
-    images/posts/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines.jpg
+  - images/posts/2023/2023-09-13-how-to-configure-ci-cd-for-hugo-with-azure-devops-pipelines.jpg
 tags:
   - hugo
   - azure devops

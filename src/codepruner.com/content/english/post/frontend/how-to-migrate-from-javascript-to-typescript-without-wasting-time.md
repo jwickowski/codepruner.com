@@ -1,15 +1,13 @@
 ---
 aliases:
-  - >-
-    posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time
+  - posts/frontend/how-to-migrate-from-javascript-to-typescript-without-wasting-time
 author: Jerzy Wickowski
 categories:
   - frontend
 date: 2021-07-18T09:40:58.000Z
 disqus_identifier: how-to-migrate-from-javascript-to-typescript-without-wasting-time
 disqus_title: How to migrate from javascript to typescript without wasting time
-disqus_url: >-
-  https://codepruner.com/how-to-migrate-from-javascript-to-typescript-without-wasting-time
+disqus_url: 'https://codepruner.com/how-to-migrate-from-javascript-to-typescript-without-wasting-time'
 draft: false
 images:
   - images/blog/red-sharp-pruner.jpg

@@ -43,11 +43,10 @@ function getUrlFromFilePath(filePath: string): string {
     var contentIndex = filePath.indexOf(prefixToSearch);
     var url = filePath.substring(contentIndex + prefixToSearch.length, filePath.length - 3);
 
-    console.log("url: ", url);
     url = url.replace(/\\/g, "/");
     url = url.replace(new RegExp("\\w{4}/\\d{4}/\\d{4}-\\d{2}-\\d{2}-"), "");
     url = url.lastIndexOf("/") === -1 ?? url ? url : url.substring(url.lastIndexOf("/") + 1);
-    console.log("url AFTER CHANGE: ", url);
+    console.log("url: ", url);
     url = url.toLowerCase();
     return url;
 }
@@ -101,7 +100,7 @@ function getFrontMatter(filePath: string) {
 function overrideFrontMatter(filePath: string, newFrontMatter: object) {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { content } = matter(fileContent);
-    const yamlFrontMatter = yaml.dump(newFrontMatter, { sortKeys: true });
+    const yamlFrontMatter = yaml.dump(newFrontMatter, { sortKeys: true, lineWidth: -1 });
     const newFileContent = `---\n${yamlFrontMatter}---\n${content}`;
     fs.writeFileSync(filePath, newFileContent);
 }

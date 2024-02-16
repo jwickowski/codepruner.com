@@ -1,21 +1,17 @@
 ---
 aliases:
-  - >-
-    /posts/2029-09-22/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
-  - >-
-    post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
+  - /posts/2029-09-22/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
+  - post/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 author: Jerzy Wickowski
 categories:
   - docker
 date: 2023-09-22T05:40:58.000Z
 disqus_identifier: how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
 disqus_title: How to run postgresql and adminer/pgadmin with docker compose
-disqus_url: >-
-  https://codepruner.com/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose
+disqus_url: 'https://codepruner.com/how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose'
 draft: false
 images:
-  - >-
-    images/posts/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.png
+  - images/posts/2023/2023-09-22-how-to-run-postgresql-and-adminer-or-pgadmin-with-docker-compose.png
 tags:
   - sql
   - postgres
