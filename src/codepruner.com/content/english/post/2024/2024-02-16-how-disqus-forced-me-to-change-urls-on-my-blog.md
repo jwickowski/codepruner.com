@@ -6,7 +6,7 @@ date: 2024-02-16T11:40:58.000Z
 disqus_identifier: how-disqus-forced-me-to-change-urls-on-my-blog
 disqus_title: How Disqus forced me to change URLs on CodePruner.com
 disqus_url: 'https://codepruner.com/how-disqus-forced-me-to-change-urls-on-my-blog'
-draft: true
+draft: false
 images:
   - images/posts/2024/2024-02-16-how-disqus-forced-me-to-change-urls-on-my-blog.jpg
 tags:
