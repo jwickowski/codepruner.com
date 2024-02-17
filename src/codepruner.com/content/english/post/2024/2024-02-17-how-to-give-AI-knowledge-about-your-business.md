@@ -57,7 +57,7 @@ the answer can look like that:
 Based on the information you provided, Jerzy Wickowski is a software developer from Poland with 15 years of experience. Additionally, Wickowski is noted as an author on CodePruner.com, which suggests that he might have contributed articles, tutorials, or content related to software development on that platform.
 ```
 
-AS you can see, if we provide the information to the context, then AI will be able to answer a specific question, but you will not be able to add all information from hundreds of company documents. To acheive it we can go to he next part 
+AS you can see, if we provide the information to the context, then AI will be able to answer a specific question, but you will not be able to add all information from hundreds of company documents. To achieve it we can go to he next part 
 
 ## RAG - Retrieval Augmented Generation
 This approach uses the previous one, but give you a way more option and allows to to work with a much bigger of data. 
@@ -72,9 +72,12 @@ The main idea is to index you data somewhere and before creating a prompt, you c
 6. Get the answer
 
 ## Plugins
-The idea of plugins is fantastic. In thac case 
+The idea of plugins is fantastic. You create your own API and you prepare a Plugin Manifest for the AI in specific format. Then when you work with AI, it discover your intention and call your plugin/your API to do a specific action. It can be getting data from your source, but also it can be an invocation of a specific action.
+
+How the AI know what method in plugin it should call? I have no idea, but if you want to know, let me know in the comments and I will investigate it.
 
 ## Fine tuning
+
 
 ## Build your specific model
 
