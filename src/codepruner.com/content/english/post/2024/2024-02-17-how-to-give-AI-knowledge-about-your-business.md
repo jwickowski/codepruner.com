@@ -1,37 +1,34 @@
 ---
-aliases:
-  - post/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search
+
 author: Jerzy Wickowski
 categories:
   - AI
-companies:
-  - esatto
-date: 2023-01-04T03:40:58.000Z
+date: 2023-02-17T03:40:58.000Z
 disqus_identifier: how-to-configure-indexing-files-from-blob-in-azure-ai-search
 disqus_title: How to configure indexing files from blob in azure AI search
 disqus_url: 'https://codepruner.com/how-to-configure-indexing-files-from-blob-in-azure-ai-search'
 draft: true
 images:
-  - images/posts/2024/2024-01-09-how-to-configure-indexing-files-from-blob-in-azure-ai-search.jpg
+  - images/posts/2024/2024-02-17-how-to-give-AI-knowledge-about-your-business.jpg
 tags:
   - ai
   - openai
   - chatGPT
   - azure
   - search
-title: How to configure indexing files from blob in azure AI search
+title: How to give AI knowledge about your business?
 type: trending
-url: how-to-configure-indexing-files-from-blob-in-azure-ai-search
+url: how-to-give-AI-knowledge-about-your-business
 ---
 
 How to give AI knowleadge about your business?
 
-Because of OpenAI and them ChatGPT AI is more and more popular. You can use it as a nice toy and ask it for some simple and fun things. It can also help you with some of your creative work like generating ideas, writing drafts of posts to social media like Facebook, LinkedIn or X. 
+Because of OpenAI and them ChatGPT AI is more and more popular. You can use it as a nice toy and ask it for some simple and fun things. It can also help you with some of your creative work like generating ideas, writing drafts of posts to social media.
 
-But it will generate you only generic content. It doesn't know you and your business. It won't know your context, but you can help it to have it. There are couple of ways to extend LLM with required knowledge. Let's check them.
+Even if it can generate you a content, it doesn't know you and your business. It won't know your context, but you can help it to have it. There are couple of ways to extend LLM with required knowledge. Let's check them.
 
 
-# Extending Context
+## Extending Context
 When you send a prompt to AI you can add more information to it. You can ask a question without passing no data like:
 ```
 Who is Jerzy Wickowski?
@@ -62,23 +59,33 @@ Based on the information you provided, Jerzy Wickowski is a software developer f
 
 AS you can see, if we provide the information to the context, then AI will be able to answer a specific question, but you will not be able to add all information from hundreds of company documents. To acheive it we can go to he next part 
 
-# RAG - Retrieval Augmented Generation
-This approach is a bit similar to the previous one, but you have to add a bit of logic before adding data to the context.
+## RAG - Retrieval Augmented Generation
+This approach uses the previous one, but give you a way more option and allows to to work with a much bigger of data. 
 
-You 
+The main idea is to index you data somewhere and before creating a prompt, you can ask for a specific data from the index. Then you can add the result to the prompt. I will describe the whole process in one of the next posts, but in a nutshell it looks like that:
 
+1. Index all of the files in an index 
+2. When user asks for anything
+3. Ask for a specific data/document from the index
+4. Add the result to the AI prompt
+5. Send the prompt with user Query and found data to the AI
+6. Get the answer
 
-# Plugin
+## Plugins
+The idea of plugins is fantastic. In thac case 
 
-# Fine tuning
+## Fine tuning
 
-# Build your specific model
+## Build your specific model
 
 
 AI gives as a huge amount of possibilities to improve things we do. One of them could be generating responses based on documents we have, but how to achieve it?
 
 
-# How should it work
+
+
+
+## How should it work
 We will go a bit deeper with that, but the main plan is:
 - Index all of the files in a search
 - When user asks for anything
