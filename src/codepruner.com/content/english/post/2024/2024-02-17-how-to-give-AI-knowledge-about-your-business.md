@@ -1,13 +1,12 @@
 ---
-
 author: Jerzy Wickowski
 categories:
   - AI
 date: 2023-02-17T03:40:58.000Z
 disqus_identifier: how-to-configure-indexing-files-from-blob-in-azure-ai-search
-disqus_title: How to configure indexing files from blob in azure AI search
-disqus_url: 'https://codepruner.com/how-to-configure-indexing-files-from-blob-in-azure-ai-search'
-draft: true
+disqus_title: How to give AI knowledge about your business?
+disqus_url: 'https://codepruner.com/how-to-give-ai-knowledge-about-your-business'
+draft: false
 images:
   - images/posts/2024/2024-02-17-how-to-give-AI-knowledge-about-your-business.jpg
 tags:
@@ -18,7 +17,7 @@ tags:
   - search
 title: How to give AI knowledge about your business?
 type: trending
-url: how-to-give-AI-knowledge-about-your-business
+url: how-to-give-ai-knowledge-about-your-business
 ---
 
 How to give AI knowleadge about your business?
@@ -26,7 +25,6 @@ How to give AI knowleadge about your business?
 Because of OpenAI and them ChatGPT AI is more and more popular. You can use it as a nice toy and ask it for some simple and fun things. It can also help you with some of your creative work like generating ideas, writing drafts of posts to social media.
 
 Even if it can generate you a content, it doesn't know you and your business. It won't know your context, but you can help it to have it. There are couple of ways to extend LLM with required knowledge. Let's check them.
-
 
 ## Extending Context
 When you send a prompt to AI you can add more information to it. You can ask a question without passing no data like:
@@ -77,33 +75,13 @@ The idea of plugins is fantastic. You create your own API and you prepare a Plug
 How the AI know what method in plugin it should call? I have no idea, but if you want to know, let me know in the comments and I will investigate it.
 
 ## Fine tuning
+Another option is an adjusting a model to your needs. It is one of the most media method. When you think that you can adjust the model to your needs, you can think that it will be the best option. 
+
+Before you decide to go that way make sure:
+- You have tried the previous, simpler, methods and you are sure they are not enough
+- Read how to do FineTunning well
+- Be aware that it can be a long and expensive process
 
 
-## Build your specific model
-
-
-AI gives as a huge amount of possibilities to improve things we do. One of them could be generating responses based on documents we have, but how to achieve it?
-
-
-
-
-
-## How should it work
-We will go a bit deeper with that, but the main plan is:
-- Index all of the files in a search
-- When user asks for anything
-- Ask for a specific data/document in search
-- Add the result to the AI promt
-
-That approach is called RAG: Retrieval Augemented Generation, but we will go step by step  
-the main idea is to index all of the files. Then when a user asks a specific question, then 
-
-
-
-
-
-POSTY:
-- Jak to ogólnie ogarnac (mozeżę być sharepoint, a moze byc blob, po prostu datasource)
-- Jak Podejść do tematu, gdy musimy np. przetłumaczyć pliki i coś z nich wyciagnąć (skillset)
-- Osobno, jak skonfigurować skillset, aby zrobić split -> translate -> merge 
-- Jak zrobić to przy pomocy asystentów w OpenAI (i jakie to ma wady/zalaty)
+## Summary
+Would you like to know anything more about it? Let me know in the comments. I will be happy to talk with you.
