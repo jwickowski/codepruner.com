@@ -2,13 +2,13 @@
 author: Jerzy Wickowski
 categories:
   - AI
-date: 2023-02-17T03:40:58.000Z
+date: 2023-02-19T18:40:58.000Z
 disqus_identifier: how-to-configure-indexing-files-from-blob-in-azure-ai-search
 disqus_title: How to give AI knowledge about your business?
 disqus_url: 'https://codepruner.com/how-to-give-ai-knowledge-about-your-business'
 draft: false
 images:
-  - images/posts/2024/2024-02-17-how-to-give-AI-knowledge-about-your-business.jpg
+  - images/posts/2024/2024-02-19-how-to-give-AI-knowledge-about-your-business.jpg
 tags:
   - ai
   - openai
