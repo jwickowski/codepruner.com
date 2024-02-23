@@ -1,11 +1,36 @@
+using CodePruner.Examples.BackgroundTask.Hangfire;
+using Hangfire;
+using Hangfire.MemoryStorage;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+#region init_hangfire
+
+builder.Services.AddHangfire(configuration => configuration
+    .UseRecommendedSerializerSettings()
+    .UseMemoryStorage());
+
+// Add the processing server as IHostedService
+builder.Services.AddHangfireServer();
+
+#endregion
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<SlowFileProcessor>();
+
 
 var app = builder.Build();
+
+
+#region init_hangfire_dashboard
+
+app.UseHangfireDashboard();
+
+#endregion
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -16,29 +41,31 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+#region example_endpoints
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+app.MapGet("/ProcessLargeFileWithoutHangfire", async ([FromServices] SlowFileProcessor fileProcessor) =>
+    {
+        Console.WriteLine("[{0:HH:mm:ss}] Request start without Hangfire", DateTime.Now);
+        var fileId = Random.Shared.Next(1, 1000);
+        await new SlowFileProcessor().ProcessFileAsync(fileId);
+        Console.WriteLine("[{0:HH:mm:ss}] Request end without Hangfire", DateTime.Now);
+        return new FileProcessResult(fileId);
+    })
+    .WithName("ProcessLargeFileWithoutHangfire")
+    .WithOpenApi();
 
+app.MapGet("/ProcessLargeFileWithHangFire", ([FromServices] SlowFileProcessor fileProcessor) =>
+    {
+        Console.WriteLine("[{0:HH:mm:ss}] Request start with Hangfire", DateTime.Now);
+        var fileId = Random.Shared.Next(1, 1000);
+        BackgroundJob.Enqueue(() => fileProcessor.ProcessFileAsync(fileId));
+        Console.WriteLine("[{0:HH:mm:ss}] Request end with Hangfire", DateTime.Now);
+        return new FileProcessResult(fileId);
+    })
+    .WithName("ProcessLargeFileWithHangFire")
+    .WithOpenApi();
+
+#endregion
 app.Run();
 
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+internal record FileProcessResult(int FileId);
