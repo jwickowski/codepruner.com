@@ -1,0 +1,6 @@
+@CodePruner.Examples.BackgroundTask.Hangfire_HostAddress = http://localhost:5007
+
+GET {{CodePruner.Examples.BackgroundTask.Hangfire_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
