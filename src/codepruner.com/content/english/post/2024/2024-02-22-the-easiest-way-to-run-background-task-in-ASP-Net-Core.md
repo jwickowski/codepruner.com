@@ -16,11 +16,12 @@ type: trending
 
 ---
 
-It is common situation that we would like to run some background tasks in our application. Just return an information to a client that we accepted his request and do the rest in the background. There are many ways to do it, but we will focus on the easiest one.
+It is common situation that we would like to run a background tasks in our application. There are many ways to do it, but we will focus on the easiest one.
 
-## Our scenario
-The best option is to show a real life scenario. I have a web application and that allows a user to upload a file. After uploading the file I need to do two things immediately: create a unique FileId and store the file somewhere. After I need to process the file, but it can cake a bit of time, so I don't want to block client. I can prepare the response for the client with the FileId, maybe a status, and start processing it in the background. 
+## Problem to solve
+The best option is to show a real life scenario. I have a web application and that allows a user to upload a file. After uploading the file I need to do two things immediately: create a unique FileId and store the file somewhere. After it, I need to process the file, but it can take a bit of time, so I don't want to block the client. I can prepare the response for the client with the FileId, maybe a status, and start processing it in the background. 
 
+## Some ideas
 Ok. So we know, that I need to run a background task. What options do we have? 
 - In old ASP.NET I was able to use `QueueBackgroundWorkItem`, but in ASP.NET Core it is not possible. 
 - I can use `IHostedService` or `BackgroundService`, but to use it I needed to write a bit of code to handle it. I would like to use something simpler. 
