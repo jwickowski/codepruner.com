@@ -3,7 +3,7 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-02-22T11:40:58.000Z
-draft: true
+draft: false
 images:
   - images/posts/2024/2024-02-22-the-easiest-way-to-run-background-task-in-ASP-Net-Core.jpg
 tags:
