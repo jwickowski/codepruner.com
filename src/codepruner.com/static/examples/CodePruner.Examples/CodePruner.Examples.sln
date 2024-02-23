@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.TypeScriptCodeGenerators.Runner", "CodePruner.Examples.TypeScriptCodeGenerators.Runner\CodePruner.Examples.TypeScriptCodeGenerators.Runner.csproj", "{92E1FC46-62A4-421E-BF9D-9E2611711CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.BlazorWasm.Containerization", "CodePruner.Examples.BlazorWasm.Containerization\CodePruner.Examples.BlazorWasm.Containerization.csproj", "{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.BlazorWasm.Containerization", "CodePruner.Examples.BlazorWasm.Containerization\CodePruner.Examples.BlazorWasm.Containerization.csproj", "{2D584A60-BFFB-4CFE-98D4-ABA8F744AC11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.AI.ChatGPT", "CodePruner.Examples.AI.ChatGPT\CodePruner.Examples.AI.ChatGPT.csproj", "{2EE8949C-084A-472D-BE31-451C340F205A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.AI.ChatGPT", "CodePruner.Examples.AI.ChatGPT\CodePruner.Examples.AI.ChatGPT.csproj", "{2EE8949C-084A-472D-BE31-451C340F205A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.AI.ExploreSemanticKernel", "CodePruner.Examples.AI.ExploreSemanticKernel\CodePruner.Examples.AI.ExploreSemanticKernel.csproj", "{6F25A143-8E05-4A29-9572-CFFE51B28C00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.AI.ExploreSemanticKernel", "CodePruner.Examples.AI.ExploreSemanticKernel\CodePruner.Examples.AI.ExploreSemanticKernel.csproj", "{6F25A143-8E05-4A29-9572-CFFE51B28C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.BackgroundTask.Hangfire", "CodePruner.Examples.BackgroundTask.Hangfire\CodePruner.Examples.BackgroundTask.Hangfire.csproj", "{6259ED5F-FF93-4608-AC77-CE992470B944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6F25A143-8E05-4A29-9572-CFFE51B28C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F25A143-8E05-4A29-9572-CFFE51B28C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F25A143-8E05-4A29-9572-CFFE51B28C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6259ED5F-FF93-4608-AC77-CE992470B944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6259ED5F-FF93-4608-AC77-CE992470B944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6259ED5F-FF93-4608-AC77-CE992470B944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6259ED5F-FF93-4608-AC77-CE992470B944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
