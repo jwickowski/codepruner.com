@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-02-22T11:40:58.000Z
+disqus_identifier: the-easiest-way-to-run-background-task-in-asp-net-core
+disqus_title: The easiest way to run background task in ASP .Net Core
+disqus_url: 'https://codepruner.com/the-easiest-way-to-run-background-task-in-asp-net-core'
 draft: false
 images:
   - images/posts/2024/2024-02-22-the-easiest-way-to-run-background-task-in-ASP-Net-Core.jpg
@@ -13,7 +16,7 @@ tags:
   - hangfire
 title: The easiest way to run background task in ASP .Net Core
 type: trending
-
+url: the-easiest-way-to-run-background-task-in-asp-net-core
 ---
 
 It is common situation that we would like to run a background tasks in our application. There are many ways to do it, but we will focus on the easiest one.
