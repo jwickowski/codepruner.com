@@ -2,15 +2,20 @@
 author: Jerzy Wickowski
 categories:
   - dotnet
-date: 2024-02-27T11:40:58.000Z
+date: 2024-03-05T06:40:58.000Z
+disqus_identifier: why-use-signalr-and-how-it-works
+disqus_title: Why use SignalR and how it works
+disqus_url: 'https://codepruner.com/why-use-signalr-and-how-it-works'
 draft: true
 images:
-  - images/posts/2024/2024-02-27-how-and-why-use-signalR.jpg
+  - images/posts/2024/2024-03-05-why-use-signalR-and-how-it-works.jpg
 tags:
   - dotNet
   - signalR
-title: How and why use SignalR
+  - WebSockets
+title: Why use SignalR and how it works
 type: regular
+url: why-use-signalr-and-how-it-works
 ---
 
 Everyone, who creates web applications, knows how the communication in the internet looks like. It is mostly a request and response. The client sends a request and the server returns a response. But what if you would like to reverse it. To send information from server to client or event to many clients? Let's look at this idea a bit closer. 
