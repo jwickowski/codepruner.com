@@ -41,7 +41,7 @@ In financial applications or in administrations panels it is very important to d
 - With request-response approach we need more resources, because then communication in two ways is required.
 - Sometimes there are not new data so the request is unnecessary.
 
-The better approach would be like:
+A better approach would be:
 - Server send information to the client when new data are available.
 - Server doesn't send information when there are no new data.
 - Client doesn't have to think about asking. Data just will be provided.
@@ -59,7 +59,7 @@ The most important fact is that SignalR it is a really nice abstraction layer ab
 ### WebSockets
 When WebSockets are used, then a communication channel between the client and the server is created. The channel is kept alive all the time and used to send messages in both ways. So you will be informed about new messages with very low latency, but also you may use the same channel to send messages to the server. 
 
-It is the best option. When SignalR can use it, it will do it.
+It is the best option. When SignalR can use it, it does.
 
 ### Server-Sent Events
 When WebSockets are not available, then SignalR have two options to keep the connection. One of then is Server-Sent Events. 
@@ -67,7 +67,7 @@ When WebSockets are not available, then SignalR have two options to keep the con
 It is similar to WebSockets, but it is only one way communication, from the server to the client. With that approach the client can't send messages to the server using SSE. But of course SignalR allows the client to send messages to the server, but it will be done with a different protocol, behind the scene. 
 
 ### Long Polling
-The last option is the most common, maybe it is not very efficient, but is works in every situation. In works in very easy way. The client sends a request with very long timeout to the server and the server doesn't respond until it has a message to send. When the server sends a message, then client send a new request with the same criteria.
+The last option is the most common. Maybe it is not very efficient, but is works in every situation. In works in very easy way. The client sends a request with very long timeout to the server and the server doesn't respond until it has a message to send. When the server sends a message, then client send a new request with the same criteria.
 
 
 ## More nice features
@@ -79,7 +79,7 @@ When the connection is lost, SignalR tries to reconnect automatically. It is ver
 If you wish you can also close and open the connection on demand. It is super important to remember it when you are creating SPA application and you change the active page. Then it could be a good idea to close the connection to save resources.
 
 ### Scalability
-This feature is not a must for the beginning, but you have to know that there is a possibility to scale the SignalR. When you start a project it is easy, because one server is enought, but when project grows you have to think about it. SignalR allows to be ran in multiple instances and the state can be shared between them. If you want to know more about it, let me know in the comment.
+This feature is not a must for the beginning, but you have to know that there is a possibility to scale the SignalR. When you start a project it is easy, because one server is enough, but when project grows you have to think about it. SignalR allows to be ran in multiple instances and the state can be shared between them. If you want to know more about it, let me know in the comment.
 
 ## Summary
 SignalR is really useful and powerful tool. It is worth to know it and use it in the right scenarios. I am planning to write more about it in the future. If you are interested in specific scenario, let me know in the comment.
