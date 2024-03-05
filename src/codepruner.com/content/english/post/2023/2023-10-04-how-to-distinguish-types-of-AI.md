@@ -19,7 +19,7 @@ tags:
   - deep-learning
   - reinforcement-learning
 title: How to distinguish types of AI?
-type: popular
+type: trending
 url: how-to-distinguish-types-of-ai
 ---
 

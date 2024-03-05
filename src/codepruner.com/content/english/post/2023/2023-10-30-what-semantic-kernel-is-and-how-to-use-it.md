@@ -20,7 +20,7 @@ tags:
   - planner
   - pipeline
 title: What is SemanticKernel how to use it?
-type: trending
+type: regular
 url: what-semantic-kernel-is-and-how-to-use-it
 ---
 

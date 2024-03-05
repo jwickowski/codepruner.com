@@ -23,7 +23,7 @@ tags:
   - wasm
   - WebAssembly
 title: How to run blazor app in docker container
-type: epic
+type: popular
 url: how-to-run-blazor-wasm-app-in-container
 ---
 

@@ -14,7 +14,7 @@ tags:
   - signalR
   - WebSockets
 title: Why use SignalR and how it works
-type: regular
+type: epic
 url: why-use-signalr-and-how-it-works
 ---
 
