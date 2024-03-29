@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.Backgro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.SignalR.Api", "CodePruner.Examples.SignalR.Api\CodePruner.Examples.SignalR.Api.csproj", "{CE09E319-829E-4B85-9158-14507FFE8764}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "codepruner.examples.signalr.react.webapp", "CodePruner.Examples.SignalR.React.WebApp\codepruner.examples.signalr.react.webapp.esproj", "{3702BC06-1294-4CB7-89FA-96AB030002C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,12 @@ Global
 		{CE09E319-829E-4B85-9158-14507FFE8764}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE09E319-829E-4B85-9158-14507FFE8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE09E319-829E-4B85-9158-14507FFE8764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3702BC06-1294-4CB7-89FA-96AB030002C8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
