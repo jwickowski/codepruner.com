@@ -14,10 +14,52 @@ title: How to use SignalR the basic scenario
 type: epic
 ---
 
-Last time I wrote about SignalR, it was about the idea and typical scenarios where it can be useful. Today I would like to show you a simple practical configuration SignalR on backend and frontend. I will guide you step by step to show you how to create a simple application with usage of SignalR. We will not create chat, because it is not very useful, but we will look at a bit more useful scenario like sending an information from backend that a process is done.
+Last time I wrote about SignalR, it was about [the idea and typical scenarios where it can be useful]({{< relref "./2024-03-05-why-use-signalR-and-how-it-works.md">}}). Today I would like to show you a simple practical configuration SignalR on backend and frontend. I will guide you step by step to show you how to create a simple application with usage of SignalR. We will not create chat, because it is not very useful, but we will look at a bit more useful scenario like sending an information from backend that a process is done.
+
+## Our scenario
+The idea of the scenario is to find a balance between simplicity and usefulness. It should be simple to allow everyone to understand it, but it should be a bit complicated to find benefits of using it. So let's assume that we have a long running process in the backend. We would like to inform the client that the process is done. The client should be informed about the progress of the process. We can image multiple steps:
+
+1. Client sends a request to the server to start the process
+2. Server returns a unique identifier of the process
+3. Server starts the process
+4. Server will send a notification after each step of the process like:
+  - Queue
+  - Start
+  - Fetching
+  - Processing
+  - Saving 
+  - Done
+5. Client will show the progress to the user
+
+Ok. We know what we want to achieve. Let's start with the configuring of the backend.
+
+{{< notice "info" >}}
+The full example you can find in the [CodePruner.com repository](https://github.com/jwickowski/codepruner.com/tree/master/src/codepruner.com/static/examples/CodePruner.Examples).
+Check projects:
+- `CodePruner.Examples.SignalR.Api`
+- `codepruner.examples.signalr.react.webapp`
+{{</ notice >}}
 
 ## How to enable SignalR on ASP.NET Core backend
+You have to create a SignalR hub. It is a class that inherits from `Hub` class. It is the place where you can define methods that will be used to send messages to the clients. Let's create a simple hub:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.SignalR.Api/SignalRCode/ProcessingHub.cs" >}}
 
+It is the ~~standard~~ old approach to create a hub. The new approach is to use generic `Hub<T>` class. It can look like:
+{{<code language="csharp" file="static/examples/CodePruner.Examples/CodePruner.Examples.SignalR.Api/SignalRCode/StronglyTypedProcessingHub.cs" >}}
+
+Ok. It looks much nicer. Now we should register hub in the `Startup.cs` or `Program.cs` file. To do it you have to add a lines:
+
+```csharp
+builder.Services.AddSignalR();
+```
+and 
+
+``` csharp
+app.MapHub<ProcessingHub>("/ProcessingHub");
+app.MapHub<StronglyTypedProcessingHub>("/StronglyTypedProcessingHub");
+```
+
+Currently it everything what you need to configure SignalR on the backend for the simplest scenario. Now we can move to the frontend.
 
 ## How to connect frontend client to SignalR
 
