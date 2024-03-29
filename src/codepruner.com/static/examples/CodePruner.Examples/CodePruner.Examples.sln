@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.AI.Chat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.AI.ExploreSemanticKernel", "CodePruner.Examples.AI.ExploreSemanticKernel\CodePruner.Examples.AI.ExploreSemanticKernel.csproj", "{6F25A143-8E05-4A29-9572-CFFE51B28C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.BackgroundTask.Hangfire", "CodePruner.Examples.BackgroundTask.Hangfire\CodePruner.Examples.BackgroundTask.Hangfire.csproj", "{6259ED5F-FF93-4608-AC77-CE992470B944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePruner.Examples.BackgroundTask.Hangfire", "CodePruner.Examples.BackgroundTask.Hangfire\CodePruner.Examples.BackgroundTask.Hangfire.csproj", "{6259ED5F-FF93-4608-AC77-CE992470B944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePruner.Examples.SignalR.Api", "CodePruner.Examples.SignalR.Api\CodePruner.Examples.SignalR.Api.csproj", "{CE09E319-829E-4B85-9158-14507FFE8764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6259ED5F-FF93-4608-AC77-CE992470B944}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6259ED5F-FF93-4608-AC77-CE992470B944}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6259ED5F-FF93-4608-AC77-CE992470B944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE09E319-829E-4B85-9158-14507FFE8764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE09E319-829E-4B85-9158-14507FFE8764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE09E319-829E-4B85-9158-14507FFE8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE09E319-829E-4B85-9158-14507FFE8764}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
