@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./Home";
-import { SignalR01Processing } from "./pages/SignalR-01-Processing";
+import { SignalR01Processing } from "./signalR/pages/SignalR-01-Processing";
 
 const router = createBrowserRouter([
   {
