@@ -16,25 +16,40 @@ export const SignalR01Processing = () => {
     const seconds = String(now.getSeconds()).padStart(2, "0");
 
     const formattedTime = `${hours}:${minutes}:${seconds}`;
-    setLogs([...logs, `${formattedTime}: ${logText}]`]);
+    setLogs(currentLogs => [...currentLogs, `${formattedTime}: ${logText}`]);
   };
 
   const hubUrl = "https://localhost:7270/StronglyTypedProcessingHub";
   const handleClick = () => {
-    log("Start processing");
+    log("Sending request to start processing.");
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+
+  };
+
+    var request = fetch("https://localhost:7270/StartFileProcessing",requestOptions);
+    request
+    .then(response => response.json())
+    .then((response: any) => {
+      const processId = response.id;
+      log(`ProcessId: ${processId}`);
+    });
+
+    log(`Request sent to start processing`);
   };
 
   useEffect(() => {
-    console.log("Initializing SignalR connection.");
+    log("Initializing SignalR connection.");
     const connection = new HubConnectionBuilder()
       .withUrl(hubUrl)
       .configureLogging(LogLevel.Information)
       .build();
 
-    console.log("Initialized SignalR connection.");
+    log("Initialized SignalR connection.");
     setConnection(connection);
 
-    console.log("Cconnection set in state.");
+    log("Connection set in state.");
   }, []);
 
   useEffect(() => {
@@ -49,7 +64,7 @@ export const SignalR01Processing = () => {
     try {
       log("Try connecting to SignalR hub");
       await connection!.start();
-      log("Connected to SignalR hub");
+      log("Connected to SignalR hub!");
     } catch (err) {
       log(`Error connecting to SignalR hub: ${err}`);
     }
@@ -60,7 +75,7 @@ export const SignalR01Processing = () => {
       <button onClick={handleClick}>Start processing:</button>
       <div>
         {logs.map((log, index) => (
-          <div key={index}>index: {log}</div>
+          <div key={index}> {index}: {log}</div>
         ))}
       </div>
     </div>
