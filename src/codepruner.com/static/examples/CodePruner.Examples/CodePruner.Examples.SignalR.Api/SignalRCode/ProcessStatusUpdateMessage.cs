@@ -1,3 +1,5 @@
-﻿namespace CodePruner.Examples.SignalR.Api.SignalRCode;
+﻿using CodePruner.Examples.SignalR.Api.Processing;
 
-public record ProcessStatusUpdateMessage(int ProcessId, ProcessStatus CurrentStatus);
+namespace CodePruner.Examples.SignalR.Api.SignalRCode;
+
+public record ProcessStatusUpdateMessage(Guid ProcessId, ProcessStatus CurrentStatus);

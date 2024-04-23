@@ -1,4 +1,4 @@
-﻿namespace CodePruner.Examples.SignalR.Api.SignalRCode;
+﻿namespace CodePruner.Examples.SignalR.Api.Processing;
 
 public enum ProcessStatus
 {

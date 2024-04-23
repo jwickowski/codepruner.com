@@ -4,7 +4,7 @@ namespace CodePruner.Examples.SignalR.Api.SignalRCode;
 
 public class StronglyTypedProcessingHub : Hub<IProcessingClient>
 {
-    
+
 }
 
 

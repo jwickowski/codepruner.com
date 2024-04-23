@@ -1,11 +1,6 @@
-import { useEffect, useState } from "react";
-import {
-  HubConnection,
-  HubConnectionBuilder,
-  LogLevel,
-} from "@microsoft/signalr";
+import { useEffect, useMemo, useState } from "react";
+import { HubConnectionBuilder, LogLevel } from "@microsoft/signalr";
 export const SignalR01Processing = () => {
-  const [connection, setConnection] = useState<HubConnection>();
   const [logs, setLogs] = useState<string[]>([]);
 
   const log = (logText: string) => {
@@ -16,58 +11,61 @@ export const SignalR01Processing = () => {
     const seconds = String(now.getSeconds()).padStart(2, "0");
 
     const formattedTime = `${hours}:${minutes}:${seconds}`;
-    setLogs(currentLogs => [...currentLogs, `${formattedTime}: ${logText}`]);
+    setLogs((currentLogs) => [...currentLogs, `${formattedTime}: ${logText}`]);
   };
 
-  const hubUrl = "https://localhost:7270/StronglyTypedProcessingHub";
-  const handleClick = () => {
-    log("Sending request to start processing.");
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
+  const connection = useMemo(() => {
+    const hubUrl = "https://localhost:7270/StronglyTypedProcessingHub";
+    log("[Memo] Initializing SignalR connection.");
 
-  };
-
-    var request = fetch("https://localhost:7270/StartFileProcessing",requestOptions);
-    request
-    .then(response => response.json())
-    .then((response: any) => {
-      const processId = response.id;
-      log(`ProcessId: ${processId}`);
-    });
-
-    log(`Request sent to start processing`);
-  };
-
-  useEffect(() => {
-    log("Initializing SignalR connection.");
-    const connection = new HubConnectionBuilder()
+    var newConnection = new HubConnectionBuilder()
       .withUrl(hubUrl)
       .configureLogging(LogLevel.Information)
       .build();
 
-    log("Initialized SignalR connection.");
-    setConnection(connection);
-
-    log("Connection set in state.");
+    log("[Memo] Connecting to SignalR hub");
+    newConnection
+      .start()
+      .then(() => {
+        log("[Memo] Connected to SignalR hub");
+      })
+      .catch((err) => {
+        log(`[Memo] Error connecting to SignalR hub: ${err}`);
+      });
+    return newConnection;
   }, []);
 
   useEffect(() => {
     if (!connection) {
-      log("Connection is not set.");
+      log("[Effect] SignalR connection doesn't exist");
       return;
     }
 
-    asyncHandleSignalrconnection();
+    log("[Effect] Setting up SignalR event handlers.");
+    connection.on("ProcessStatusUpdate", (message: any) => {
+      log(`[Effect][SignalR] ProcessStatusUpdate: ${message.currentStatus}`);
+    });
+
+    return () => {
+      log("[Effect] Removing SignalR event handlers.");
+      connection.off("ProcessStatusUpdate");
+    };
   }, [connection]);
-  const asyncHandleSignalrconnection = async () => {
-    try {
-      log("Try connecting to SignalR hub");
-      await connection!.start();
-      log("Connected to SignalR hub!");
-    } catch (err) {
-      log(`Error connecting to SignalR hub: ${err}`);
-    }
+
+  const handleClick = () => {
+    log("[Click] Sending request to start processing.");
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    };
+
+    var request = fetch(
+      "https://localhost:7270/StartFileProcessingSync",
+      requestOptions
+    );
+    request.then(() => {
+      log(`[Click] Request is done`);
+    });
   };
 
   return (
@@ -75,7 +73,10 @@ export const SignalR01Processing = () => {
       <button onClick={handleClick}>Start processing:</button>
       <div>
         {logs.map((log, index) => (
-          <div key={index}> {index}: {log}</div>
+          <div key={index}>
+            {" "}
+            {index}: {log}
+          </div>
         ))}
       </div>
     </div>
