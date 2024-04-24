@@ -56,7 +56,7 @@ app.MapPost("/StartFileProcessingSync", async (
         var fileProcessingId = Guid.NewGuid();
         var fileProcessId = new FileProcessId(fileProcessingId);
 
-        var actualState = new ProcessStatusState(fileProcessId, ProcessStatus.InQueue))
+        var actualState = new ProcessStatusState(fileProcessId, ProcessStatus.InQueue);
         while (actualState.Status != ProcessStatus.Done)
         {
             await hub.Clients.All.ProcessStatusUpdate(new ProcessStatusUpdateMessage(fileProcessId.Id,

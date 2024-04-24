@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-//#region create_signalR_imports
-import { HubConnectionBuilder, LogLevel } from "@microsoft/signalr";
-//#endregion
+import { getSignalRConnection } from "../SignalConnection";
 export const SignalR01Processing = () => {
   const [logs, setLogs] = useState<string[]>([]);
-
+  const connection = useMemo(() => getSignalRConnection(), []);
   const log = (logText: string) => {
     console.log(logText);
     var now = new Date();
@@ -15,29 +13,6 @@ export const SignalR01Processing = () => {
     const formattedTime = `${hours}:${minutes}:${seconds}`;
     setLogs((currentLogs) => [...currentLogs, `${formattedTime}: ${logText}`]);
   };
-  //#region create_signalR_connection
-  const connection = useMemo(() => {
-    const hubUrl = "https://localhost:7270/StronglyTypedProcessingHub";
-    log("[Memo] Initializing SignalR connection.");
-
-    var newConnection = new HubConnectionBuilder()
-      .withUrl(hubUrl)
-      .configureLogging(LogLevel.Information)
-      .build();
-
-    log("[Memo] Connecting to SignalR hub");
-    newConnection
-      .start()
-      .then(() => {
-        log("[Memo] Connected to SignalR hub");
-      })
-      .catch((err) => {
-        log(`[Memo] Error connecting to SignalR hub: ${err}`);
-      });
-    return newConnection;
-  }, []);
-
-  //#endregion
 
   useEffect(() => {
     if (!connection) {
