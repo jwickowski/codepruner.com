@@ -7,10 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+#region register_signalR_services_enum_string_serialization
 builder.Services
     .AddSignalR()
     .AddJsonProtocol(options => options
         .PayloadSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+#endregion
+
+
+#region enable_cors
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
@@ -18,10 +25,11 @@ builder.Services.AddCors(options =>
         {
             corsPolicyOptions.WithOrigins("http://localhost:5173")
                 .AllowAnyHeader()
-                .AllowAnyMethod().
-                AllowCredentials();
+                .AllowAnyMethod()
+                .AllowCredentials();
         });
 });
+#endregion
 
 builder.Services.AddSingleton<FileProcessingStore>();
 builder.Services.AddTransient<FileProcessor>();
@@ -36,8 +44,10 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 app.UseHttpsRedirection();
 
+#region map_signalR_processing_hub
 app.MapHub<ProcessingHub>("/ProcessingHub");
 app.MapHub<StronglyTypedProcessingHub>("/StronglyTypedProcessingHub");
+#endregion
 
 app.MapPost("/StartFileProcessingSync", async (
         FileProcessor fileProcessor,
