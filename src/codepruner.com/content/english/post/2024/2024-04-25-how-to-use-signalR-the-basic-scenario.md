@@ -2,7 +2,7 @@
 author: Jerzy Wickowski
 categories:
   - dotnet
-date: 2024-04-23T06:40:58.000Z
+date: 2024-04-25T06:40:58.000Z
 draft: true
 images:
   - images/posts/2024/2024-03-05-why-use-signalR-and-how-it-works.jpg
@@ -67,17 +67,48 @@ The 1st thing you have to do is to install the SignalR client.
 npm i @microsoft/signalr
 ```
 
-When you have installed the client you can start using it. In our case we will do it inside a component. Import some data from the client library:
-{{<code language="javascript" file="static/examples/CodePruner.Examples/codepruner.examples.signalr.react.webapp/src/signalR/pages/SignalR-01-Processing.tsx" region="create_signalR_imports" >}}
-and initialize the connection:
-{{<code language="javascript" file="static/examples/CodePruner.Examples/codepruner.examples.signalr.react.webapp/src/signalR/pages/SignalR-01-Processing.tsx" region="create_signalR_connection" >}}
+When you have installed the client package you can start using it. The example code is here:
+{{<code language="javascript" file="static/examples/CodePruner.Examples/codepruner.examples.signalr.react.webapp/src/signalR/SignalRConnectionInstance.ts" >}}
+In shortcut you have to:
+- Import the SignalR client
+- Create a connection with an address to the SignalR hub
+- Start the connection
+- Add event listeners to handle messages from the server
 
-In our case I have created the connection in `useMemo` to be sure it is initialized only once.
-## NEXT exmplaes
-- reconnection
-- sending only to specific client
-- sending only to specific group
-- multiple hubs
-- multiple connections
-- storing state in database or redis
-- scaling
+Ok. We have the initialization of the signalR in the ts file. Now we can use it in the React component. The example code is here:
+{{<code language="javascript" file="static/examples/CodePruner.Examples/codepruner.examples.signalr.react.webapp/src/signalR/pages/SignalR-01-Processing.tsx" region="get_signalr_connection" >}}
+Fantastic. Now when you start the application you should see  information about the connection in the console. It is the first step to connect to the SignalR hub. Now we can move to the next step.
+
+``` console
+[SignalConnection] Initializing SignalR connection.
+[SignalConnection] Connecting to SignalR hub
+[SignalConnection] Connected to SignalR hub
+```
+
+### Sending messages to the server
+Now when everything is configured we have to configure sending message from the server, because it is the most important part of the scenario. At the beginning we have to add an endpoint that will be used to start the process. The example code is here:
+{{<code language="csharp"  file="static/examples/CodePruner.Examples/CodePruner.Examples.SignalR.Api/Program.cs" region="enable_cors" >}}
+and we have to handle it on the front end:
+
+{{<code language="tsx" file="static/examples/CodePruner.Examples/codepruner.examples.signalr.react.webapp/src/signalR/pages/SignalR-01-Processing.tsx" region="invoke_server_processing" >}}
+
+Fantastic! Our example is ready. When you run the application and click the button you should see the information about the process in the console. It should look like:
+
+
+``` console
+[SignalConnection] Initializing SignalR connection.
+[SignalConnection] Connecting to SignalR hub
+[SignalConnection] Connected to SignalR hub
+[Click] Sending request to start processing.
+c32a0e10-7fc9-4179-9680-7063628d56c0 - InQueue
+c32a0e10-7fc9-4179-9680-7063628d56c0 - Started
+c32a0e10-7fc9-4179-9680-7063628d56c0 - Fetched
+c32a0e10-7fc9-4179-9680-7063628d56c0 - Processed
+c32a0e10-7fc9-4179-9680-7063628d56c0 - Saved
+[Click] Request is done
+c32a0e10-7fc9-4179-9680-7063628d56c0 - Done
+```
+## Summary
+
+As you can see, everything is working. If you would like to run it you can [clone the code](https://github.com/jwickowski/codepruner.com/tree/master/src/codepruner.com/static/examples/CodePruner.Examples) and run it locally.
+Do you have any questions about SignalR? Let me know in the comments bellow.

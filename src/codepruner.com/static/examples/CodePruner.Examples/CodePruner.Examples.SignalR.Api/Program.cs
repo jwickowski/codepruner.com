@@ -49,6 +49,7 @@ app.MapHub<ProcessingHub>("/ProcessingHub");
 app.MapHub<StronglyTypedProcessingHub>("/StronglyTypedProcessingHub");
 #endregion
 
+#region file_processing_sync_endpoint
 app.MapPost("/StartFileProcessingSync", async (
         FileProcessor fileProcessor,
         IHubContext<StronglyTypedProcessingHub, IProcessingClient> hub) =>
@@ -69,5 +70,6 @@ app.MapPost("/StartFileProcessingSync", async (
     })
     .WithName("FileProcessing")
     .WithOpenApi();
+#endregion
 
 app.Run();
