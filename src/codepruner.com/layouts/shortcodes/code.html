@@ -4,8 +4,6 @@
 
 {{ if eq $region ""}}
     {{ (print "```" $lang "\n" $file "\n```") | markdownify }}
-
-
 {{ else }}
     {{ $startMarker := print "#region " $region  }}
     {{ $endMarker := "#endregion" }}
@@ -29,6 +27,6 @@
     {{ end}}
 
 
-    {{ (print "```" $lang  $result "```") | markdownify }}
+    {{ (print "```" $lang "\n" $result "```") | markdownify }}
 
 {{ end }}
