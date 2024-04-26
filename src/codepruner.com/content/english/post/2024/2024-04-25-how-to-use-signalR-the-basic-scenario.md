@@ -3,7 +3,10 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-04-25T06:40:58.000Z
-draft: true
+disqus_identifier: how-to-use-signalr-the-basic-scenario
+disqus_title: How to use SignalR the basic scenario - tutorial
+disqus_url: 'https://codepruner.com/how-to-use-signalr-the-basic-scenario'
+draft: false
 images:
   - images/posts/2024/2024-04-25-how-to-use-signalR-the-basic-scenario.jpg
 tags:
@@ -13,6 +16,7 @@ tags:
   - react
 title: How to use SignalR the basic scenario - tutorial
 type: regular
+url: how-to-use-signalr-the-basic-scenario
 ---
 
 In the previous article, I describe [the idea of SignalR and some typical scenarios where it is useful]({{< relref "./2024-03-05-why-use-signalR-and-how-it-works.md">}}). Today, I will show you a simple but practical configuration SignalR on on both the backend and frontend. I will guide you step by step how to make SignalR working for you and your users. 
