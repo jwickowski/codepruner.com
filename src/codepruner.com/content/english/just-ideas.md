@@ -25,6 +25,8 @@ POSTY:
   - how to be sure that the message was delivered in signalR
   - how to be sure that all data is up to date with signalR
 
+- Jak odpalić hugo server z poziomu dockera (trzeda dodać --bind 0.0.0.0)
+
 ## How to configure it on backend
 
 
