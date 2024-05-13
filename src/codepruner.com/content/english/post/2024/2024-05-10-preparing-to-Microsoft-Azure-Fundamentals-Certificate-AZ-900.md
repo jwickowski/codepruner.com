@@ -10,6 +10,7 @@ draft: false
 images:
   - images/posts/2024/2024-05-10-preparing-to-Microsoft-Azure-Fundamentals-Certificate-AZ-900.jpg
 tags:
+  - az-900
   - dotnet
   - Azure
   - certificate
