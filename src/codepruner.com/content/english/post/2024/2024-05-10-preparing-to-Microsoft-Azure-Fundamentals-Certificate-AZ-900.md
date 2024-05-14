@@ -4,7 +4,7 @@ categories:
   - dotnet
 date: 2024-05-10T06:40:58.000Z
 disqus_identifier: preparing-to-microsoft-azure-fundamentals-certificate-az-900
-disqus_title: Preparing to Microsoft Azure Fundamentals Certificate AZ-900.
+disqus_title: Preparing to Microsoft Azure Fundamentals Certificate AZ-900
 disqus_url: 'https://codepruner.com/preparing-to-microsoft-azure-fundamentals-certificate-az-900'
 draft: false
 images:

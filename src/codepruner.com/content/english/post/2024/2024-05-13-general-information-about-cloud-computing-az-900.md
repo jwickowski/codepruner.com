@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-05-13T06:40:58.000Z
+disqus_identifier: general-information-about-cloud-computing-az-900
+disqus_title: General information about cloud computing - AZ-900
+disqus_url: 'https://codepruner.com/general-information-about-cloud-computing-az-900'
 draft: false
 images:
   - images/posts/2024/2024-05-13-general-information-about-cloud-computing-az-900.jpg
@@ -13,7 +16,9 @@ tags:
   - certificate
   - course
   - exam
-type: regular
+title: General information about cloud computing - AZ-900
+type: trending
+url: general-information-about-cloud-computing-az-900
 ---
 During preparation for passing the AZ-900 exam you have to get knowledge about Azure, but also you need to have a good understanding of a general cloud computing concepts. In the [previous post]({{< relref "./2024-05-10-preparing-to-Microsoft-Azure-Fundamentals-Certificate-AZ-900.md" >}}) I described my plan and listed the resources I used to prepare for the exam. Below you can find general information about cloud computing. 
 
