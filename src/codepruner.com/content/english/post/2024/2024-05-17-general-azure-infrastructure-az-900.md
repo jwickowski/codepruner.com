@@ -2,10 +2,10 @@
 author: Jerzy Wickowski
 categories:
   - dotnet
-date: 2024-05-17T06:40:58.000Z
-draft: true
+date: 2024-05-17T09:40:58.000Z
+draft: false
 images:
-  - images/posts/2024/2024-05-17-general-azure-infrastructure-like-region-and-resources-for-az-900.jpg
+  - images/posts/2024/2024-05-17-general-azure-infrastructure-az-900.jfif
 tags:
   - az-900
   - dotnet
@@ -56,16 +56,6 @@ There is another level to improve the availability of the service.
 - Not every region has option to select availability zones
 - When one datacenter is down, the other (in a different Availability Zone) can still work
 
-
-- UNDERSTAND IT BETTER and maybe create a diagram
-  - Locally Redundant Storage (LRS) - data is replicated 3 times in the same datacenter
-  - Zone Redundant Storage (ZRS) - data is replicated 3 times in 3 different datacenters
-  - Geo Redundant Storage (GRS) - data is replicated 3 times in the same region and 3 times in a different region
-  - Read-Access Geo Redundant Storage (RA-GRS) - the same as GRS but you can read data from the second region
-  - Geo Zone Redundant Storage (GZRS) - the same as GRS but data is replicated in 3 different regions
-  - Read-Access Geo Zone Redundant Storage (RA-GZRS) - the same as GZRS but you can read data from the second region
-  - Read-access geo redundant storage (RA-GRS) - the same as GRS but you can read data from the second region
-
 ## Geographies
 It ia bigger area in Azure glossary.
 - It works on a higher level
@@ -81,5 +71,5 @@ In most cases when you use azure services you must select a region, but there ar
 - Azure DevOps
 
 
-
-
+## Do you want more?
+Let me know in the comments!
