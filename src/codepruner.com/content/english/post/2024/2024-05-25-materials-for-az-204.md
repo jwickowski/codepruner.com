@@ -27,3 +27,6 @@ https://www.coursera.org/learn/az-204-developing-solutions-for-microsoft-azure?u
 https://www.youtube.com/watch?v=jZx8PMQjobk
 
 
+test from phone
+
+
