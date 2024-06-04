@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-06-04T06:40:58.000Z
+disqus_identifier: core-services-in-azure-for-az-900
+disqus_title: Core services in Azure for AZ-900
+disqus_url: 'https://codepruner.com/core-services-in-azure-for-az-900'
 draft: true
 images:
   - images/posts/2024/2024-06-04-core-services-in-azure-for-az-900.jpg
@@ -19,6 +22,7 @@ tags:
   - network
 title: Core services in Azure for AZ-900
 type: regular
+url: core-services-in-azure-for-az-900
 ---
 
 Welcome in the next episode of the preparing to passing excam AZ-900. In that episode we will cover the most popular resources in Azure. They are be grouped by the role they have, like computing, networking or storage.
