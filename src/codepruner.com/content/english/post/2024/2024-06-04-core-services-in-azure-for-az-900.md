@@ -6,7 +6,7 @@ date: 2024-06-04T06:40:58.000Z
 disqus_identifier: core-services-in-azure-for-az-900
 disqus_title: Core services in Azure for AZ-900
 disqus_url: 'https://codepruner.com/core-services-in-azure-for-az-900'
-draft: true
+draft: false
 images:
   - images/posts/2024/2024-06-04-core-services-in-azure-for-az-900.jpg
 tags:
