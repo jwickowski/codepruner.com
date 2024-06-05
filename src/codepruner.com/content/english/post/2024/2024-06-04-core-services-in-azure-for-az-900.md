@@ -21,7 +21,7 @@ tags:
   - storage
   - network
 title: Core services in Azure for AZ-900
-type: regular
+type: epic
 url: core-services-in-azure-for-az-900
 ---
 
