@@ -8,7 +8,7 @@ disqus_title: General Azure infrastructure for AZ-900
 disqus_url: 'https://codepruner.com/general-azure-infrastructure-az-900'
 draft: false
 images:
-  - images/posts/2024/2024-05-17-general-azure-infrastructure-az-900.jfif
+  - images/posts/2024/2024-05-17-general-azure-infrastructure-az-900.jpg
 tags:
   - az-900
   - dotnet
