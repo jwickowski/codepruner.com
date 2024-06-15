@@ -21,35 +21,29 @@ type: trending
 In the [last post]({{< relref "./2024-06-04-core-services-in-azure-for-az-900.md" >}}) you were able to read about core services in Azure for storage, network and computing. Now it is time to dive into more specialized services for IoT and BigData.
 
 ## IoT
-IoT (Internet of Things) is more and more popular. There was a peak about 2018. Not we don't hear too much about it, because we have new buzz words like AI, GPT, etc. But there is a huge need to collect a huge amout of data from sensors. IoT services are here to handle these requirenemnts.
+IoT (Internet of Things) is more and more popular. There was a peak about 2018. Now we don't hear too much about it, because we have new buzz words like AI, GPT, etc. But there is still a huge need of collecting a great deal of data from sensors. IoT services are here to handle these requirenemnts.
 
-### What is IoT?
-It is a network of connected devices. There devices send telemetry informations, but also can recieve configurations. Examples? Of course, cars; light bulb; cameras; temperature sensors;
+Before we dive into IoT, we should have an aswer for the question: What IoT is?
+It is a network of connected devices. There devices send telemetry informations, but also can recieve configurations. Examples? Of course, cars; light bulbs; cameras; temperature sensors;
 
 ### IoT Hub
+It is the base Azure IoT service to help us working with IoT. 
 - It allows for bidirectional communication between IoT Hub and devices
-- PaaS for IoT
-- Integrates with a lot of Azure services
-- There are SDKs avaliable in many languages
 - It supports multiple protocols: `HTTPS`, `AMQP`,`MQTT`
+- We can cal it PaaS for IoT
+- It integrates with a lot of Azure services
+- There are SDKs avaliable in many languages
 
-There is `Rasperry Pi Azure IoT Online Simulator` to simulate a usage of example IoT device.
-To connect a device to IoT Hub:
--  you need to pass connection string to that device
+To test it there is `Rasperry Pi Azure IoT Online Simulator` to simulate a usage of example IoT device.
 
 ### IoT Central
-It is simmilar to Iot Hub, but it works on a differene level.
-- It is build on IoT Hub and 30+ Azure Services
-- It is IoT App Platform - SaaS
-- Industry specific app tempates
-- Service for connecting, managing and monitoring IoT devies
+It is a servise on higher abstraction layer then IoT Hub. We can sall it a SaaS for for connecting, managing and monitoring IoT devies. It uses more than 30 other Azure services behind.
 
 ### Azure  Sphere
-- It is not just a service it is set of component to build IoT app
-- - It looks that a part of hardware needs to be installed in devices 
+It is something more than just a service it is an ecosystem for IoT from Microsoft. It is build both from phisical chip with dedicated OS and the servie in the cloud.
 - The OS on that system will be updated by Microsoft
-- Then your app can run on that sevice
-- certified chips
+- You can write your app on that chip
+- There is a way to update software on these devicess 
 
 There are related services:
 - Azure Sphere Secirity Service   
@@ -59,9 +53,8 @@ There are related services:
   - The main reason is ti create secure e2e solution
 
 ## BigData
-Every one heard about BigData, but what is it and how to work with that? Let's check.
+The second topic for today it BigData. As previus we should start with describing what BigData is, because it has more complicated definition than IoT. Although everyone heard about BigData, it is still a misteriuos area. So make it clear. What BigData is?
 
-## What is BigData?
 It is a part of technology that helps us with processing too large or too compex set of data for traditional software solutions. There are some metricks when we can talk about BigData:
 - Velocity:
   1. Realtime
