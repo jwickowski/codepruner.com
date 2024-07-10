@@ -63,6 +63,23 @@ When you think about the high availability, disaster recovery, etc. you should t
 - Read-access geo redundant storage (RA-GRS) - the same as GRS but you can read data from the second region
 
 
+## Azure Marketplace
+When you select a resource to install you select them in the Azure Marketplace. There are a lot of services provided by Microsoft. We described some of them in [the previous post] But it is more that that.
+- It is very similar to normal eShop
+- There are products/services from Microsoft and from other vendors
+- One template can provide one or more services
+- You can think about it like "Azure Shop"
+- There are IaaS, Paas and SaaS
+
+
+There is something bigger than `Azure Merketplace`. It is `Comertial Marketplace`
+It contains:
+- `Azure Marketpalce`
+  - It is only for azure
+  - Dedicated for Developers
+- `Microsoft Appsource`
+  - Is is for wider use like: `Azure`, `Power BI`,`Dynamics 365`,`Microsoft 365`
+
 ## How to configure it on backend
 
 
