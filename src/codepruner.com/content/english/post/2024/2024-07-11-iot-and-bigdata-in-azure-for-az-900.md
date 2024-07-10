@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-07-11T05:40:58.000Z
+disqus_identifier: iot-and-bigdata-in-azure-for-az-900
+disqus_title: IoT and BigData in Azure for AZ-900
+disqus_url: 'https://codepruner.com/iot-and-bigdata-in-azure-for-az-900'
 draft: true
 images:
   - images/posts/2024/2024-07-11-iot-and-bigdata-in-azure-for-az-900.jpg
@@ -16,7 +19,7 @@ tags:
   - bigdata
 title: IoT and BigData in Azure for AZ-900
 type: trending
-
+url: iot-and-bigdata-in-azure-for-az-900
 ---
 In the [last post]({{< relref "./2024-06-04-core-services-in-azure-for-az-900.md" >}}) you were able to read about core services in Azure for storage, network and computing. Now it is time to dive into more specialized services for IoT and BigData.
 
