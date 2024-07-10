@@ -64,7 +64,7 @@ When you think about the high availability, disaster recovery, etc. you should t
 
 
 ## Azure Marketplace
-When you select a resource to install you select them in the Azure Marketplace. There are a lot of services provided by Microsoft. We described some of them in [the previous post]({{< relred "./2024-06-04-core-services-in-azure-for-az-900.md" >}}). But it is more that that.
+When you select a resource to install you select them in the Azure Marketplace. There are a lot of services provided by Microsoft. We described some of them in [the previous post] But it is more that that.
 - It is very similar to normal eShop
 - There are products/services from Microsoft and from other vendors
 - One template can provide one or more services
