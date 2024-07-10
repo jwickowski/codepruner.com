@@ -6,7 +6,7 @@ date: 2024-07-11T05:40:58.000Z
 disqus_identifier: iot-and-bigdata-in-azure-for-az-900
 disqus_title: IoT and BigData in Azure for AZ-900
 disqus_url: 'https://codepruner.com/iot-and-bigdata-in-azure-for-az-900'
-draft: true
+draft: false
 images:
   - images/posts/2024/2024-07-11-iot-and-bigdata-in-azure-for-az-900.jpg
 tags:
