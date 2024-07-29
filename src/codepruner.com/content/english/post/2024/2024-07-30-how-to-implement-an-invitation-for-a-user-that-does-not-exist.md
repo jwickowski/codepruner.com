@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - ddd
 date: 2024-07-26T05:40:58.000Z
+disqus_identifier: how-to-implement-an-invitation-for-a-user-that-does-not-exist
+disqus_title: How to implement an invitation for a user that does not exist
+disqus_url: 'https://codepruner.com/how-to-implement-an-invitation-for-a-user-that-does-not-exist'
 draft: false
 images:
   - images/posts/2024/2024-07-30-how-to-implement-an-invitation-for-a-user-that-does-not-exist.jpg
@@ -13,7 +16,7 @@ tags:
   - ideas
 title: How to implement an invitation for a user that does not exist
 type: epic
-
+url: how-to-implement-an-invitation-for-a-user-that-does-not-exist
 ---
 User does not exist. I would like to invite him to a group. It the the problem I met on creating [application](https://www.vatahapp.com/) to improve the cooperation between trainers, players and sport enthusiasts.
 Allow me to walk you through the problems and their solution.
