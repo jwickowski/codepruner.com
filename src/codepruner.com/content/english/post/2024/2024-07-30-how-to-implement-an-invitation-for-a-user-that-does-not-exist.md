@@ -12,10 +12,11 @@ tags:
   - dotNet
   - ideas
 title: How to implement an invitation for a user that does not exist
-type: trending
+type: epic
 
 ---
-I am creating an [application](https://www.vatahapp.com/) to improve the cooperation between trainers, players and sport enthusiasts. On one of the step I ran into a problem of inviting not existing people, at least in the system. Let allow to me to walk you thought the problems and its solution.
+User does not exist. I would like to invite him to a group. It the the problem I met on creating [application](https://www.vatahapp.com/) to improve the cooperation between trainers, players and sport enthusiasts.
+Allow me to walk you through the problems and their solution.
 
 ## Understand the process
 Before we go deeper with the technical problems and solution I will describe the process of invitation. 
@@ -25,9 +26,9 @@ There are 3 options of configure join policy:
 - `InvitationOnly` - To join user should be invited and he should approve invitation
 
 It is rather simple, but with every JoinPolicy user can be invited to the club he should approve the invitation. But there is also one interesting scenario to allow for joining
-When user is invited and send a join request, then we can assume than it can became a member.
+When a user is invited and sends a join request, we can assume that they can become a member.
 
-In the most of the situations we know that user has account in the system, because he has to have it to approve the invitation or send a join request, but there is a possibility that user will be invited to the group without have an account. Let image that it can be done with the usage of email or phone number.
+In the most of the situations we know that user has account in the system, because he has to have it to approve the invitation or send a join request, but there is a possibility that user will be invited to the group without have an account. Imagine that this can be done using an email or phone number.
 
 So we have to have a relation between email/phone and user to solve the membership.
 
@@ -37,7 +38,7 @@ I had some ideas to solve it like:
   - I decided to use external library for account (AspNet Identity), so I am not able to create account
 - On approving the request I can search invitations by email, but it is not clear and it can have bad performance in the future
 
-So let check current solution and then we will go further to solve the issue.
+Let's check the current solution and then proceed to solve the issue.
 
 ## Current solution
 In the 1st version of the implementation I didn't think about that case. So I just support userId. Let see the Entity:
@@ -59,13 +60,13 @@ public class ClubMembershipEntity() : BaseEntity<ClubMembershipId>(ClubMembershi
     public void AcceptInvitation(JoinPolicyType joinPolicyType);
 }
 ```
-As you can see there are 5 methods and the state. So in that situation user have to exist. I pass `JoinPolicyType` as parameter because it is defined in `sportClub` or `sportGroup` level, so it must be passed from there.
-I can add a complexity to that soulution to pass `email` or `phone` to `CreateClubMembership` method, but after analyzing the problem I understood that the current solution is fine and I should handle it different way
+As you can see, there are 5 methods and the state. So in that situation user have to exist. I pass `JoinPolicyType` as parameter because it is defined in `sportClub` or `sportGroup` level, so it must be passed from there.
+I can add a complexity to that solution to pass `email` or `phone` to `CreateClubMembership` method, but after analyzing the problem I understood that the current solution is fine and I should handle it different way
 
 ## Idea of the solution
-So if I don't want to change the existing Entity, I need to create something to handle the issue. 
+So if I don't want to change the existing entity, I need to create something to handle this issue.
 My idea is:
-1. When someone is invited to a club. Check if the uses exists.
+1. When someone is invited to a club, check if the user exists.
   - if yes, I can continue processing with: `ClubMembershipEntity`
 2. Create `ClubMemberShipInvitationEntity` to keep the information about invitation. It can look like:
     ``` csharp 
@@ -88,8 +89,8 @@ My idea is:
 5. And the process can be continued as usual.
 
 ## Summary
-Eventually, I decided to not go this way for now, because I am on very early stage of the implementation and we choose simpler solution:
+Eventually, I decided not to go this way for now, because I am at a very early stage of the implementation and we chose a simpler solution:
 1. That user has to have an account to be invited
-2. Someone can create a link to make a request to join to the club, and then user can register itself.
+2. Someone can create a link to make a request to join the club, and then the user can register themselves.
 
 Would you like to add or ask anything? Let me know in the comment section below!
