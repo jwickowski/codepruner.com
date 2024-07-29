@@ -10,6 +10,7 @@ draft: true
 
 
 POSTY:
+- Czym jest CAP? Jak go użyć? itp itd
 - Jak to ogólnie ogarnac (mozeżę być sharepoint, a moze byc blob, po prostu datasource)
 - Jak Podejść do tematu, gdy musimy np. przetłumaczyć pliki i coś z nich wyciagnąć (skillset)
 - Osobno, jak skonfigurować skillset, aby zrobić split -> translate -> merge 
