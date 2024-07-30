@@ -2,7 +2,7 @@
 author: Jerzy Wickowski
 categories:
   - ddd
-date: 2024-07-26T05:40:58.000Z
+date: 2024-07-30T03:40:58.000Z
 disqus_identifier: how-to-implement-an-invitation-for-a-user-that-does-not-exist
 disqus_title: How to implement an invitation for a user that does not exist
 disqus_url: 'https://codepruner.com/how-to-implement-an-invitation-for-a-user-that-does-not-exist'
