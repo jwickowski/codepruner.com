@@ -3,12 +3,12 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-08-05T05:40:58.000Z
-disqus_identifier: how-to-notify-application-when-user-registers-with-aspnet-identity
-disqus_title: How to implement an invitation for a user that does not exist
-disqus_url: 'https://codepruner.com/how-to-notify-application-when-user-registers-with-aspnet-identity'
+disqus_identifier: how-extend-asp-net-identity-to-inform-your-app-about-registration
+disqus_title: How to extend AspNet Identity to inform your app about user registration
+disqus_url: 'https://codepruner.com/how-extend-asp-net-identity-to-inform-your-app-about-user-registration'
 draft: false
 images:
-  - images/posts/2024/2024-08-05-how-to-notify-application-when-user-registers-with-aspnet-identity.jpg
+  - images/posts/2024/2024-08-05-how-extend-asp-net-identity-to-inform-your-app-about-user-registration.jpg
 tags:
   - ddd
   - aspnet
@@ -16,9 +16,9 @@ tags:
   - dotnet
   - user
   - account
-title: How to implement an invitation for a user that does not exist
+title: How to extend AspNet Identity to inform your app about user registration
 type: regular
-url: how-to-notify-application-when-user-registers-with-aspnet-identity
+url: how-extend-asp-net-identity-to-inform-your-app-about-user-registration
 ---
 AspNet Identity is a .NET library from Microsoft. It provides authentication and authorization for ASP.NET application. It is regularly developed and maintained. Moreover, together with .NET 8 `Identity API endpoints` was published. I decided to use it in my project, but I had a need to extend it. Are you interested it? Welcome.
 
