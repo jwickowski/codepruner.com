@@ -6,7 +6,7 @@ date: 2024-08-05T05:40:58.000Z
 disqus_identifier: how-to-notify-application-when-user-registers-with-aspnet-identity
 disqus_title: How to implement an invitation for a user that does not exist
 disqus_url: 'https://codepruner.com/how-to-notify-application-when-user-registers-with-aspnet-identity'
-draft: true
+draft: false
 images:
   - images/posts/2024/2024-08-05-how-to-notify-application-when-user-registers-with-aspnet-identity.jpg
 tags:
