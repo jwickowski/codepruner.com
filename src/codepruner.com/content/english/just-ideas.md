@@ -85,3 +85,57 @@ It contains:
 
 
 ## How to configure it in frontend
+
+
+## Base for convencions test
+```csharp
+public class ConvenctionTests
+{
+    [Fact]
+    public void check_total_amount_of_assemblies()
+    {
+        var assemblies = GetAssemblies();
+        assemblies.Count().ShouldBe(13);
+    }
+
+    [Fact]
+    public void assemblies_and_csprojs_amount_should_be_the_same()
+    {
+        var csprojs = GetCsProjs();
+        var assemblies = GetAssemblies();
+
+        csprojs.Count().ShouldBe(assemblies.Count());
+    }
+
+    private IEnumerable<Assembly> GetAssemblies()
+    {
+        var processed = new HashSet<string>();
+        var toCheck = new Queue<RuntimeLibrary>(DependencyContext.Default.RuntimeLibraries);
+        while (toCheck.Any())
+        {
+            var runtimeLibrary = toCheck.Dequeue();
+            if (processed.Contains(runtimeLibrary.Name))
+            {
+                continue;
+            }
+
+            processed.Add(runtimeLibrary.Name);
+            if (runtimeLibrary.Name.StartsWith("PROJECT_PREFIX"))
+            {
+                var assembly = Assembly.Load(new AssemblyName(runtimeLibrary.Name));
+                yield return assembly;
+            }
+        }
+    }
+
+    private IEnumerable<string> GetCsProjs()
+    {
+        var basePath = AppDomain.CurrentDomain.BaseDirectory;
+        basePath = Path.Combine(basePath, "../../../../");
+        basePath = Path.GetFullPath(basePath);
+        var files = Directory.GetFiles(basePath, "*.csproj", SearchOption.AllDirectories);
+        return files;
+    }
+}
+
+```
