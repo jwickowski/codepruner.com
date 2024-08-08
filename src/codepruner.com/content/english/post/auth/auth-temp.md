@@ -3,7 +3,7 @@ aliases:
   - posts/auth/auth-temp
 author: Jerzy Wickowski
 categories:
-  - auth
+  - ideas
 date: 2022-02-28T10:40:58.000Z
 disqus_identifier: auth-temp
 disqus_title: temp for the future

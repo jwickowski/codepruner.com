@@ -3,7 +3,7 @@ aliases:
   - posts/craftsmanship/what-is-adr-and-why-you-should-add-it-into-your-project
 author: Jerzy Wickowski
 categories:
-  - craftsmanship
+  - Craftsmanship
 date: 2021-11-17T07:40:58.000Z
 disqus_identifier: what-is-adr-and-why-you-should-add-it-into-your-project
 disqus_title: How to persist project decisions for future developers and why you should add ADR to your project?

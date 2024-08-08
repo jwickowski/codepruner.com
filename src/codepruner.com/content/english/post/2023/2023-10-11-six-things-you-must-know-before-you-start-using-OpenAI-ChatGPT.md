@@ -3,7 +3,7 @@ aliases:
   - post/2023/2023-10-11-six-things-you-must-know-before-you-start-using-openai-chatgpt
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 companies:
   - esatto
 date: 2023-10-09T03:40:58.000Z

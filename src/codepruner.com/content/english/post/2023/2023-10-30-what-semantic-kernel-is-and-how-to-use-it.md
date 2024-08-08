@@ -3,7 +3,7 @@ aliases:
   - post/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 companies:
   - esatto
 date: 2023-10-30T03:40:58.000Z

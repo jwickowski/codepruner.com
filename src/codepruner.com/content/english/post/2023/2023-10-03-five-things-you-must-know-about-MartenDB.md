@@ -3,7 +3,7 @@ aliases:
   - post/2023/2023-10-03-five-things-you-must-know-about-martendb
 author: Jerzy Wickowski
 categories:
-  - EventSourcing
+  - Craftsmanship
 date: 2023-10-03T03:40:58.000Z
 disqus_identifier: five-things-you-must-know-about-martendb
 disqus_title: 5 things you have to know when you think about MartenDB

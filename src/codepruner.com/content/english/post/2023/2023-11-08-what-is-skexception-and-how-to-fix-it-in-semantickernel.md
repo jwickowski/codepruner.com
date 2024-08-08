@@ -3,7 +3,7 @@ aliases:
   - post/2023/2023-11-08-what-is-skexception-and-how-to-fix-it-in-semantickernel
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 companies:
   - esatto
 date: 2023-11-08T03:40:58.000Z

@@ -3,7 +3,7 @@ aliases:
   - posts/ddd/why-do-i-hate-repositories
 author: Jerzy Wickowski
 categories:
-  - ddd
+  - Craftsmanship
 date: 2021-05-23T20:16:58.000Z
 disqus_identifier: why-do-i-hate-repositories
 disqus_title: Why do I hate repositories?

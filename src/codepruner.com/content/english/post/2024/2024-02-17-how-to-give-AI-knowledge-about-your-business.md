@@ -1,7 +1,7 @@
 ---
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 date: 2024-02-19T18:40:58.000Z
 disqus_identifier: how-to-configure-indexing-files-from-blob-in-azure-ai-search
 disqus_title: How to give AI knowledge about your business?

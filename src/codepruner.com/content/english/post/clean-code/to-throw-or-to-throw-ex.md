@@ -3,7 +3,7 @@ aliases:
   - posts/clean-code/to-throw-or-to-throw-ex
 author: Jerzy Wickowski
 categories:
-  - clean-code
+  - Craftsmanship
 date: 2021-06-14T10:40:58.000Z
 disqus_identifier: to-throw-or-to-throw-ex
 disqus_title: To throw or to throw ex. How to rethrow exceptions in C#

@@ -3,7 +3,7 @@ aliases:
   - posts/clean-code/how-to-start-improving-code-in-old-legacy
 author: Jerzy Wickowski
 categories:
-  - clean-code
+  - Craftsmanship
 date: 2021-03-29T20:40:58.000Z
 disqus_identifier: how-to-start-improving-code-in-old-legacy
 disqus_title: How to start improving code in old lagacy project

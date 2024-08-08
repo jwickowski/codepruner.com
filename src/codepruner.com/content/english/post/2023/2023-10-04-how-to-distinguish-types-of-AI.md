@@ -3,7 +3,7 @@ aliases:
   - post/2023/2023-10-04-how-to-distinguish-types-of-ai
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 companies:
   - esatto
 date: 2023-10-04T03:40:58.000Z

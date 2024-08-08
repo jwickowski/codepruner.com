@@ -3,7 +3,7 @@ aliases:
   - post/2023/semantic-kernel-drafts
 author: Jerzy Wickowski
 categories:
-  - AI
+  - artificial intelligence
 companies:
   - esatto
 date: 2023-11-01T03:40:58.000Z

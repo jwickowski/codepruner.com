@@ -1,7 +1,7 @@
 ---
 author: Jerzy Wickowski
 categories:
-  - ddd
+  - dotnet
 date: 2024-07-30T03:40:58.000Z
 disqus_identifier: how-to-implement-an-invitation-for-a-user-that-does-not-exist
 disqus_title: How to implement an invitation for a user that does not exist
