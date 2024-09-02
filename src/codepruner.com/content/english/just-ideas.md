@@ -27,7 +27,9 @@ POSTY:
   - how to be sure that all data is up to date with signalR
 
 - Jak odpalić hugo server z poziomu dockera (trzeda dodać --bind 0.0.0.0)
-
+- Testcontainers + xunit + Class Fixtures (+ Assembly Fixtures in v3)
+  - https://testcontainers.com/
+  - https://xunit.net/docs/shared-context#assembly-fixture
 
 ## Some basic terms
 - TCP - Transmission Control Protocol
