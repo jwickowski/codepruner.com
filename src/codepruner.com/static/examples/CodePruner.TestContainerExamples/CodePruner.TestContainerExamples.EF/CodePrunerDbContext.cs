@@ -8,7 +8,7 @@ public class CodePrunerDbContext : DbContext
     {
     }
     
-    DbSet<Article> Articles { get; set; }
+   public  DbSet<Article> Articles { get; set; }
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

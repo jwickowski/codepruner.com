@@ -40,8 +40,8 @@ namespace CodePruner.TestContainerExamples.EF.Migrations
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasMaxLength(-1)
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 

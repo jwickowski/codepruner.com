@@ -18,7 +18,7 @@ public class ArticleConfiguration : IEntityTypeConfiguration<Article>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Title).HasMaxLength(500);
         builder.Property(x=> x.Content).HasMaxLength(-1);
-        builder.Property(x => x.Url).HasMaxLength(-1);
+        builder.Property(x => x.Url).HasMaxLength(200);
         builder.HasIndex(x => x.Url).IsUnique();
     }
 }

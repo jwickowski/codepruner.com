@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodePruner.TestContainerExamples.EF.Migrations
 {
     [DbContext(typeof(CodePrunerDbContext))]
-    [Migration("20240903044516_AddArticle")]
+    [Migration("20240903064641_AddArticle")]
     partial class AddArticle
     {
         /// <inheritdoc />
@@ -43,8 +43,8 @@ namespace CodePruner.TestContainerExamples.EF.Migrations
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasMaxLength(-1)
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 

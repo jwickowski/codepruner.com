@@ -18,7 +18,7 @@ namespace CodePruner.TestContainerExamples.EF.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", maxLength: -1, nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", maxLength: -1, nullable: false)
+                    Url = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
