@@ -42,6 +42,17 @@ CONTAINER ID   IMAGE                                                   COMMAND  
 ca0435e51f90   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   "/opt/mssql/bin/perm…"   33 seconds ago   Up 32 seconds   0.0.0.0:50542->1433/tcp   sleepy_shannon
 5abee30ab59e   testcontainers/ryuk:0.6.0                               "/bin/ryuk"              33 seconds ago   Up 33 seconds   0.0.0.0:50539->8080/tcp   testcontainers-ryuk-1e294371-ec07-4c3f-8841-e8bd5e271444
 ```
+
+- test z classFixture - CreateOneDatabaseTest
+- nowe docker ps:
+```
+CONTAINER ID   IMAGE                                                   COMMAND                  CREATED          STATUS          PORTS                     NAMES
+2abd95cce2e5   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   "/opt/mssql/bin/perm…"   17 seconds ago   Up 17 seconds   0.0.0.0:62044->1433/tcp   great_visvesvaraya
+243336dfd2b8   testcontainers/ryuk:0.6.0                               "/bin/ryuk"              18 seconds ago   Up 18 seconds   0.0.0.0:62041->8080/tcp   testcontainers-ryuk-35ee84c6-8647-4719-bc10-0fb85033863b
+```
+czyli jest tylko jeden konener na klasę
+
+Co jest spoko! POtem może być instancja per assembly, ale to dopiero w xunit v3 => https://xunit.net/docs/getting-started/v3/whats-new
 ## Summary 
 <!-- I know it was shorter material than usual, but I believe it will be expanded in the future.
 If you have any question, let me know in comments section below.
