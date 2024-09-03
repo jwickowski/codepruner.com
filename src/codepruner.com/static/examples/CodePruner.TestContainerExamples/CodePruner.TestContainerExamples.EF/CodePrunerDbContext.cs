@@ -14,7 +14,6 @@ public class CodePrunerDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer();
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

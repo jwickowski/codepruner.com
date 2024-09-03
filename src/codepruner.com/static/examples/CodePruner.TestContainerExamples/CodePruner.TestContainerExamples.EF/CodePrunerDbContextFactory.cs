@@ -8,7 +8,7 @@ public class CodePrunerDbContextFactory : IDesignTimeDbContextFactory<CodePruner
     public CodePrunerDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<CodePrunerDbContext>();
-
+        optionsBuilder.UseSqlServer();
         return new CodePrunerDbContext(optionsBuilder.Options);
     }
 }
