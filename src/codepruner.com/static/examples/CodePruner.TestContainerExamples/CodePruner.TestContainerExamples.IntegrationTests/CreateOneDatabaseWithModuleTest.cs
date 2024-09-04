@@ -77,6 +77,7 @@ public class DatabaseContainerModuleFixture
         InitSql().Wait();
         RunMigration().Wait();
     }
+    #region init_sql
     private async Task InitSql()
     {
         var container = new MsSqlBuilder()
@@ -92,6 +93,7 @@ public class DatabaseContainerModuleFixture
 
         ConnectionString = connectionStringBuilder.ConnectionString;
     }
+    #endregion
 
     private async Task RunMigration()
     {

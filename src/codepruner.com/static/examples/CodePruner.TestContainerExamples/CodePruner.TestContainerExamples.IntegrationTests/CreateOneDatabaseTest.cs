@@ -1,21 +1,16 @@
 using CodePruner.TestContainerExamples.EF;
-using Docker.DotNet.Models;
 using DotNet.Testcontainers.Builders;
-using DotNet.Testcontainers.Containers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace CodePruner.TestContainerExamples.IntegrationTests;
 
+#region test_class
 public class CreateOneDatabaseTest(DatabaseContainerFixture fixture) : IClassFixture<DatabaseContainerFixture>
 {
-
     [Fact]
     public async Task insert_value_to_database()
     {
-
-
         await using var dbContext = fixture.CreateDbContext();
         dbContext.Articles.Add(new Article
         {
@@ -30,8 +25,6 @@ public class CreateOneDatabaseTest(DatabaseContainerFixture fixture) : IClassFix
     [Fact]
     public async Task insert_and_select_value_to_database()
     {
-       
-
         await using (var dbContextToSave = fixture.CreateDbContext())
         {
             dbContextToSave.Articles.Add(new Article
@@ -54,33 +47,28 @@ public class CreateOneDatabaseTest(DatabaseContainerFixture fixture) : IClassFix
     public async Task double_insert_with_unique_constraint_to_database()
     {
         var url = "url-should-be-unique";
-        await using (var dbContextToSave = fixture.CreateDbContext())
+        await using var dbContextToSave = fixture.CreateDbContext();
+        dbContextToSave.Articles.Add(new Article
         {
-            dbContextToSave.Articles.Add(new Article
-            {
-                Id = Guid.NewGuid(),
-                Url = url,
-                Title = "title one",
-                Content = "Content one..."
-            });
-            await dbContextToSave.SaveChangesAsync();
-            dbContextToSave.Articles.Add(new Article
-            {
-                Id = Guid.NewGuid(),
-                Url = url,
-                Title = "title two",
-                Content = "Content two..."
-            });
-            var exception = await Assert.ThrowsAsync<DbUpdateException>(async () => await dbContextToSave.SaveChangesAsync());
-            Assert.Contains("IX_Articles_Url", exception.InnerException!.Message);
-        }
-        
+            Id = Guid.NewGuid(),
+            Url = url,
+            Title = "title one",
+            Content = "Content one..."
+        });
+        await dbContextToSave.SaveChangesAsync();
+        dbContextToSave.Articles.Add(new Article
+        {
+            Id = Guid.NewGuid(),
+            Url = url,
+            Title = "title two",
+            Content = "Content two..."
+        });
+        var exception = await Assert.ThrowsAsync<DbUpdateException>(async () => await dbContextToSave.SaveChangesAsync());
+        Assert.Contains("IX_Articles_Url", exception.InnerException!.Message);
     }
-
-   
-
 }
-
+#endregion
+#region fixture_class
 public class DatabaseContainerFixture
 {
     public string ConnectionString { get; private set; } = "";
@@ -131,3 +119,4 @@ public class DatabaseContainerFixture
         return dbContext;
     }
 }
+#endregion

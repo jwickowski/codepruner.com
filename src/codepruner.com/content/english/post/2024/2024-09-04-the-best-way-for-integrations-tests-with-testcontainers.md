@@ -100,7 +100,7 @@ So when it works, let see on out test:
 
 {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateDatabaseInTestClassTest.cs" region="tests" >}}
 
-all of them pass. IF you don't believe you can clone the repo and run it on your environemnt. As I mentioned at the beggining that approach has some vulnerabilities. I mean for each test new container is created. So when we execute: `docker ps` you will se that 3+1 containers run.
+all of them pass. IF you don't believe you can clone the repo and run it on your environemnt. As I mentioned at the beggining that approach has some vulnerabilities. I mean for each test new container is created. So when we execute: `docker ps`.
 ``` text
 CONTAINER ID   IMAGE                                                   CREATED          PORTS
 1cf171523b96   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   4 seconds ago    0.0.0.0:50557->1433/tcp
@@ -108,23 +108,37 @@ CONTAINER ID   IMAGE                                                   CREATED  
 ca0435e51f90   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   33 seconds ago   0.0.0.0:50542->1433/tcp
 5abee30ab59e   testcontainers/ryuk:0.6.0                               33 seconds ago   0.0.0.0:50539->8080/tcp
 ```
+You can see 3+1 containers running. One for each test. Now it is not a problem, but when you have more and more test you will have more and more containers. So do something to reduce amount of them.
 
-- test z classFixture - CreateOneDatabaseTest
-- nowe docker ps:
+## Reduce number of containers in xUnit
+I suggest to use xUnit, so I am going to describe how to achieve it. There is a possibility to share resources between tests in one class. I know that theory tells us that tests should be independent. In most cases it is true, but sometime we need to sacrifice something to achieve something else. It is in that scenario. We sacrifice stateless for better time and lower memory usage. Ok, so how to do it?
+1. Create a FixtureClass. It is a normal class, but you need to prepare everything you want to share in constructor. Here is out example:
+ {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="fixture_class" >}}
+
+ You can ses it is the same code as previous, but in a separate class.
+2. Use the fixture. To do this, you need to add interface `IClassFixture<DatabaseContainerFixture>` and pass the fixture by constructor to the test class. Here is an example:
+ {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="test_class" >}}
+
+Fantastic. It is time to run these test and check containers with `docker ps`.
+
 ```
-CONTAINER ID   IMAGE                                                   COMMAND                  CREATED          STATUS          PORTS                     NAMES
-2abd95cce2e5   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   "/opt/mssql/bin/perm…"   17 seconds ago   Up 17 seconds   0.0.0.0:62044->1433/tcp   great_visvesvaraya
-243336dfd2b8   testcontainers/ryuk:0.6.0                               "/bin/ryuk"              18 seconds ago   Up 18 seconds   0.0.0.0:62041->8080/tcp   testcontainers-ryuk-35ee84c6-8647-4719-bc10-0fb85033863b
+CONTAINER ID   IMAGE                                                   CREATED          PORTS
+2abd95cce2e5   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   17 seconds ago   0.0.0.0:62044->1433/tcp
+243336dfd2b8   testcontainers/ryuk:0.6.0                               18 seconds ago   0.0.0.0:62041->8080/tcp
 ```
-czyli jest tylko jeden konener na klasę
+Success. There is only one container for test. Fantascic.
 
-Co jest spoko! POtem może być instancja per assembly, ale to dopiero w xunit v3 => https://xunit.net/docs/getting-started/v3/whats-new
+## Use testcontainers modules 
+As you can see in my previous examples I built ConnectionString manually. It works, but some of popular services like: SqlServer, Kafka, RabbitMQ, Redis, etc. there are ready to use modules. Here is an example for SqlServer:
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="init_sql" >}}
 
+As you can see it is much easier.
 
-- jeszcze opcja z gotowym mofdułem => https://dotnet.testcontainers.org/modules/mssql/
-https://testcontainers.com/modules/mssql/
 
 ## Summary 
+It is everything for today. Is is useful for you? Would you like to add or ask anything? Let me know in the comment below.
+See you next time.
+
 <!-- I know it was shorter material than usual, but I believe it will be expanded in the future.
 If you have any question, let me know in comments section below.
 If you want to be informed about new posts, subscribe. -->
