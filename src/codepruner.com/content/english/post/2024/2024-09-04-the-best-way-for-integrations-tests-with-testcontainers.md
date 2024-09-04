@@ -53,6 +53,10 @@ CONTAINER ID   IMAGE                                                   COMMAND  
 czyli jest tylko jeden konener na klasę
 
 Co jest spoko! POtem może być instancja per assembly, ale to dopiero w xunit v3 => https://xunit.net/docs/getting-started/v3/whats-new
+
+
+- jeszcze opcja z gotowym mofdułem => https://dotnet.testcontainers.org/modules/mssql/
+
 ## Summary 
 <!-- I know it was shorter material than usual, but I believe it will be expanded in the future.
 If you have any question, let me know in comments section below.
