@@ -115,6 +115,7 @@ public class DatabaseContainerFixture
         ConnectionString = connectionStringBuilder.ConnectionString;
     }
 
+
     private async Task RunMigration()
     {
         await using var dbContext = CreateDbContext();

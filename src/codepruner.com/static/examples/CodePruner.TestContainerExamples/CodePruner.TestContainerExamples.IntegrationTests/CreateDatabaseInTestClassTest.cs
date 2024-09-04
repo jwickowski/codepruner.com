@@ -84,6 +84,7 @@ public class CreateDatabaseInTestClassTest
     {
         var password = "yourStrong(!)Password";
         var container = new ContainerBuilder()
+            
             .WithImage("mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04")
             .WithPortBinding(1433, true)
             .WithEnvironment("ACCEPT_EULA", "Y")

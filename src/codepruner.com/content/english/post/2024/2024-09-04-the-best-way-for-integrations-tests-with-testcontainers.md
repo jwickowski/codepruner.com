@@ -24,13 +24,45 @@ My idea it noMy idea it not to create a complex scenario, but to show you how to
 The whole project is in this repository in [](\src\codepruner.com\static\examples\CodePruner.TestContainerExamples)
 
 ## Preparing database project
-- add Article class
-- add ArticleConfiguration
-- Create CodePrunerDbContext
-- Create CodePrunerDbContextFactory, for easier executing migrations etc
-- Add Init Migration
-  - `cd .\CodePruner.TestContainerExamples.EF`
-  - `dotnet ef migrations add AddArticle`
+Before we start writing integration test we should prepare a database project. Let's start with Article class:
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_class" >}}
+
+and Article table configuration:
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_configuration" >}}
+
+You can see, I have added the Unique index on Url column. It will be required later to check if we really run our test on database engine.
+then add DbContext:
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/CodePrunerDbContext.cs" >}}
+
+You can see that Article and ArticleConfiguration is added.
+Then we add `CodePrunerDbContextFactory` to simplify running migration when we have it then `ef migrations` will know how to create DbContext to create a migration for example.
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/CodePrunerDbContextFactory.cs" >}}
+
+and it is almost everything.
+Now you should create a migration: 
+``` 
+cd .\CodePruner.TestContainerExamples.EF
+dotnet ef migrations add AddArticle
+```
+
+after it migration will be created. The migration will create couple of files:
+- `CodePrunerDbContextModelSnapshot.cs` - It is metadata information for EntityFramework to know how to create next migrations. Which table exists and should be deleted or altered.
+- `20240903064641_AddArticle` - It is a single migration. These numbers at the beginning represent date when migration was created. It is important to keep them in order. It should look like:
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Migrations/20240903064641_AddArticle.cs" >}}
+
+At this moment you can create/update the database with command:
+`dotnet ef database update --connection "ConnectionString"`
+or when you create DbCOntext you can run migration:
+```csharp
+ private async Task RunMigration()
+ {
+     await using var dbContext = CreateDbContext();
+     await dbContext.Database.MigrateAsync();
+ }
+```
+
+
+
 - add xunit project `CodePruner.TestContainerExamples.IntegrationTests`
 - add `dotnet add package Testcontainers`
 - tutaj konfiguracja testów:
@@ -56,6 +88,7 @@ Co jest spoko! POtem może być instancja per assembly, ale to dopiero w xunit v
 
 
 - jeszcze opcja z gotowym mofdułem => https://dotnet.testcontainers.org/modules/mssql/
+https://testcontainers.com/modules/mssql/
 
 ## Summary 
 <!-- I know it was shorter material than usual, but I believe it will be expanded in the future.

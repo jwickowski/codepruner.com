@@ -26,7 +26,6 @@
         {{ errorf (print "There is no region: '" $region "' in file: '" (.Get "file") "'") }}
     {{ end}}
 
-
     {{ (print "```" $lang "\n" $result "```") | markdownify }}
 
 {{ end }}

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CodePruner.TestContainerExamples.EF;
-
+#region article_class
 public class Article
 {
     public Guid Id { get; set; }
@@ -10,7 +10,9 @@ public class Article
     public string Content { get; set; }
     public string Url { get; set; }
 }
+#endregion
 
+#region article_configuration
 public class ArticleConfiguration : IEntityTypeConfiguration<Article>
 {
     public void Configure(EntityTypeBuilder<Article> builder)
@@ -22,3 +24,4 @@ public class ArticleConfiguration : IEntityTypeConfiguration<Article>
         builder.HasIndex(x => x.Url).IsUnique();
     }
 }
+#endregion
