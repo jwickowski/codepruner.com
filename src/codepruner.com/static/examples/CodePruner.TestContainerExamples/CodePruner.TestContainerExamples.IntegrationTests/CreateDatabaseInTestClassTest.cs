@@ -1,19 +1,17 @@
 using CodePruner.TestContainerExamples.EF;
-using Docker.DotNet.Models;
 using DotNet.Testcontainers.Builders;
-using DotNet.Testcontainers.Containers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace CodePruner.TestContainerExamples.IntegrationTests;
 
 public class CreateDatabaseInTestClassTest
 {
+    #region tests
     [Fact]
     public async Task insert_value_to_database()
     {
-        var (container, connectionstring) = await InitSql();
+        var connectionstring = await InitSql();
         await RunMigration(connectionstring);
 
         await using var dbContext = CreateDbContext(connectionstring);
@@ -30,7 +28,7 @@ public class CreateDatabaseInTestClassTest
     [Fact]
     public async Task insert_and_select_value_to_database()
     {
-        var (container, connectionstring) = await InitSql();
+        var connectionstring = await InitSql();
         await RunMigration(connectionstring);
 
         await using (var dbContextToSave = CreateDbContext(connectionstring))
@@ -54,7 +52,7 @@ public class CreateDatabaseInTestClassTest
     [Fact]
     public async Task double_insert_with_unique_constraint_to_database()
     {
-        var (container, connectionstring) = await InitSql();
+        var connectionstring = await InitSql();
         await RunMigration(connectionstring);
         var url = "url-should-be-unique";
         await using (var dbContextToSave = CreateDbContext(connectionstring))
@@ -77,14 +75,13 @@ public class CreateDatabaseInTestClassTest
             var exception = await Assert.ThrowsAsync<DbUpdateException>(async () => await dbContextToSave.SaveChangesAsync());
             Assert.Contains("IX_Articles_Url", exception.InnerException!.Message);
         }
-        
     }
-
-    private async Task<(IContainer container, string connectionString)> InitSql()
+    #endregion
+    #region init_sql
+    private async Task<string> InitSql()
     {
         var password = "yourStrong(!)Password";
         var container = new ContainerBuilder()
-            
             .WithImage("mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04")
             .WithPortBinding(1433, true)
             .WithEnvironment("ACCEPT_EULA", "Y")
@@ -103,15 +100,8 @@ public class CreateDatabaseInTestClassTest
             DataSource = $"{container.Hostname},{container.GetMappedPublicPort(1433)}",
             TrustServerCertificate = true
         };
-        return (container, connectionStringBuilder.ConnectionString);
+        return connectionStringBuilder.ConnectionString;
     }
-
-    private async Task RunMigration(string connectionString)
-    {
-        await using var dbContext = CreateDbContext(connectionString);
-        await dbContext.Database.EnsureCreatedAsync();
-    }
-
     private CodePrunerDbContext CreateDbContext(string connectionString)
     {
         var optionsBuilder = new DbContextOptionsBuilder<CodePrunerDbContext>();
@@ -120,5 +110,14 @@ public class CreateDatabaseInTestClassTest
         var dbContext = new CodePrunerDbContext(optionsBuilder.Options);
         return dbContext;
     }
+    #endregion
+    #region run_migration
+    private async Task RunMigration(string connectionString)
+    {
+        await using var dbContext = CreateDbContext(connectionString);
+        await dbContext.Database.MigrateAsync();
+    }
+    #endregion
+   
 
 }
