@@ -17,57 +17,6 @@ Testing is important. Test are more important. There are multiple ways to catego
 
 The whole project is in this repository in [](\src\codepruner.com\static\examples\CodePruner.TestContainerExamples)
 
-## Preparing database project
-Before we start writing integration test we should prepare a database project. Let's start with Article class:
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_class" >}}
-
-and Article table configuration:
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_configuration" >}}
-
-You can see, I have added the Unique index on Url column. It will be required later to check if we really run our test on database engine.
-then add DbContext:
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/CodePrunerDbContext.cs" >}}
-
-You can see that Article and ArticleConfiguration is added.
-Then we add `CodePrunerDbContextFactory` to simplify running migration when we have it then `ef migrations` will know how to create DbContext to create a migration for example.
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/CodePrunerDbContextFactory.cs" >}}
-
-and it is almost everything.
-Now you should create a migration: 
-``` 
-cd .\CodePruner.TestContainerExamples.EF
-dotnet ef migrations add AddArticle
-```
-
-after it migration will be created. The migration will create couple of files:
-- `CodePrunerDbContextModelSnapshot.cs` - It is metadata information for EntityFramework to know how to create next migrations. Which table exists and should be deleted or altered.
-- `20240903064641_AddArticle` - It is a single migration. These numbers at the beginning represent date when migration was created. It is important to keep them in order. It should look like:
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Migrations/20240903064641_AddArticle.cs" >}}
-
-At this moment you can create/update the database with command:
-`dotnet ef database update --connection "ConnectionString"`
-or when you create DbCOntext you can run migration:
-```csharp
- private async Task RunMigration()
- {
-     await using var dbContext = CreateDbContext();
-     await dbContext.Database.MigrateAsync();
-     // or      await dbContext.Database.EnsureCreatedAsync();
- }
-```
-## The difference between `EnsureCreatedAsync` and `MigrateAsync`
-Four our example the differece isn't important, because both of them will create database as we want, but when we go a bit deeper.
-- `EnsureCreateDatabaseAsync` - Will just create database, but it wont care about any migrations. So it is a better choice for test cases when we just need a created database. Documentation describes the bechaviour:
-   - if the database exists and has any tables, then no action is taken. Nothing is done to ensure the database schema is compatible with the Entity Framework model.
-   - If the database exists but does not have any tables, then the Entity Framework model is used to create the database schema.
-    - If the database does not exist, then the database is created and the Entity Framework model is used to create the database schema.
-- `MigrateAsync` - It also create database if it doesn't exist, but if does it will process migration steps to update it to the newest version. 
-
-If you would like to see a speed comparision, let me know in the comments, then I will prepare it for you. 
-
----------------------------
-Tutaj pewnie zrobimy dwa różne artykuły o EF
---------------------------
 
 In one of the previous post I have described how to configure EntityFramework migration. We will use that code in today example, because in our environments we need a bit more then just pure database. We expect it will have schema applied. So let's begin our adventure.
 
@@ -88,6 +37,7 @@ dotnet add package Testcontainers
 ```
 Add code for initialize container with SqlServer:
 {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateDatabaseInTestClassTest.cs" region="init_sql" >}}
+
 There are some interesting things to describe:
 - To set image you want to use invoke `WithImage`. In you case we use SqlServer. All de details how to configure the image you can find on [DockerHub](https://hub.docker.com/r/microsoft/mssql-server) .
 - `.WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(1433))` - This line is very important, because it tells to testcontainers when the container is ready. There are much more options. YOu can find other WaitStrategies  [here](https://dotnet.testcontainers.org/api/wait_strategies/)
@@ -113,15 +63,15 @@ You can see 3+1 containers running. One for each test. Now it is not a problem, 
 ## Reduce number of containers in xUnit
 I suggest to use xUnit, so I am going to describe how to achieve it. There is a possibility to share resources between tests in one class. I know that theory tells us that tests should be independent. In most cases it is true, but sometime we need to sacrifice something to achieve something else. It is in that scenario. We sacrifice stateless for better time and lower memory usage. Ok, so how to do it?
 1. Create a FixtureClass. It is a normal class, but you need to prepare everything you want to share in constructor. Here is out example:
- {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="fixture_class" >}}
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="fixture_class" >}}
 
- You can ses it is the same code as previous, but in a separate class.
+You can ses it is the same code as previous, but in a separate class.
 2. Use the fixture. To do this, you need to add interface `IClassFixture<DatabaseContainerFixture>` and pass the fixture by constructor to the test class. Here is an example:
- {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="test_class" >}}
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="test_class" >}}
 
 Fantastic. It is time to run these test and check containers with `docker ps`.
 
-```
+```text
 CONTAINER ID   IMAGE                                                   CREATED          PORTS
 2abd95cce2e5   mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04   17 seconds ago   0.0.0.0:62044->1433/tcp
 243336dfd2b8   testcontainers/ryuk:0.6.0                               18 seconds ago   0.0.0.0:62041->8080/tcp
@@ -130,7 +80,7 @@ Success. There is only one container for test. Fantascic.
 
 ## Use testcontainers modules 
 As you can see in my previous examples I built ConnectionString manually. It works, but some of popular services like: SqlServer, Kafka, RabbitMQ, Redis, etc. there are ready to use modules. Here is an example for SqlServer:
-{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseTest.cs" region="init_sql" >}}
+{{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.IntegrationTests/CreateOneDatabaseWithModuleTest.cs" region="init_sql" >}}
 
 As you can see it is much easier.
 
