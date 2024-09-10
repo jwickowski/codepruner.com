@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-08-08T05:40:58.000Z
+disqus_identifier: azure-machine-learning-services-for-az-900
+disqus_title: Azure Machine Learning services for AZ-900
+disqus_url: 'https://codepruner.com/azure-machine-learning-services-for-az-900'
 draft: false
 images:
   - images/posts/2024/2024-08-08-azure-machine-learning-services-for-az-900.jpg
@@ -14,6 +17,7 @@ tags:
   - machine learning
 title: Azure Machine Learning services for AZ-900
 type: regular
+url: azure-machine-learning-services-for-az-900
 ---
 Today we will not go very deep in that topic. It is rather to show you a basic services for AI/ML. Currently Artificial Intelligence is a buzzword and when we think about it LLMs and GPTs come to out minds, but threre are more technical services, added to Azure long time ago. So I am going to focus on these older services today, but if you would like to read about newer ones. Let me know in the comments sections.
 

@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-09-10T05:40:58.000Z
+disqus_identifier: how-to-configure-entity-framework-with-migrations-tutorial
+disqus_title: How to configure EntityFramework with migrations - tutorial
+disqus_url: 'https://codepruner.com/how-to-configure-entity-framework-with-migrations-tutorial'
 draft: false
 images:
   - images/posts/2024/2024-09-10-how-to-configure-entity-framework-with-migrations-tutorial.jpg
@@ -12,8 +15,9 @@ tags:
   - code
   - implementation
   - SQL
-title: How to configure EntityFramework with migrations - tutorial 
+title: How to configure EntityFramework with migrations - tutorial
 type: regular
+url: how-to-configure-entity-framework-with-migrations-tutorial
 ---
 When I start a new project in .NET and I need to persist data, EntityFramework is my 1st choice. Why?. It it the most common approach in .NET world and it allows to start application easily. In this article I will guide you through configuring EntityFramework with migrations including  some tricks and good practices.  
 
