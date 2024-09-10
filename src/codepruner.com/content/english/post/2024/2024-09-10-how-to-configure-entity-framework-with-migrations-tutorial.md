@@ -19,20 +19,20 @@ title: How to configure EntityFramework with migrations - tutorial
 type: regular
 url: how-to-configure-entity-framework-with-migrations-tutorial
 ---
-When I start a new project in .NET and I need to persist data, EntityFramework is my 1st choice. Why? It is the most common approach in .NET world and it allows to start application easily. In this article I will guide you through configuring EntityFramework with migrations including  some tricks and good practices.  
+When I start a new project in .NET and I need to persist data, EntityFramework is my first choice. Why? It is the most common approach in .NET world and it allows to start application easily. In this article I will guide you through configuring EntityFramework with migrations including  some tricks and good practices.  
 
 ## DataModel and its configuration
-The first think we need to do is creating a data model to store in the database. I have prepared `Article` class to store it:  
+The first thing you need to do is creating a data model to store in the database. I have prepared `Article` class to store it:  
 
 {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_class" >}}
 
-Data model is not enough. You need to add also a bit of metadata to it. You can use attributes DataAttributes or FluentConfiguration. I am the of of the second option, because I think it is cleaner and there are more capabilities. It can be like:
+Data model is not enough. You need to add also a bit of metadata to it. You can use attributes `DataAttributes` or `FluentConfiguration` approach. I am the of the second option, because it is much cleaner and there are more capabilities. It can be like:
 {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/Article.cs" region="article_configuration" >}}
 
-You can see, to go with FluentConfiguration you have to implement `IEntityTypeConfiguration<T>` and implement `Configure(EntityTypeBuilder<T> builder)` method. What you can see here:
- - Setting Id as primary key
- - Setting your column lengths
- - Adding unique index on Url column
+With `FluentConfiguration` you have to implement `IEntityTypeConfiguration<T>` and write `Configure(EntityTypeBuilder<T> builder)` method. What you can see here:
+- Setting Id as primary key
+- Setting columns lengths
+- Adding unique index on Url column
 
 ## DbContext
 Next thing you need to do is creating your own DbContext. In our case it is:
@@ -45,14 +45,14 @@ There are some facts:
     - Setting database type, like `SqlServer`, `Postgres`, `SQLite`
 3. Add `DbSet<Article> Articles`. Sometimes it can be omitted, but I suggest to add it by default, because it makes working with EF nicer
 4. In `OnModelCreating` I have applied the configuration.
-    - You can do something like: `builder.ApplyConfigurationsFromAssembly(typeof(CodePrunerDbContext).Assembly);` to avoid adding configuration in the future. They will be loaded automatically.
+    - You can do something like: `builder.ApplyConfigurationsFromAssembly(typeof(CodePrunerDbContext).Assembly)` to avoid adding configuration in the future. They will be loaded automatically.
 
 ## Adding migration
 When you have all of the previous steps done you are almost ready to add the migration. Before you do it I recommend to add context factory to simplify adding migrations, because `dotnet` will know how to construct the DbContext.
 {{<code language="csharp" file="static/examples/CodePruner.TestContainerExamples/CodePruner.TestContainerExamples.EF/CodePrunerDbContextFactory.cs" >}}
 
-Ok. Now you are ready to add the 1st migration. To do it, go to the directory with you EF project and add migration:
-``` 
+Ok. Now you are ready to add the first migration. To do it, go to the directory with your EF project and add migration:
+``` text
 cd .\CodePruner.TestContainerExamples.EF
 dotnet ef migrations add AddArticle
 ```
@@ -88,5 +88,5 @@ Both of them will create database as we want, but when we go a bit deeper.
 If you would like to see a speed comparison, let me know in the comments, then I will prepare it for you. 
 
 ## Summary 
-It is everything for today. Is is useful for you? Would you like to add or ask anything? Let me know in the comment below.
+It is everything for today. Is it useful for you? Would you like to add or ask anything? Let me know in the comment below.
 See you next time.
