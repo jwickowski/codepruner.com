@@ -12,21 +12,26 @@ weight = 1
 # name = "Pages"
 # hasChildren = true
 
+
+[[main]]
+name = "DotNet"
+url = "categories/dotnet"
+weight = 10
+
 [[main]]
 name = "Frontend"
 url = "categories/frontend/"
-weight = 10
-
+weight = 20
 
 [[main]]
-name = "GoHugo"
-url = "categories/hugo/"
-weight = 20
+name = "AI"
+url = "categories/artificial-intelligence"
+weight = 30
 
 [[main]]
 name = "About me"
 URL = "about-me/"
-weight = 30
+weight = 40
 
 # [[main]]
 # parent = "Pages"
