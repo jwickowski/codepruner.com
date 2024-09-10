@@ -14,8 +14,8 @@ draft: false
 images:
   - images/posts/2023/2023-11-08-what_is_skexception_and_how_to_fix_it_in_semantickernel.jpg
 tags:
-  - ai
-  - openai
+  - AI
+  - openAI
   - Semantic Kernel
   - Exception
 title: 'How to fix SKException: Function not available _GLOBAL_FUNCTIONS_.input from SemanticKernel?'

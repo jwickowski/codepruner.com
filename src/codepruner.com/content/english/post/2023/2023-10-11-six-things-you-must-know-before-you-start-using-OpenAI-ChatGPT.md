@@ -14,8 +14,8 @@ draft: false
 images:
   - images/posts/2023/2023-10-11-six-things-you-must-know-before-you-start-using-OpenAI-ChatGPT.jpg
 tags:
-  - ai
-  - openai
+  - AI
+  - openAI
   - chatGPT
   - api
   - temperature

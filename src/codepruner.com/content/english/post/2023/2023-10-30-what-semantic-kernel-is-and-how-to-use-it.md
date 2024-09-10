@@ -14,8 +14,8 @@ draft: false
 images:
   - images/posts/2023/2023-10-30-what-semantic-kernel-is-and-how-to-use-it.png
 tags:
-  - ai
-  - openai
+  - AI
+  - openAI
   - Semantic Kernel
   - planner
   - pipeline

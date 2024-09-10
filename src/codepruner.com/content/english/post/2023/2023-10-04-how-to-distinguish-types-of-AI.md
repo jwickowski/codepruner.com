@@ -14,7 +14,7 @@ draft: false
 images:
   - images/posts/2023/2023-10-04-how-to-distinguish-types-of-AI.jpg
 tags:
-  - ai
+  - AI
   - machine-learning
   - deep-learning
   - reinforcement-learning

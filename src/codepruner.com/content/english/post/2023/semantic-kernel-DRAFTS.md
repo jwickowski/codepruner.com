@@ -14,8 +14,8 @@ draft: true
 images:
   - images/posts/2023/2023-10-126-XXXXXXXXXXXXXXXXXXXXXXXXXXX.jpg
 tags:
-  - ai
-  - openai
+  - AI
+  - openAI
   - chatGPT
   - Semantic Kernel
 title: Context and Memory in SemanticKernel?

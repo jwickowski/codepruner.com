@@ -10,8 +10,8 @@ draft: false
 images:
   - images/posts/2024/2024-02-19-how-to-give-AI-knowledge-about-your-business.jpg
 tags:
-  - ai
-  - openai
+  - AI
+  - openAI
   - chatGPT
   - azure
   - search
