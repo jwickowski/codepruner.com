@@ -5,15 +5,15 @@ categories:
 date: 2024-12-27T05:40:58.000Z
 draft: false
 images:
-  - images/posts/2024/2024-12-27-azure-machine-learning-services-for-az-900.jpg
+  - images/posts/2024/2024-12-27-the-best-way-for-integrations-tests-with-testcontainers.jpg
 tags:
   - testcontainers
   - dotnet
   - backend
   - tests
   - c#
-title: 2024-12-27-the-best-way-for-integrations-tests-with-testcontainers
-type: regular
+title: The best way for integrations tests with Testcontainers
+type: trending
 ---
 Testing is important. Test are more important. There are multiple ways to categorize tests like [`Unit`, `Integration`, `E2E`]. When it is possible I recommend using UnitTests, but in some cases they are not enough. In some situations writing integration test are simpler and faster. When? For example when using external services are required. you use Sql or when you have a dependency to an external service like `Apache Kafka` 
 
