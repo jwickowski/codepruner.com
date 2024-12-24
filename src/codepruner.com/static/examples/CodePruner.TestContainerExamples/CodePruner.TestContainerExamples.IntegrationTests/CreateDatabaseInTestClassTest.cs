@@ -1,7 +1,11 @@
+using Azure;
 using CodePruner.TestContainerExamples.EF;
 using DotNet.Testcontainers.Builders;
+using DotNet.Testcontainers.Configurations;
+using DotNet.Testcontainers.Containers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Testcontainers.MsSql;
 
 namespace CodePruner.TestContainerExamples.IntegrationTests;
 
@@ -9,7 +13,7 @@ public class CreateDatabaseInTestClassTest
 {
     #region tests
     [Fact]
-    public async Task insert_value_to_database()
+    public async Task insert()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -24,9 +28,8 @@ public class CreateDatabaseInTestClassTest
         });
         await dbContext.SaveChangesAsync();
     }
-
     [Fact]
-    public async Task insert_and_select_value_to_database()
+    public async Task insert_and_select()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -50,7 +53,7 @@ public class CreateDatabaseInTestClassTest
     }
 
     [Fact]
-    public async Task double_insert_with_unique_constraint_to_database()
+    public async Task try_double_insert_with_unique_constraint()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -100,7 +103,8 @@ public class CreateDatabaseInTestClassTest
             DataSource = $"{container.Hostname},{container.GetMappedPublicPort(1433)}",
             TrustServerCertificate = true
         };
-        return connectionStringBuilder.ConnectionString;
+
+       return  connectionStringBuilder.ConnectionString;
     }
     private CodePrunerDbContext CreateDbContext(string connectionString)
     {
@@ -110,6 +114,7 @@ public class CreateDatabaseInTestClassTest
         var dbContext = new CodePrunerDbContext(optionsBuilder.Options);
         return dbContext;
     }
+
     #endregion
     #region run_migration
     private async Task RunMigration(string connectionString)

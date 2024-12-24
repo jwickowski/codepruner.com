@@ -68,6 +68,7 @@ public class CreateOneDatabaseTest(DatabaseContainerFixture fixture) : IClassFix
     }
 }
 #endregion
+
 #region fixture_class
 public class DatabaseContainerFixture
 {
