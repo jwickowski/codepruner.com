@@ -1,7 +1,11 @@
+using Azure;
 using CodePruner.TestContainerExamples.EF;
 using DotNet.Testcontainers.Builders;
+using DotNet.Testcontainers.Configurations;
+using DotNet.Testcontainers.Containers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Testcontainers.MsSql;
 
 namespace CodePruner.TestContainerExamples.IntegrationTests;
 
@@ -77,8 +81,9 @@ public class CreateDatabaseInTestClassTest
     }
     #endregion
     #region init_sql
-    private async Task<string> InitSql(string password = "hard_password_for_test_only")
+    private async Task<string> InitSql()
     {
+        var password = "yourStrong(!)Password";
         var container = new ContainerBuilder()
             .WithImage("mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04")
             .WithPortBinding(1433, true)
@@ -98,7 +103,8 @@ public class CreateDatabaseInTestClassTest
             DataSource = $"{container.Hostname},{container.GetMappedPublicPort(1433)}",
             TrustServerCertificate = true
         };
-        return connectionStringBuilder.ConnectionString;
+
+       return  connectionStringBuilder.ConnectionString;
     }
     private CodePrunerDbContext CreateDbContext(string connectionString)
     {
@@ -108,6 +114,7 @@ public class CreateDatabaseInTestClassTest
         var dbContext = new CodePrunerDbContext(optionsBuilder.Options);
         return dbContext;
     }
+
     #endregion
     #region run_migration
     private async Task RunMigration(string connectionString)

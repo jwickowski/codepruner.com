@@ -2,12 +2,16 @@
 author: Jerzy Wickowski
 categories:
   - dotnet
-date: 2024-12-24T05:40:58.000Z
-draft: true
+date: 2024-12-27T05:40:58.000Z
+draft: false
 images:
   - images/posts/2024/2024-12-27-azure-machine-learning-services-for-az-900.jpg
 tags:
-  - devops
+  - testcontainers
+  - dotnet
+  - backend
+  - tests
+  - c#
 title: 2024-12-27-the-best-way-for-integrations-tests-with-testcontainers
 type: regular
 ---
