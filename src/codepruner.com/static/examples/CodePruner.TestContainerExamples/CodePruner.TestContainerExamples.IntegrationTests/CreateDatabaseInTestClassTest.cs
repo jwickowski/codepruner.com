@@ -9,7 +9,7 @@ public class CreateDatabaseInTestClassTest
 {
     #region tests
     [Fact]
-    public async Task insert_value_to_database()
+    public async Task insert()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -24,9 +24,8 @@ public class CreateDatabaseInTestClassTest
         });
         await dbContext.SaveChangesAsync();
     }
-
     [Fact]
-    public async Task insert_and_select_value_to_database()
+    public async Task insert_and_select()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -50,7 +49,7 @@ public class CreateDatabaseInTestClassTest
     }
 
     [Fact]
-    public async Task double_insert_with_unique_constraint_to_database()
+    public async Task try_double_insert_with_unique_constraint()
     {
         var connectionstring = await InitSql();
         await RunMigration(connectionstring);
@@ -78,9 +77,8 @@ public class CreateDatabaseInTestClassTest
     }
     #endregion
     #region init_sql
-    private async Task<string> InitSql()
+    private async Task<string> InitSql(string password = "hard_password_for_test_only")
     {
-        var password = "yourStrong(!)Password";
         var container = new ContainerBuilder()
             .WithImage("mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04")
             .WithPortBinding(1433, true)
