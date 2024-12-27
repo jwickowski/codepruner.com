@@ -1,11 +1,7 @@
-using Azure;
 using CodePruner.TestContainerExamples.EF;
 using DotNet.Testcontainers.Builders;
-using DotNet.Testcontainers.Configurations;
-using DotNet.Testcontainers.Containers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Testcontainers.MsSql;
 
 namespace CodePruner.TestContainerExamples.IntegrationTests;
 

@@ -8,7 +8,7 @@ namespace CodePruner.TestContainerExamples.IntegrationTests;
 public class CreateOneDatabaseWithModuleTest(DatabaseContainerModuleFixture fixture) : IClassFixture<DatabaseContainerModuleFixture>
 {
     [Fact]
-    public async Task insert_value_to_database()
+    public async Task insert()
     {
         await using var dbContext = fixture.CreateDbContext();
         dbContext.Articles.Add(new Article
@@ -22,7 +22,7 @@ public class CreateOneDatabaseWithModuleTest(DatabaseContainerModuleFixture fixt
     }
 
     [Fact]
-    public async Task insert_and_select_value_to_database()
+    public async Task insert_and_select()
     {
         await using (var dbContextToSave = fixture.CreateDbContext())
         {
@@ -43,7 +43,7 @@ public class CreateOneDatabaseWithModuleTest(DatabaseContainerModuleFixture fixt
     }
 
     [Fact]
-    public async Task double_insert_with_unique_constraint_to_database()
+    public async Task try_double_insert_with_unique_constraint()
     {
         var url = "url-should-be-unique";
         await using (var dbContextToSave = fixture.CreateDbContext())
