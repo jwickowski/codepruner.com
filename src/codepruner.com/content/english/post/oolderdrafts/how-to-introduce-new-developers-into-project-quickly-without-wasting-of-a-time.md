@@ -51,7 +51,7 @@ Not every documentation is good. How do I describe a good documentation:
 Ok... but how to make documentation like that? I would not suggest creating a special documentation for new people.  I would suggest using...
 
 # ADR
-It is a natural way to persist and document decision in a project. Then you will have all of advantages from ADRs. I wrote a bit about in an article about [Architecture Decision Record]({{< relref "../craftsmanship/what-is-ADR-and-why-you-should-add-it-into-your-project.md">}}).
+It is a natural way to persist and document decision in a project. Then you will have all of advantages from ADRs. I wrote a bit about in an article about [Architecture Decision Record]({{< relref "../2021/2021-11-17-what-is-adr-and-why-you-should-add-it-into-your-project.md">}}).
 
 Moreover, you add it as a step in a project's introduction. New devs should read it one by one and then:
 - They will know what approaches are in the project
@@ -77,7 +77,7 @@ You should have an updated documentation, with real examples, and with a
 - User guide - gread idea
 The best option is create 
 
-Start using [ADR]({{< relref "../craftsmanship/what-is-ADR-and-why-you-should-add-it-into-your-project.md">}}) 
+ Start using [ADR]({{< relref "../2021/2021-11-17-what-is-adr-and-why-you-should-add-it-into-your-project.md">}}) 
 
   - Other developers time, because they need to describe everything
   

@@ -23,7 +23,7 @@ url: how-extend-asp-net-identity-to-inform-your-app-about-user-registration
 AspNet Identity is a .NET library from Microsoft. It provides authentication and authorization for ASP.NET application. It is regularly developed and maintained. Moreover, together with .NET 8 `Identity API endpoints` was published. I decided to use it in my project, but I had a need to extend it. Are you interested it? Welcome.
 
 ## My requirements
-1. I have decided to create separate API application for Auth, like I have describe it in [one of my previous post]({{< relref "../auth/how-to-configure-auth-to-be-independent-of-provider.md" >}}). I use there `ASP .NET Identity API endpoints`. 
+1. I have decided to create separate API application for Auth, like I have describe it in [one of my previous post]({{< relref "../2022/2022-06-22-how-to-configure-auth-to-be-independent-of-provider.md" >}}). I use there `ASP .NET Identity API endpoints`. 
 
 2. I need to execute something when user is registered. The case is described in post [ How to implement an invitation for a user that does not exist]({{< relref "./2024-07-30-how-to-implement-an-invitation-for-a-user-that-does-not-exist.md" >}}). 
 
