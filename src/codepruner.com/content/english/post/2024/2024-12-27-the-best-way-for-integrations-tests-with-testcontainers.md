@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-12-27T05:40:58.000Z
+disqus_identifier: the-best-way-for-integrations-tests-with-testcontainers
+disqus_title: The best way for integrations tests with Testcontainers
+disqus_url: 'https://codepruner.com/the-best-way-for-integrations-tests-with-testcontainers'
 draft: false
 images:
   - images/posts/2024/2024-12-27-the-best-way-for-integrations-tests-with-testcontainers.jpg
@@ -15,6 +18,7 @@ tags:
   - integration tests
 title: The best way for integrations tests with Testcontainers
 type: trending
+url: the-best-way-for-integrations-tests-with-testcontainers
 ---
 Testing is important. Automated tests are more important. There are multiple ways to categorize tests like [`Unit`, `Integration`, `E2E`]. When it is possible I recommend using UnitTests, but in some cases they are not enough. In some situations writing integration test is much simpler and faster. When? For example when you need to use any external service like `Apache Kafka` or `sql`. 
 
