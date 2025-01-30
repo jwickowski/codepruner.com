@@ -14,6 +14,8 @@ tags:
   - course
   - exam
 type: regular
+url: draft-2024-05-25-materials-for-az-204
+title: sss
 ---
 
 https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification
