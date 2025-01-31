@@ -10,7 +10,7 @@ disqus_title: How to configure Auth to be independent of provider
 disqus_url: 'https://codepruner.com/how-to-configure-auth-to-be-independent-of-provider'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2022/2022-06-22-how-to-configure-auth-to-be-independent-of-provider.jpg
 tags:
   - auth
   - jwt

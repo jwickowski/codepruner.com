@@ -20,7 +20,7 @@ type: regular
 url: topics-and-concepts-for-codepruner
 ---
 
-We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "../2021/welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 
+We are nine months after starting of the blog. I wrote some main ideas in the [1st posts]({{< relref "../2021/2021-03-22-welcome-on-CodePruner.md">}}). All of them are active, but I have clarified some ideas and concepts in higher level. I would like to share it with you and write it for myself in the future. 
 
 # Types of blogs
 We can split blogs into two categories:

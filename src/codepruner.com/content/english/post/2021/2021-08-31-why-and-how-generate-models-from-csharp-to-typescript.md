@@ -57,7 +57,7 @@ If they are some many benefits, why this approach is so rare?
 
 - Write it by your own
 - Use complete tool
-- Hybrid, write your code, but with usage of some libraries - Check newer post about the [generating apiClient based on swagger]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}).
+- Hybrid, write your code, but with usage of some libraries - Check newer post about the [generating apiClient based on swagger]({{< relref "../2023/2023-08-10-never-hardcode-api-endpoints-on-frontend.md">}}).
 # A real example
 
 Here you can see a sample implementation. My approach is to create a simple version at the beginning and improve it when it is required. So that solution is not perfect, but it is simple and it will give you benefits form the 1st day of usage.
@@ -104,7 +104,7 @@ But current version is saving a huge amount of my teams' time.
 
 # Update
 
-After a bit of time, I have found a ncie tool to generate the code. If you want to read about it go [[here]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}).
+After a bit of time, I have found a ncie tool to generate the code. If you want to read about it go [[here]({{< relref "../2023/2023-08-10-never-hardcode-api-endpoints-on-frontend.md">}}).
 
 # Is it good?
 

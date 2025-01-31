@@ -3,6 +3,9 @@ author: Jerzy Wickowski
 categories:
   - dotnet
 date: 2024-05-25T06:40:58.000Z
+disqus_identifier: draft-2024-05-25-materials-for-az-204
+disqus_title: sss
+disqus_url: 'https://codepruner.com/draft-2024-05-25-materials-for-az-204'
 draft: true
 images:
   - images/posts/2024/2024-05-25-materials-for-az-204.jpg
@@ -13,7 +16,9 @@ tags:
   - certificate
   - course
   - exam
+title: sss
 type: regular
+url: draft-2024-05-25-materials-for-az-204
 ---
 
 https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification

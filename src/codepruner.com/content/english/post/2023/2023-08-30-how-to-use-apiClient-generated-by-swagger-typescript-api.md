@@ -24,7 +24,7 @@ type: regular
 url: how-to-use-apiclient-generated-by-swagger-typescript-api
 ---
  
-In previous post I described [why and how you should generate TypeScript ApiClient based on Swagger]({{< relref "./never-hardcode-api-endpoints-on-frontend.md">}}). After that post you should have a generated a client, and now I will show use how to use it in a real project.
+In previous post I described [why and how you should generate TypeScript ApiClient based on Swagger]({{< relref "../2023/2023-08-10-never-hardcode-api-endpoints-on-frontend.md">}}). After that post you should have a generated a client, and now I will show use how to use it in a real project.
 
 # How to use it 
 

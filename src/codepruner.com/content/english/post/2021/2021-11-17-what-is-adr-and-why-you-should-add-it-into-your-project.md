@@ -10,7 +10,7 @@ disqus_title: How to persist project decisions for future developers and why you
 disqus_url: 'https://codepruner.com/what-is-adr-and-why-you-should-add-it-into-your-project'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-11-17-what-is-adr-and-why-you-should-add-it-into-your-project.jpg
 tags:
   - ADR
   - architecture
