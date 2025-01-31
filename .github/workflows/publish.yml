@@ -42,7 +42,7 @@ jobs:
       - name: Build
         run: hugo --source "src/codepruner.com/" --minify --logLevel info -e production
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: codepruner.com
           path: src/codepruner.com/public     
