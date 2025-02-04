@@ -10,7 +10,7 @@ disqus_title: How to run hugo - 1st step
 disqus_url: 'https://codepruner.com/run-hugo-1st-step'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-03-23-run-hugo-1st-step.png
 tags:
   - hugo
   - blog
