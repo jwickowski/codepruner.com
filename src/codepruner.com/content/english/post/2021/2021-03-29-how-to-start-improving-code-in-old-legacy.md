@@ -6,17 +6,17 @@ categories:
   - Craftsmanship
 date: 2021-03-29T20:40:58.000Z
 disqus_identifier: how-to-start-improving-code-in-old-legacy
-disqus_title: How to start improving code in old lagacy project
+disqus_title: How to start improving code in old legacy project
 disqus_url: 'https://codepruner.com/how-to-start-improving-code-in-old-legacy'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-03-29-how-to-start-improving-code-in-old-legacy.png
 tags:
   - legacy
   - clean code
   - ideas
   - pain points
-title: How to start improving code in old lagacy project
+title: How to start improving code in old legacy project
 type: regular
 url: how-to-start-improving-code-in-old-legacy
 ---
