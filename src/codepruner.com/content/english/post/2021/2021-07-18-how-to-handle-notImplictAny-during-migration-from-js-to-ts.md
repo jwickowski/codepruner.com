@@ -11,7 +11,7 @@ disqus_title: How  to handle notImplictAny during migration from js to ts withou
 disqus_url: 'https://codepruner.com/how-to-handle-notimplictany-during-migration-from-js-to-ts'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-07-18-how-to-handle-notImplictAny-during-migration-from-js-to-ts.png
 tags:
   - javascript
   - typescript

@@ -10,7 +10,7 @@ disqus_title: Topics and concepts for CodePruner
 disqus_url: 'https://codepruner.com/topics-and-concepts-for-codepruner'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-10-11-topics-and-concepts-for-CodePruner.png
 tags:
   - ideas
   - blog

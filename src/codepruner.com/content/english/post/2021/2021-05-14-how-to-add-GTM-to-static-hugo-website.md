@@ -10,7 +10,7 @@ disqus_title: How to add Google Tag Manager to static hugo website?
 disqus_url: 'https://codepruner.com/how-to-add-gtm-to-static-hugo-website'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-05-14-how-to-add-GTM-to-static-hugo-website.png
 tags:
   - hugo
   - blog

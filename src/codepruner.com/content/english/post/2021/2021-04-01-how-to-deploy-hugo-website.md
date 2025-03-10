@@ -10,7 +10,7 @@ disqus_title: How to deploy Hugo website?
 disqus_url: 'https://codepruner.com/how-to-deploy-hugo-website'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-04-01-how-to-deploy-hugo-website.png
 tags:
   - hugo
   - blog

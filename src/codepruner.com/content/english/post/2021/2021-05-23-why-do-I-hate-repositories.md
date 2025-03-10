@@ -10,7 +10,7 @@ disqus_title: Why do I hate repositories?
 disqus_url: 'https://codepruner.com/why-do-i-hate-repositories'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-05-23-why-do-I-hate-repositories.png
 tags:
   - ddd
   - repository

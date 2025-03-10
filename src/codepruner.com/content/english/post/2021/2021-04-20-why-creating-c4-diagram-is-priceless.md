@@ -10,7 +10,7 @@ disqus_title: Why creating c4 diagram is priceless
 disqus_url: 'https://codepruner.com/why-creating-c4-diagram-is-priceless'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-04-20-why-creating-c4-diagram-is-priceless.png
 tags:
   - legacy
   - clean code

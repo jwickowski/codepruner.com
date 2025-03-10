@@ -10,7 +10,7 @@ disqus_title: How to add real code snippets from github into hugo post
 disqus_url: 'https://codepruner.com/how-to-add-real-code-snippets-from-github-into-hugo-post'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-08-30-how-to-add-real-code-snippets-from-github-into-hugo-post.png
 tags:
   - hugo
   - blog

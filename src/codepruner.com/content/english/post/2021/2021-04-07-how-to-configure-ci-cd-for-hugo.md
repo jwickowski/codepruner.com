@@ -10,7 +10,7 @@ disqus_title: How to configure CI/CD for hugo?
 disqus_url: 'https://codepruner.com/how-to-configure-ci-cd-for-hugo'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-04-07-how-to-configure-ci-cd-for-hugo.png
 tags:
   - hugo
   - docker

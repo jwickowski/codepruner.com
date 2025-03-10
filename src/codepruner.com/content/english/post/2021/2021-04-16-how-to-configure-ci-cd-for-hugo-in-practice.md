@@ -10,7 +10,7 @@ disqus_title: How to configure CI/CD for hugo in practice with GitHub Actions?
 disqus_url: 'https://codepruner.com/how-to-configure-ci-cd-for-hugo-in-practice'
 draft: false
 images:
-  - images/blog/red-sharp-pruner.jpg
+  - images/posts/2021/2021-04-16-how-to-configure-ci-cd-for-hugo-in-practice.png
 tags:
   - hugo
   - github actions

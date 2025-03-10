@@ -10,7 +10,7 @@ disqus_title: Why not WordPress?
 disqus_url: 'https://codepruner.com/why-not-wordpress'
 draft: false
 images:
-  - images/posts/2021/why-not-wordpress.jpg
+  - images/posts/2021/2021-03-23-why-not-wordpress.jpg
 tags:
   - hugo
   - blog
